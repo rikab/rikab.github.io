@@ -86,17 +86,17 @@
     <div class="container">
       <h1>About Me</h1>
 
-      <div class="section-blurb">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <p class=""> I am a physics PhD student at the <a href="https://physics.mit.edu/" target="_blank" rel="noopener">Massachusetts Institute of Technology (MIT)</a></p>
-          </div>
+      <div class="row justify-content-center pseudo-nav">
+        <div class="section-blurb">
+          <!-- <div class="col-lg-8"> -->
+            <p class=""> I am a physics PhD student at the <a href="https://physics.mit.edu/" target="_blank" rel="noopener">Massachusetts Institute of Technology (MIT)</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+          <!-- </div> -->
         </div>
       </div>
 
      
       <a class="btn btn-light see-more" href="./assets/pdf/rikab_CV.pdf">See
-        More</a>
+        More [CV]</a>
     </div>
   </div>
 
@@ -104,35 +104,167 @@
   <!-- ABOUT ME -->
   <div class="container-fluid section section-dark" id="research">
 
+    <!-- RESEARCH -->
     <div class="container">
-      <h1>RESEARCH</h1>
+      <h1>RESEARCH & PUBLICATIONS</h1>
 
       <div class="section-blurb">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
+        <div class="row justify-content-center pseudo-nav">
             <p class=""> I am primarily interested in the intersection between theoretical particle physics and modern machine learning methods. How can we use machine learning to understand particle physics, and how can we use particle physics to understand machine learning?</p>
-          </div>
         </div>
       </div>
 
-      <div class="card-deck">
 
-        <div class="card floating-box mt-2">
+       <!-- Frequentist WAY -->
+       <div class="card-deck">
+
+        <div class="card floating-box mt-2" style = "width: 100%">
+          
           <div class="card-body">
-            <h3 class="card-title">Search for bottom-type, vectorlike quark pair production in a fully hadronic final state in proton-proton collisions at s= 13 TeV</h3>
-            <h5 class="card-subtitle text-muted">The CMS Collaboration</h5> <br/>
-            <h5 class="card-subtitle text-muted"> December 2020</h5> <br/>
-            <h5 class="card-subtitle text-muted"> <a href = "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.112004">Physical Review D 102 (11), 112004</a></h5> <br/>
-            <p class="card-text"> We search for evidence of Vector-Like Quark (VLQ) production in the CMS Detector of the Large Hadron Collider's entire second run, and set (as of publication) the highest mass limits on VLQ hadronic decays </p>
+
+            <div class="row justify-content-center pseudo-nav">
+            <h3 class="card-title">Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics</h3>
+          </div>
+
+            <div class="row justify-content-center pseudo-nav">
+              <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
+                <img src="assets/img/Freq_Way.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                
+              </div>
+              
+              <div class="col" style="padding-bottom: 40px; padding-top: 40px;">
+              <h5 class="card-subtitle text-muted">Rikab Gambhir, Benjamin Nachman, and Jesse Thaler</h5> <br/>
+              <h5 class="card-subtitle text-muted"> 9 May 2022</h5> <br/>
+              <h5 class="card-subtitle text-muted">[TODO: UPDATE] <a href = "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.112004">arXiv Preprint</a></h5> <br/>
+              <p class="card-text"> We present a machine learning framework for performing maximum likelihood inference with Guassian uncertainty estimation, which also quantifies the mutual informaiton between the unobservable and measured quantities. </p>
+              </div>
+            
+
+            </div>
+
           </div>
           <div class="card-footer">
-            <a href="http://www.physics.rutgers.edu/hex/CMS.html" class="btn btn-light">Learn More</a>
+            <a href="https://github.com/rikab/GaussianAnsatz" class="btn btn-light">Learn More [Github]</a>
           </div>
         </div>
       </div>
+
+        <!-- VLQ -->
+      <div class="card-deck">
+
+        <div class="card floating-box mt-2" style = "width: 100%">
+          
+          <div class="card-body">
+
+            <div class="row justify-content-center pseudo-nav">
+            <h3 class="card-title">Search for bottom-type, vectorlike quark pair production in a fully hadronic final state in proton-proton collisions at s= 13 TeV</h3>
+          </div>
+
+            <div class="row justify-content-center pseudo-nav">
+              <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
+                <img src="assets/img/exclusion.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                
+              </div>
+              
+              <div class="col" style="padding-bottom: 40px; padding-top: 40px;">
+              <h5 class="card-subtitle text-muted">The CMS Collaboration</h5> <br/>
+              <h5 class="card-subtitle text-muted"> 7 December 2020</h5> <br/>
+              <h5 class="card-subtitle text-muted"> <a href = "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.112004">Physical Review D 102 (11), 112004</a></h5> <br/>
+              <p class="card-text"> We search for evidence of Vector-Like Quark (VLQ) production in the CMS Detector of the Large Hadron Collider's entire second run, and set (as of publication) the highest mass limits on VLQ hadronic decays </p>
+              </div>
+            
+
+            </div>
+
+          </div>
+          <div class="card-footer">
+            <a href="http://www.physics.rutgers.edu/hex/CMS.html" class="btn btn-light">Learn More [Rutgers CMS]</a>
+          </div>
+        </div>
+      </div>
+
 
 
     </div>
+
+  </div>
+  <div class="container-fluid section section-light" id="talks">
+
+
+    <!-- Talks -->
+    <div class="container">
+      <h1>Talks</h1>
+
+
+  <!-- Hear the Shape of a Jet? -->
+  <div class="card-deck">
+
+    <div class="card floating-box mt-2">
+      
+      <div class="card-body">
+
+        <h3 class="card-title">Can You Hear the Shape of a Jet?</h3>
+
+        <div class="row justify-content-center pseudo-nav">
+        <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
+          <img src="assets/talks/test_signal_1_1-Ellipsiness + Pileup.gif" style='height: 100%; width: 100%; object-fit: contain'/>
+          
+        </div>
+        
+        <div class="col" style="padding-top: 40px; padding-bottom: 40px; ">
+        <h5 class="card-subtitle text-muted">APS April 2022: Data Analysis, AI, and ML I</h5> <br/>
+        <h5 class="card-subtitle text-muted">New York, NY, 10 April 2022</h5> <br/>
+        <h5 class="card-subtitle text-muted"> <a href = "./assets/talks/can_you_hear_the_shape_of_a_jet.pdf">Slides [PDF]</a></h5> <br/>
+        </div>
+
+
+      </div>
+
+      </div>
+      <div class="card-footer">
+        <a href="https://april.aps.org/" class="btn btn-light">Link to APS April</a>
+      </div>
+    </div>
+  </div>
+
+
+        <!-- Freq Way -->
+      <div class="card-deck">
+
+        <div class="card floating-box mt-2">
+          
+          <div class="card-body">
+
+            <h3 class="card-title">Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics</h3>
+ 
+            <div class="row justify-content-center pseudo-nav">
+            <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
+              <img src="assets/talks/thumbnail_gaussian.png" style='height: 100%; width: 100%; object-fit: contain'/>
+              
+            </div>
+            
+            <div class="col" style="padding-top: 40px; padding-bottom: 40px; ">
+            <h5 class="card-subtitle text-muted">ML4Jets2021: Regression, Calibration, and Fast Inference</h5> <br/>
+            <h5 class="card-subtitle text-muted">Remote Talk, 7 July 2021</h5> <br/>
+            <h5 class="card-subtitle text-muted"> <a href = "./assets/talks/Calibration and Correlation ML4Jets.pdf">Slides [PDF]</a></h5> <br/>
+            </div>
+  
+
+          </div>
+
+          </div>
+          <div class="card-footer">
+            <a href="https://indico.cern.ch/event/980214/" class="btn btn-light">Link to ML4Jets2021</a>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
   </div>
 
  
@@ -149,12 +281,12 @@
       </div>
       <div class="col-sm-2" style="padding-bottom: 40px">
         <h2 style="padding-bottom: 10px">Resources</h2>
-        <h6><a class="footer-link" href="#">Resource 1</a></h6>
-        <a class="footer-link" href="#">Resource 2</a>
+        <h6><a class="footer-link" href="https://twitter.com/FinitePhysicist">My better Twitter account</a></h6>
+        <a class="footer-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Inspiration Video!</a>
       </div>
 
     </div>
-    <p>&copy; 2021 Rikab Gambhir. All rights reserved.</p>
+    <p>&copy; 2022 Rikab Gambhir. All rights reserved.</p>
   </footer>
   <script type="text/javascript">
 

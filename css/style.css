@@ -2,6 +2,11 @@ body {
     background-color: #141414;
 }
 
+a {
+    color: rgba(255, 0, 0, 0.623);
+}
+
+
 .navbar-custom {
     background-color: #303030;
     border-color: #E7E7E7;
@@ -143,6 +148,10 @@ body {
     color: #404040;
 }
 
+.section-light h1 {
+    color: #404040;
+}
+
 .section-box {
     background-color: #252525;
     color: #404040;
@@ -240,11 +249,13 @@ footer h6 {
     vertical-align: middle;
     text-align: center;
 }
+
 .card-text{
     color: inherit;
     align-content: center;
     text-align: center;
     size: inherit;
+    
 }
 
 .card-body{
