@@ -76,6 +76,9 @@
       <div class="col-lg-2">
         <a class="btn btn-light btn-bounce fade-in five page-scroll smoothScroll" href="#research">Research</a>
       </div>
+      <div class="col-lg-2">
+        <a class="btn btn-light btn-bounce fade-in five page-scroll smoothScroll" href="#talks">Presentations</a>
+      </div>
     </div>
   </div>
 
@@ -89,7 +92,7 @@
       <div class="row justify-content-center pseudo-nav">
         <div class="section-blurb">
           <!-- <div class="col-lg-8"> -->
-            <p class=""> I am a physics PhD student at the <a href="https://physics.mit.edu/" target="_blank" rel="noopener">Massachusetts Institute of Technology (MIT)</a>. My background is in physics, mathematics, data science, and applied sciences in engineering. </p>
+            <p class=""> I am a physics PhD student at the <a href="https://physics.mit.edu/" target="_blank" rel="noopener">Massachusetts Institute of Technology (MIT)</a>. My background is in particle physics, mathematics, data science, and applied sciences in engineering. </p>
           <!-- </div> -->
         </div>
       </div>
@@ -169,15 +172,53 @@
       </div>
 
 
-      <!-- CALIBRATION PRIORS
-      <div class="card-deck">
+
+      <!-- SHAPER -->
+      <div class="card-deck", id="shaper_paper">
 
         <div class="card floating-box mt-2" style = "width: 100%">
           
           <div class="card-body">
 
             <div class="row justify-content-center pseudo-nav">
-            <h3 class="card-title">Bais and Priors in Machine Learning Calibrations for High Energy Physics</h3>
+            <h3 class="card-title">SHAPER: Can You Hear the Shape of a Jet?</h3>
+          </div>
+
+            <div class="row justify-content-center pseudo-nav">
+              <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
+                <img src="assets/img/SHAPER.gif" style='height: 100%; width: 100%; object-fit: contain'/>
+                
+              </div>
+              
+              <div class="col" style="padding-bottom: 40px; padding-top: 40px;">
+              <h5 class="card-subtitle text-muted">Demba Ba, Akshunna S. Dogra, Rikab Gambhir, Abiy Tasissa, and Jesse Thaler</h5> <br/>
+              <h5 class="card-subtitle text-muted">26 February 2023</h5> <br/>
+              <h5 class="card-subtitle text-muted"><a href = "https://arxiv.org/abs/2302.12266">[arXiv Preprint]</a> <!-- <a href = "">[INSPIRE-HEP (Soon)]</a>--></h5> <br/>
+              <p class="card-text">We show that the Earth Mover's Distance is <i>the</i> natural structure for comparing collider events and constructing IRC-safe observables. We also present <b>SHAPER</b>, a framework for defining and computing shape-based observables, and show how these new observables may be useful for phenomenological studies.</p>
+              </div>
+            
+
+            </div>
+
+          </div>
+          <div class="card-footer">
+            <a href="https://github.com/rikab/SHAPER" class="btn btn-light">Learn More [The SHAPER Package]</a>
+          </div>
+        </div>
+      </div> 
+
+
+
+
+      <!-- CALIBRATION PRIORS-->
+      <div class="card-deck", id = "calibration_priors_paper">
+
+        <div class="card floating-box mt-2" style = "width: 100%">
+          
+          <div class="card-body">
+
+            <div class="row justify-content-center pseudo-nav">
+            <h3 class="card-title">Bias and Priors in Machine Learning Calibrations for High Energy Physics</h3>
           </div>
 
             <div class="row justify-content-center pseudo-nav">
@@ -189,7 +230,7 @@
               <div class="col" style="padding-bottom: 40px; padding-top: 40px;">
               <h5 class="card-subtitle text-muted">Rikab Gambhir, Benjamin Nachman, and Jesse Thaler</h5> <br/>
               <h5 class="card-subtitle text-muted"> 11 May 2022</h5> <br/>
-              <h5 class="card-subtitle text-muted"><a href = "">arXiv Preprint (Coming Soon!)</a></h5> <br/>
+              <h5 class="card-subtitle text-muted"><a href = "https://arxiv.org/abs/2205.05084">[arXiv Preprint]</a> <a href = "https://inspirehep.net/literature/2079976">[INSPIRE-HEP]</a></h5> <br/>
               <p class="card-text"> We demonstrate how some recent proposals for both simulation-based and data-based calibrations inherit properties of the sample used for training, which can result in biases for downstream analyses, and argue that our recently proposed Gaussian Ansatz approach can avoid some of the pitfalls of prior dependence. </p>
               </div>
             
@@ -198,14 +239,14 @@
 
           </div>
           <div class="card-footer">
-            <a href="https://github.com/hep-lbdl/calibrationpriors" class="btn btn-light">Learn More [Github]</a>
+            <a href="https://github.com/hep-lbdl/calibrationpriors" class="btn btn-light">Learn More [Analysis Notebook Github]</a>
           </div>
         </div>
-      </div> -->
+      </div> 
 
 
        <!-- Frequentist WAY -->
-       <div class="card-deck">
+       <div class="card-deck", id = "freq_way_paper">
 
         <div class="card floating-box mt-2" style = "width: 100%">
           
@@ -224,7 +265,7 @@
               <div class="col" style="padding-bottom: 40px; padding-top: 40px;">
               <h5 class="card-subtitle text-muted">Rikab Gambhir, Benjamin Nachman, and Jesse Thaler</h5> <br/>
               <h5 class="card-subtitle text-muted"> 9 May 2022</h5> <br/>
-              <h5 class="card-subtitle text-muted"><a href = "https://arxiv.org/abs/2205.03413">arXiv Preprint</a></h5> <br/>
+              <h5 class="card-subtitle text-muted"><a href = "https://arxiv.org/abs/2205.03413">[arXiv Preprint]</a> <a href = "https://inspirehep.net/literature/2078714">[INSPIRE-HEP]</a></h5> <br/>
               <p class="card-text"> We present a machine learning framework for performing maximum likelihood inference with Guassian uncertainty estimation, which also quantifies the mutual informaiton between the unobservable and measured quantities. </p>
               </div>
             
@@ -233,7 +274,7 @@
 
           </div>
           <div class="card-footer">
-            <a href="https://github.com/rikab/GaussianAnsatz" class="btn btn-light">Learn More [Github]</a>
+            <a href="https://github.com/rikab/GaussianAnsatz" class="btn btn-light">Learn More [The Gaussian Ansatz Package]</a>
           </div>
         </div>
       </div>
@@ -267,7 +308,7 @@
 
           </div>
           <div class="card-footer">
-            <a href="http://www.physics.rutgers.edu/hex/CMS.html" class="btn btn-light">Learn More [Rutgers CMS]</a>
+            <a href="http://www.physics.rutgers.edu/hex/CMS.html" class="btn btn-light">Learn More [Rutgers CMS Group]</a>
           </div>
         </div>
       </div>
@@ -279,13 +320,20 @@
   </div>
   <div class="container-fluid section section-light" id="talks">
 
-
+<!---->
     <!-- Talks -->
     <div class="container">
-      <h1>Talks</h1>
+      <h1>PRESENTATIONS</h1>
+
+      <div class="section-blurb">
+        <div class="row justify-content-center pseudo-nav">
+            <p class="">Below is a list of all public talks I have given, organized by the publication they correspond to. Note that while several talks share the same category and even the same title, the talks themselves can be very different, especially if the format (invited seminar versus talk, for example) is different! Additionally, many slides originally had GIFs and animations, which will not render here.</p>
+        </div>
+      </div>
 
 
-  <!-- Hear the Shape of a Jet? -->
+
+      <!-- Hear the Shape of a Jet? -->
   <div class="card-deck">
 
     <div class="card floating-box mt-2">
@@ -294,59 +342,81 @@
 
         <h3 class="card-title">Can You Hear the Shape of a Jet?</h3>
 
-        <div class="row justify-content-center pseudo-nav">
-        <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
-          <img src="assets/talks/test_signal_1_1-Ellipsiness + Pileup.gif" style='height: 100%; width: 100%; object-fit: contain'/>
-          
-        </div>
-        
-        <div class="col" style="padding-top: 40px; padding-bottom: 40px; ">
-        <h5 class="card-subtitle text-muted">APS April 2022: Data Analysis, AI, and ML I</h5> <br/>
-        <h5 class="card-subtitle text-muted">New York, NY, 10 April 2022</h5> <br/>
-        <h5 class="card-subtitle text-muted"> <a href = "./assets/talks/can_you_hear_the_shape_of_a_jet.pdf">Slides [PDF]</a></h5> <br/>
-        </div>
+       
 
+
+        <div class="row justify-content-left pseudo-nav">
+          <li>
+            <p class="card-text"> <a href = "https://indico.cern.ch/event/1159913/contributions/5062759/">"Can You Hear the Shape of a Jet?"</a>, Talk, 4 Novemebr 2022, at ML4Jets2022.  <h5 class="card-subtitle text-muted">Rutgers University: New Jersey, United States. <a href = "./assets/talks/(ML4Jets 2022) Can you hear the shape of a jet .pdf">Slides [PDF]</a></h5>  </p> 
+          </li>  
+          <li>
+            <p class="card-text"> <a href = "https://indico.cern.ch/event/1144064/contributions/4940343/">"Can You Hear the Shape of a Jet?"</a>, Talk, 15 August 2022, at BOOST 2022.  <h5 class="card-subtitle text-muted">University of Hamburg: Hamburg, Germany. <a href = "./assets/talks/(BOOST 2022) Can you hear the shape of a jet -2.pdf">Slides [PDF]</a></h5>  </p> 
+          </li>  
+          <li>
+            <p class="card-text"> <a href = "./assets/talks/IAIFI Story.pdf">"Can You Hear the Shape of a Jet? An IAIFI Story"</a>, Local Presentation, 11 August 2022, for IAIFI/NSF Review.  <h5 class="card-subtitle text-muted">MIT: Massachusetts, United States. <a href = "./assets/talks/IAIFI Story.pdf">Slides [PDF]</a></h5>  </p> 
+          </li>  
+          <li>
+            <p class="card-text"> <a href = "https://meetings.aps.org/Meeting/APR22/Session/K08.7">"Can You Hear the Shape of a Jet?"</a>, Talk, 10 April 2022, at APS April Meeting 2022.  <h5 class="card-subtitle text-muted">New York City: New York, United States. <a href = "./assets/talks/can_you_hear_the_shape_of_a_jet.pdf">Slides [PDF]</a></h5>  </p> 
+          </li>  
+        
 
       </div>
 
       </div>
       <div class="card-footer">
-        <a href="https://april.aps.org/" class="btn btn-light">Link to APS April</a>
+        <a href="#shaper_paper" class="btn btn-light">Link to our corresponding publication, "SHAPER: Can you Hear the Shape of a Jet?"</a>
       </div>
     </div>
   </div>
 
 
-        <!-- Freq Way -->
-      <div class="card-deck">
 
-        <div class="card floating-box mt-2">
-          
-          <div class="card-body">
+  <!-- Frequentist Way -->
+  <div class="card-deck">
 
-            <h3 class="card-title">Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics</h3>
- 
-            <div class="row justify-content-center pseudo-nav">
-            <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
-              <img src="assets/talks/thumbnail_gaussian.png" style='height: 100%; width: 100%; object-fit: contain'/>
-              
-            </div>
-            
-            <div class="col" style="padding-top: 40px; padding-bottom: 40px; ">
-            <h5 class="card-subtitle text-muted">ML4Jets2021: Regression, Calibration, and Fast Inference</h5> <br/>
-            <h5 class="card-subtitle text-muted">Remote Talk, 7 July 2021</h5> <br/>
-            <h5 class="card-subtitle text-muted"> <a href = "./assets/talks/Calibration and Correlation ML4Jets.pdf">Slides [PDF]</a></h5> <br/>
-            </div>
+  <div class="card floating-box mt-2">
+    
+    <div class="card-body">
+
+      <h3 class="card-title">Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics</h3>
+
+      
+
+
+      <div class="row justify-content-left pseudo-nav">
+        <li>
+          <p class="card-text"> <a href = "https://neurips.cc/virtual/2022/event/56849">"Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"</a>, Poster, 3 December 2022, at Machine Learning and the Physical Sciences.  <h5 class="card-subtitle text-muted">NeurIPS (Virtual). <a href = "./assets/talks/frequentist_way_poster.png">Poster [PNG]</a></h5>  </p> 
+        </li>  
+        <li>
+          <p class="card-text"> <a href = "https://indico.cern.ch/event/1223571/">"Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"</a>, Invited Talk, 22 Novemebr 2022, for ATLAS Jet/Etmiss.  <h5 class="card-subtitle text-muted">CERN (Virtual). <a href = "./assets/talks/(ATLAS) Frequentist Way.pdf">Slides [PDF]</a></h5>  </p> 
+        </li>  
+        <li>
+          <p class="card-text"> <a href = "./assets/talks/(UCI) Frequentist Way-1-1.pdf">"Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"</a>, Invied Seminar, 13 September 2022, for the UCI Physics Astro/Particle-ML Seminar series.  <h5 class="card-subtitle text-muted">University of Califoria, Irvine (Virtual). <a href = "./assets/talks/(UCI) Frequentist Way-1-1.pdf">Slides [PDF]</a></h5>  </p> 
+        </li>  
+        <li>
+          <p class="card-text"> <a href = "https://indico.cern.ch/event/980214/contributions/4413598/">"Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"</a>, Talk, 7 July 2021, at ML4Jets2021.  <h5 class="card-subtitle text-muted">University of Heidelberg (Virtual). <a href = "./assets/talks/Calibration and Correlation ML4Jets.pdf">Slides [PDF]</a></h5>  </p> 
+        </li>  
+      
+
+    </div>
+
+    </div>
+    <div class="card-footer">
+      <a href="#freq_way_paper" class="btn btn-light">Link to our corresponding publication (1), "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"</a>
+    </div>
+    <div class="card-footer">
+      <a href="#calibration_priors_paper" class="btn btn-light">Link to our corresponding publication (2), "Bias and Priors in Machine Learning Calibrations for High Energy Physics"</a>
+    </div>
+  </div>
+</div>
+
+
   
 
-          </div>
 
-          </div>
-          <div class="card-footer">
-            <a href="https://indico.cern.ch/event/980214/" class="btn btn-light">Link to ML4Jets2021</a>
-          </div>
-        </div>
-      </div>
+     
+
+
 
 
 
@@ -375,7 +445,7 @@
       </div>
 
     </div>
-    <p>&copy; 2022 Rikab Gambhir. All rights reserved.</p>
+    <p>&copy; 2022-2023 Rikab Gambhir. All rights reserved.</p>
   </footer>
   <script type="text/javascript">
 
