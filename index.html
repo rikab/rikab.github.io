@@ -43,7 +43,7 @@
   
 
   <!--Main Body  -->
-  <header class="text-center py-5">
+  <header class="text-center py-5 text-white">
   <img src="assets/img/fun_headshot.jpg" alt="Rikab Gambhir"
        id="splash-logo" class="rounded-circle mb-3 shadow"
        loading="lazy">
@@ -94,7 +94,8 @@
 
  
 <!-- ---------- About ---------- -->
-<section id="about" class="container py-5">   <!-- remove section-light -->  <h2 class="mb-3">About Me</h2>
+<section id="about" class="container py-5 text-white" >   <!-- remove section-light --> 
+   <h2 class="mb-3">About Me</h2>
   <p>
     I’m a research scientist at the
     <a href="https://physics.mit.edu/" target="_blank" rel="noopener">Massachusetts Institute of Technology</a>.
@@ -114,7 +115,7 @@
     <div class="col-md-8">
       <h3>Education</h3>
       <ul class="list-unstyled ms-3">
-        <li><strong>Ph.D., Theoretical Physics</strong>, MIT (2020‑&nbsp;present)<br>
+        <li><strong>Ph.D., Theoretical Physics</strong>, MIT (2020‑2025)<br>
             Advisor: <a href="http://jthaler.net/">Jesse Thaler</a></li>
         <li class="mt-2"><strong>B.S., Physics / Math / Applied Sci.</strong>,
             Rutgers University (2016‑2020) – <i>summa cum laude</i><br>
@@ -166,7 +167,7 @@
     const card = document.createElement('div');
     card.className = 'card floating-box';
     card.innerHTML = `
-      <div class="card-body bg-dark text-white">
+      <div class="card-body">
         <h3 class="card-title">${p.title}</h3>
         <div class="row g-4">
           <div class="col-md-5">
@@ -179,7 +180,7 @@
             </p>
             <p>${p.blurb}</p>
             ${p.links.map(
-              l => `<a href="${l.href}" class="btn btn-sm btn-light me-2"
+              l => `<a href="${l.href}" class="btn btn-sm btn-dark me-2"
                        target="_blank" rel="noopener">${l.text}</a>`
             ).join('')}
           </div>
