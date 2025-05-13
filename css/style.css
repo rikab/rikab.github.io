@@ -288,3 +288,41 @@ code {
     padding-left: 2px;
     padding-right: 2px;
     border-radius: 2pt;
+}
+
+
+
+
+
+/* ---------- hero name visibility ---------- */
+header h1 {
+  color:#fff !important;          /* pure white */
+  margin-bottom:.25rem;           /* breathing room under the name */
+}
+
+/* ---------- About section: light text on dark bg ---------- */
+/* Easiest: just make that section dark */
+#about {
+  background:#111;                /* same charcoal as research section */
+  color:#eee;
+}
+#about a { color:#ff3b3b; }        /* keep MIT‑red links visible */
+#about a:hover{ color:#ff6464; }
+
+/* ---------- Card background lighter ---------- */
+.card.floating-box{
+  background:#262626 !important;  /* mid‑grey instead of near‑black   */
+  border:1px solid #333;          /* subtle outline                   */
+}
+.card.floating-box h3{ color:#ff3b3b; }   /* keep red titles */
+
+/* ---------- Typography fix ---------- */
+body         { color:#dcdcdc; }                /* default light‑grey */
+section#about p,
+section#about li,
+section#about ul { color:#dcdcdc; }            /* ensure white-ish in about */
+h1,h2,h3,h4  { color:#f5f5f5; }                /* brighter headings */
+
+/* make sure paragraphs don’t inherit Bootstrap's muted class inadvertently */
+.text-muted:not(.card-subtitle) { color:#b0b0b0 !important; }
+

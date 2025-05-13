@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Rikab Gambhir</title>
+  <title>Rikab Gambhir, Ph.D.</title>
   <meta charset="utf-8">
   <link rel="shortcut icon" href="favicon.ico" type="image/icon">
   <link rel="icon" href="favicon.ico" type="image/icon">
@@ -29,6 +29,13 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&
+              family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet">
+
   <meta name="google-site-verification" content="JY83yB4L21zRVvDarmmI5D7XRR4Pzl5SDU_LKLa7nV4" />
 </head>
 
@@ -36,11 +43,13 @@
   
 
   <!--Main Body  -->
-  <div class="container-fluid splash">
-    <!-- <img id="splash-logo" src="assets/img/better_headshot.png" /> -->
-    <img id="splash-logo" src="assets/img/fun_headshot.jpg"  sizes="Large/>
-    <h1>Rikab Gambhir</h1>
-    <h2>Theoretical Physicist</h2>
+  <header class="text-center py-5">
+  <img src="assets/img/fun_headshot.jpg" alt="Rikab Gambhir"
+       id="splash-logo" class="rounded-circle mb-3 shadow"
+       loading="lazy">
+  <h1 class="display-5 fw-bold mb-2">Rikab Gambhir</h1>
+  <p class="lead mb-4">Theoretical Physicist &nbsp;•&nbsp; Ph.D., MIT</p>
+
 
   <!-- Socials -->
   <div class="container-fluid splash-blurb">
@@ -83,627 +92,129 @@
     </div>
   </div>
 
-  <!-- Make a n -->
-
-
-  <!-- ABOUT ME -->
-  <div class="container-fluid section section-light" id="about_me">
-
-    <div class="container">
-      <h1>About Me</h1>
-
-      <div class="row justify-content-center pseudo-nav">
-        <div class="section-blurb">
-          <!-- <div class="col-lg-8"> -->
-            <p class=""> I am a physics PhD Candidate at the <a href="https://physics.mit.edu/" target="_blank" rel="noopener">Massachusetts Institute of Technology (MIT)</a>. My background is in particle physics, mathematics, data science, and applied sciences in engineering. </p>
-          <!-- </div> -->
-        </div>
-      </div>
-
-      <div class="row justify-content-center pseudo-nav">
-        <!-- <div class="col" style="padding-top: 40px; padding-bottom: 40px; vertical-align: top;">
-          <h3>Biographical</h3>
-          <ul>
-            <li>
-              <p>Full Name: Rikab Singh Gambhir</p>
-            </li>
-            <li>
-              <p>Birthday: 24 January 1998</p>
-            </li> 
-            <li>
-              <p>Contact: rikab&#64;mit.edu</p>
-            </li> 
-          </ul>
-        </div> -->
-        <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
-          <h3>Interests</h3>
-          <ul>
-              <li>
-                <p>Particle Physics</p>
-                <ul>
-                  <li><p>Quantum Field Theory</p></li>
-                  <li><p>Jets and QCD</p></li>
-                  <li><p>Future Colliders</p></li>
-                  <li><p>Beyond the Standard Model</p></li>
-                </ul>
-              </li>
-              <li>
-                <p>Data Science</p>
-                <ul>
-                  <li><p>Machine Learning</p></li>
-                  <li><p>Optimal Transport</p></li>
-                </ul>
-              </li>
-          </ul>
-        </div>
-        <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
-          <h3>Education</h3>
-          <ul>
-            <li>
-              <div class="description">
-                <p class="course">PhD Candidate in Physics, 2020-</p>
-                <p class="institution">Massachusetts Institute of Technology<br>Advisor: <a href="http://jthaler.net/">Jesse Thaler</a><br></p>
-              </div>
-            </li>
-            <li>
-              <div class="description">
-                <p class="course">Bachelor of Science in Physics, Mathematics, and Applied Science 2016-2020</p>
-                <p class="institution">Rutgers University<br><i>summa cum laude</i>, Highest Honors<br>Advisor: <a href="http://cgisvr.physics.rutgers.edu/cgi-bin/physdb/genpip.pl?Schnetzer">Stephen Schnetzer</a></p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-     
-      <a class="btn btn-light see-more" href="./assets/pdf/rikab_CV.pdf">See
-        More [CV]</a>
-    </div>
-  </div>
-
-
-  <!-- ABOUT ME -->
-  <div class="container-fluid section section-dark" id="research">
-
-    <!-- RESEARCH -->
-    <div class="container">
-      <h1>RESEARCH & PUBLICATIONS</h1>
-
-      <div class="section-blurb">
-        <div class="row justify-content-center pseudo-nav">
-            <p class=""> I am primarily interested in the intersection between theoretical particle physics and modern machine learning methods. How can we use machine learning to understand particle physics, and how can we use particle physics to understand machine learning?</p>
-        </div>
-      </div>
-
-
-      <!-- Moment Pooling -->
-      <div class="card-deck", id="beam_dump_paper">
-
-        <div class="card floating-box mt-2" style = "width: 100%">
-          
-          <div class="card-body">
-
-            <div class="row justify-content-center pseudo-nav">
-            <h3 class="card-title">Moments of Clarity: Streamlining Latent Spaces in Machine Learning using Moment Pooling</h3>
-          </div>
-
-            <div class="row justify-content-center pseudo-nav">
-              <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
-                <img src="assets/img/moments.png" style='height: 100%; width: 100%; object-fit: contain'/>
-                
-              </div>
-              
-              <div class="col" style="padding-bottom: 40px; padding-top: 40px;">
-              <h5 class="card-subtitle text-muted">Rikab Gambhir, Athis Osathapan, and Jesse Thaler</h5> <br/>
-              <h5 class="card-subtitle text-muted">13 March 2024</h5> <br/>
-              <h5 class="card-subtitle text-muted"><a href = "https://arxiv.org/abs/2403.08854">[arXiv Preprint]</a> <!-- <a href = "">[INSPIRE-HEP (Soon)]</a>--></h5> <br/>
-              <p class="card-text"> We propose "Moment Pooling", a natural extension of Deep Sets networks which drastically decrease latent space dimensionality of these networks while maintaining or even improving performance. Moment Pooling generalizes the summation in Deep Sets to arbitrary multivariate moments, which enables the model to achieve a much higher effective latent dimensionality for a fixed latent dimension. We demonstrate Moment Pooling on the collider physics task of quark/gluon jet classification by extending Energy Flow Networks (EFNs) to Moment EFNs. The smaller latent dimension allows for the internal representation to be directly visualized and interpreted, which in turn enables the learned internal jet representation to be extracted in closed form.</p>
-              </div>
-            
-
-            </div>
-
-          </div>
-
-          <!-- <font color=black>You can install SHAPER for Python with the command <font color=red>pip install pyshaper</font></font>  -->
-
-          <!-- <div class="card-footer">
-            <a href="https://github.com/rikab/SHAPER" class="btn btn-light">Learn More [The SHAPER Package]</a>
-          </div> -->
-        </div>
-      </div> 
-
-
-
-      <!-- Seeing Double -->
-      <div class="card-deck", id="beam_dump_paper">
-
-        <div class="card floating-box mt-2" style = "width: 100%">
-          
-          <div class="card-body">
-
-            <div class="row justify-content-center pseudo-nav">
-            <h3 class="card-title">Seeing Double: Calibrating Two Jets at Once</h3>
-          </div>
-
-            <div class="row justify-content-center pseudo-nav">
-              <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
-                <img src="assets/img/Seeing_Double.png" style='height: 100%; width: 100%; object-fit: contain'/>
-                
-              </div>
-              
-              <div class="col" style="padding-bottom: 40px; padding-top: 40px;">
-              <h5 class="card-subtitle text-muted">Rikab Gambhir and Benjamin Nachman</h5> <br/>
-              <h5 class="card-subtitle text-muted">21 February 2024</h5> <br/>
-              <h5 class="card-subtitle text-muted"><a href = "https://arxiv.org/abs/2402.14067">[arXiv Preprint]</a> <!-- <a href = "">[INSPIRE-HEP (Soon)]</a>--></h5> <br/>
-              <p class="card-text"> We propose taking advantage of the correlations induced
-                by momentum conservation between jets in order to improve their jet energy calibration. This approach is demonstrated with simulated jets from the CMS Detector, yielding a 3-5% relative improvement in the jet energy resolution, corresponding to a quadrature improvement of approximately 35%.</p>
-              </div>
-            
-
-            </div>
-
-          </div>
-
-          <!-- <font color=black>You can install SHAPER for Python with the command <font color=red>pip install pyshaper</font></font>  -->
-
-          <!-- <div class="card-footer">
-            <a href="https://github.com/rikab/SHAPER" class="btn btn-light">Learn More [The SHAPER Package]</a>
-          </div> -->
-        </div>
-      </div> 
-
-
-      <!-- BEAM DUMP -->
-      <div class="card-deck", id="beam_dump_paper">
-
-        <div class="card floating-box mt-2" style = "width: 100%">
-          
-          <div class="card-body">
-
-            <div class="row justify-content-center pseudo-nav">
-            <h3 class="card-title">The New Physics Case for Beam-Dump Experiments with Accelerated Muon Beams</h3>
-          </div>
-
-            <div class="row justify-content-center pseudo-nav">
-              <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
-                <img src="assets/img/beam_dump.png" style='height: 100%; width: 100%; object-fit: contain'/>
-                
-              </div>
-              
-              <div class="col" style="padding-bottom: 40px; padding-top: 40px;">
-              <h5 class="card-subtitle text-muted">Cari Cesarotti and Rikab Gambhir</h5> <br/>
-              <h5 class="card-subtitle text-muted">24 October 2023</h5> <br/>
-              <h5 class="card-subtitle text-muted"><a href = "https://arxiv.org/abs/2310.16110">[arXiv Preprint]</a> <!-- <a href = "">[INSPIRE-HEP (Soon)]</a>--></h5> <br/>
-              <p class="card-text"> We demonstrate the utility of muon beam-dump experiments for new physics searches at energies from 10 GeV to 5 TeV. We find that, even at low energies like those accessible at staging or demonstrator facilities, it is possible to probe new regions of parameter space for a variety of generic BSM models.</p>
-              </div>
-            
-
-            </div>
-
-          </div>
-
-          <!-- <font color=black>You can install SHAPER for Python with the command <font color=red>pip install pyshaper</font></font>  -->
-
-          <!-- <div class="card-footer">
-            <a href="https://github.com/rikab/SHAPER" class="btn btn-light">Learn More [The SHAPER Package]</a>
-          </div> -->
-        </div>
-      </div> 
-
-
-
-
-
-
-
-      <!-- SHAPER -->
-      <div class="card-deck", id="shaper_paper">
-
-        <div class="card floating-box mt-2" style = "width: 100%">
-          
-          <div class="card-body">
-
-            <div class="row justify-content-center pseudo-nav">
-            <h3 class="card-title">SHAPER: Can You Hear the Shape of a Jet?</h3>
-          </div>
-
-            <div class="row justify-content-center pseudo-nav">
-              <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
-                <img src="assets/img/SHAPER.gif" style='height: 100%; width: 100%; object-fit: contain'/>
-                
-              </div>
-              
-              <div class="col" style="padding-bottom: 40px; padding-top: 40px;">
-              <h5 class="card-subtitle text-muted">Demba Ba, Akshunna S. Dogra, Rikab Gambhir, Abiy Tasissa, and Jesse Thaler</h5> <br/>
-              <h5 class="card-subtitle text-muted">26 February 2023</h5> <br/>
-              <h5 class="card-subtitle text-muted"><a href = "https://arxiv.org/abs/2302.12266">[arXiv Preprint]</a> <!-- <a href = "">[INSPIRE-HEP (Soon)]</a>--></h5> <br/>
-              <p class="card-text">We show that the Earth Mover's Distance is <i>the</i> natural structure for comparing collider events and constructing IRC-safe observables. We also present <b>SHAPER</b>, a framework for defining and computing shape-based observables, and show how these new observables may be useful for phenomenological studies.</p>
-              </div>
-            
-
-            </div>
-
-          </div>
-
-          <font color=black>You can install SHAPER for Python with the command <font color=red>pip install pyshaper</font></font> 
-
-          <div class="card-footer">
-            <a href="https://github.com/rikab/SHAPER" class="btn btn-light">Learn More [The SHAPER Package]</a>
-          </div>
-        </div>
-      </div> 
-
-
-
-
-      <!-- CALIBRATION PRIORS-->
-      <div class="card-deck", id = "calibration_priors_paper">
-
-        <div class="card floating-box mt-2" style = "width: 100%">
-          
-          <div class="card-body">
-
-            <div class="row justify-content-center pseudo-nav">
-            <h3 class="card-title">Bias and Priors in Machine Learning Calibrations for High Energy Physics</h3>
-          </div>
-
-            <div class="row justify-content-center pseudo-nav">
-              <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
-                <img src="assets/img/Calibration_Priors.png" style='height: 100%; width: 100%; object-fit: contain'/>
-                
-              </div>
-              
-              <div class="col" style="padding-bottom: 40px; padding-top: 40px;">
-              <h5 class="card-subtitle text-muted">Rikab Gambhir, Benjamin Nachman, and Jesse Thaler</h5> <br/>
-              <h5 class="card-subtitle text-muted"> 11 May 2022</h5> <br/>
-              <h5 class="card-subtitle text-muted"><a href = "https://arxiv.org/abs/2205.05084">[arXiv Preprint]</a> <a href = "https://inspirehep.net/literature/2079976">[INSPIRE-HEP]</a></h5> <br/>
-              <p class="card-text"> We demonstrate how some recent proposals for both simulation-based and data-based calibrations inherit properties of the sample used for training, which can result in biases for downstream analyses, and argue that our recently proposed Gaussian Ansatz approach can avoid some of the pitfalls of prior dependence. </p>
-              </div>
-            
-
-            </div>
-
-          </div>
-          <div class="card-footer">
-            <a href="https://github.com/hep-lbdl/calibrationpriors" class="btn btn-light">Learn More [Analysis Notebook Github]</a>
-          </div>
-        </div>
-      </div> 
-
-
-       <!-- Frequentist WAY -->
-       <div class="card-deck", id = "freq_way_paper">
-
-        <div class="card floating-box mt-2" style = "width: 100%">
-          
-          <div class="card-body">
-
-            <div class="row justify-content-center pseudo-nav">
-            <h3 class="card-title">Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics</h3>
-          </div>
-
-            <div class="row justify-content-center pseudo-nav">
-              <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
-                <img src="assets/img/Freq_Way.png" style='height: 100%; width: 100%; object-fit: contain'/>
-                
-              </div>
-              
-              <div class="col" style="padding-bottom: 40px; padding-top: 40px;">
-              <h5 class="card-subtitle text-muted">Rikab Gambhir, Benjamin Nachman, and Jesse Thaler</h5> <br/>
-              <h5 class="card-subtitle text-muted"> 9 May 2022</h5> <br/>
-              <h5 class="card-subtitle text-muted"><a href = "https://arxiv.org/abs/2205.03413">[arXiv Preprint]</a> <a href = "https://inspirehep.net/literature/2078714">[INSPIRE-HEP]</a></h5> <br/>
-              <p class="card-text"> We present a machine learning framework for performing maximum likelihood inference with Guassian uncertainty estimation, which also quantifies the mutual informaiton between the unobservable and measured quantities. </p>
-              </div>
-            
-
-            </div>
-
-          </div>
-
-          <font color=black>You can install the Gaussian Ansatz for Python with the command <font color=red>pip install gaussianansatz</font></font> 
-
-          <div class="card-footer">
-            <a href="https://github.com/rikab/GaussianAnsatz" class="btn btn-light">Learn More [The Gaussian Ansatz Package]</a>
-          </div>
-        </div>
-      </div>
-
-        <!-- VLQ -->
-      <div class="card-deck">
-
-        <div class="card floating-box mt-2" style = "width: 100%">
-          
-          <div class="card-body">
-
-            <div class="row justify-content-center pseudo-nav">
-            <h3 class="card-title">Search for bottom-type, vectorlike quark pair production in a fully hadronic final state in proton-proton collisions at s= 13 TeV</h3>
-          </div>
-
-            <div class="row justify-content-center pseudo-nav">
-              <div class="col" style="padding-top: 40px; padding-bottom: 40px;">
-                <img src="assets/img/exclusion.png" style='height: 100%; width: 100%; object-fit: contain'/>
-                
-              </div>
-              
-              <div class="col" style="padding-bottom: 40px; padding-top: 40px;">
-              <h5 class="card-subtitle text-muted">The CMS Collaboration</h5> <br/>
-              <h5 class="card-subtitle text-muted"> 7 December 2020</h5> <br/>
-              <h5 class="card-subtitle text-muted"> <a href = "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.112004">Physical Review D 102 (11), 112004</a></h5> <br/>
-              <p class="card-text"> We search for evidence of Vector-Like Quark (VLQ) production in the CMS Detector of the Large Hadron Collider's entire second run, and set (as of publication) the highest mass limits on VLQ hadronic decays </p>
-              </div>
-            
-
-            </div>
-
-          </div>
-          <div class="card-footer">
-            <a href="http://www.physics.rutgers.edu/hex/CMS.html" class="btn btn-light">Learn More [Rutgers CMS Group]</a>
-          </div>
-        </div>
-      </div>
-
-
-
-    </div>
-
-  </div>
-  <div class="container-fluid section section-light" id="talks">
-
-<!---->
-    <!-- Talks -->
-    <div class="container">
-      <h1>PRESENTATIONS</h1>
-
-      <div class="section-blurb">
-        <div class="row justify-content-center pseudo-nav">
-            <p class="">Below is a list of all public presentations I have given, organized by topic (in no particular order). Note that while several talks share the same category and even the same title, the talks themselves can be very different, especially if the format (invited seminar versus talk, for example) is different! Unfortunately, many slides originally had GIFs and animations, which will not render here as PDFs. </p>
-              
-            <p class="">Items marked with a red star (<font color=red>★</font>) are my recommended versions for viewing!</p>
-        </div>
-      </div>
-
-
-  <!-- Invited Talks -->
-  <div class="card-deck">
-
-    <div class="card floating-box mt-2">
-      
-      <div class="card-body">
-  
-        <h3 class="card-title">Invited Talks</h3>
-  
-        <div class="row justify-content-left pseudo-nav">
-          <li>
-            <p class="card-text"> <font color=red>★</font><a href = "https://stanford.zoom.us/rec/share/oJLuBcLOiD_OrJjNc7C01kq09xQYhaK3CYpn0VzyXFCsdt1xMp24ZwBSzMcIoXyh.BKP0GP6--Qu0LthP">"Moments Of Clarity in Machine Learning for Jet Physics"</a>, Invited Talk, 28 May 2024, for the SLAC AI Seminar.  <font class="card-subtitle text-muted">SLAC (Virtual). <a href = "./assets/talks/(SLAC 2024) ML And Colliders.pdf">Slides [PDF]</a></font>  </p> 
-          </li> 
-          <li>
-            <p class="card-text"> <font color=red>★</font> <a href = "https://indico.fnal.gov/event/58914/timetable/">"How Do I Take my Cup of CMS Open Data?"</a>, Invited Talk, 11 July 2023, at Fermilab CMS Open Data Workshop 2023.  <font class="card-subtitle text-muted">Fermilab, Illinois, United States. <a href = "./assets/talks/(Fermilab 2023) CMS Open Data-2.pdf">Slides [PDF]</a></font>  </p> 
-          </li>  
-          <li>
-            <p class="card-text"> <font color=red>★</font><a href = "https://indico.cern.ch/event/1223571/">"Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"</a>, Invited Talk, 22 Novemebr 2022, for ATLAS Jet/Etmiss.  <font class="card-subtitle text-muted">CERN (Virtual). <a href = "./assets/talks/(ATLAS) Frequentist Way.pdf">Slides [PDF]</a></font>  </p> 
-          </li>  
-          <li>
-            <p class="card-text"> <a href = "./assets/talks/(UCI) Frequentist Way-1-1.pdf">"Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"</a>, Invited Seminar, 13 September 2022, for the UCI Physics Astro/Particle-ML Seminar series.  <font class="card-subtitle text-muted">University of Califoria, Irvine (Virtual). <a href = "./assets/talks/(UCI) Frequentist Way-1-1.pdf">Slides [PDF]</a></font>  </p> 
-          </li>
-      </div>
-  
-  
-      </div>
-      
-    </div>
-  </div>
-
-    <!-- Muon Beam Dump -->
-  <div class="card-deck">
-
-    <div class="card floating-box mt-2">
-      
-      <div class="card-body">
-  
-        <h3 class="card-title">Muon Beam Dumps</h3>
-  
-        <div class="row justify-content-left pseudo-nav">
-          <li>
-            <p class="card-text"><a href = "https://indico.cern.ch/event/1358339/contributions/5899388/">"The New Physics Case for Beam-Dump Experiments with Accelerated Muon Beams"</a>, Talk, 16 May 2024, at DPF-Pheno 2024.  <font class="card-subtitle text-muted">University of Pittsburgh: Pittsburgh, Pennslyvania. <a href = "./assets/talks/(Pheno 2024) Muon Beam Dump.pdf">Slides [PDF]</a></font>  </p> 
-          </li>  
-      </div>
-  
-        <div class="row justify-content-left pseudo-nav">
-          <li>
-            <p class="card-text"> <font color=red>★</font><a href = "./assets/talks/(Grad Seminar 2024) Muon Beam Dump-1.pdf">"The New Physics Case for Muon Beam-Dump Experiments"</a>, Internal Seminar, 19 March 2024, for the MIT CTP Graduate Seminar.   <font class="card-subtitle text-muted">MIT: Massachusetts, United States. <a href = "./assets/talks/(Grad Seminar 2024) Muon Beam Dump-1.pdf">Slides [PDF]</a></font>  </p> 
-          </li>   
-         
-  
-      </div>
-  
-      </div>
-      
-    </div>
-  </div>
-
-
-     <!-- SPECTER -->
-  <div class="card-deck">
-
-    <div class="card floating-box mt-2">
-      
-      <div class="card-body">
-
-        <h3 class="card-title"> SPECTER: Efficient Evaluation of the Spectral EMD </h3>
-
-       
-
-        <div class="row justify-content-left pseudo-nav">
-          <li>
-            <p class="card-text"> <font color=red>★</font><a href = "https://iaifi.org/summer-workshop">"SPECTER: Efficient Evaluation of the Spectral EMD "</a>, Talk, 15 August 2024, at the IAIFI Workshop.  <font class="card-subtitle text-muted">MIT Media Lab. <a href = "./assets/talks/(IAIFI 2024) SPECTER.pdf">Slides [PDF]</a></font>  </p> 
-          </li>  
-      </div>
-
-
-
-        <div class="row justify-content-left pseudo-nav">
-          <li>
-            <p class="card-text"><a href = "https://agenda.infn.it/event/37093/contributions/234299/">"SPECTER: Efficient Evaluation of the Spectral EMD "</a>, Talk, 31 July 2024, at BOOST 2024.  <font class="card-subtitle text-muted">Palazzo Ducale: Genova, Italy. <a href = "./assets/talks/(BOOST 2024) SPECTER.pdf">Slides [PDF]</a></font>  </p> 
-          </li>  
-      </div>
-
-        <div class="row justify-content-left pseudo-nav">
-          <li>
-            <p class="card-text"> <a href = "https://indico.cern.ch/event/1253794/contributions/5588542/">"SPECTER: Efficient Evaluation of the Spectral EMD "</a>, Talk, 8 November 2023, at ML4Jets2023.  <font class="card-subtitle text-muted">DESY: Hamburg, Germany. <a href = "./assets/talks/(ML4Jets 2023) SPECTER-2.pdf">Slides [PDF]</a></font>  </p> 
-          </li>  
-      </div>
-
-      </div>
-    </div>
-  </div>
-
-
-      <!-- Hear the Shape of a Jet? -->
-  <div class="card-deck">
-
-    <div class="card floating-box mt-2">
-      
-      <div class="card-body">
-
-        <h3 class="card-title">Can You Hear the Shape of a Jet?</h3>
-
-       
-
-
-        <div class="row justify-content-left pseudo-nav">
-          <li>
-            <p class="card-text"><a href = "./assets/talks/(IAIFI 2023) Can you hear the shape of a jet_.pdf">Can You Hear the Shape of a Jet? An IAIFI Story"</a>, Internal Seminar, 16 May 2023, for the IAIFI Engineering Advisory Board.  <font class="card-subtitle text-muted">MIT: Massachusetts, United States. <a href = "./assets/talks/(IAIFI 2023) Can you hear the shape of a jet_.pdf">Slides [PDF]</a></font>  </p> 
-          </li> 
-          <li>
-            <p class="card-text"> <font color=red>★</font><a href = "./assets/talks/(Grad Seminar 2023) Can you hear the shape of a jet .pdf">Can You Hear the Shape of a Jet?"</a>, Internal Seminar, 17 March 2023, for the MIT CTP Graduate Seminar.  <font class="card-subtitle text-muted">MIT: Massachusetts, United States. <a href = "./assets/talks/(Grad Seminar 2023) Can you hear the shape of a jet .pdf">Slides [PDF]</a></font>  </p> 
-          </li> 
-          <li>
-            <p class="card-text"> <a href = "https://indico.cern.ch/event/1159913/contributions/5062759/">"Can You Hear the Shape of a Jet?"</a>, Talk, 4 Novemebr 2022, at ML4Jets2022.  <font class="card-subtitle text-muted">Rutgers University: New Jersey, United States. <a href = "./assets/talks/(ML4Jets 2022) Can you hear the shape of a jet .pdf">Slides [PDF]</a></font>  </p> 
-          </li>  
-          <li>
-            <p class="card-text"> <a href = "https://indico.cern.ch/event/1144064/contributions/4940343/">"Can You Hear the Shape of a Jet?"</a>, Talk, 15 August 2022, at BOOST 2022.  <font class="card-subtitle text-muted">University of Hamburg: Hamburg, Germany. <a href = "./assets/talks/(BOOST 2022) Can you hear the shape of a jet -2.pdf">Slides [PDF]</a></font>  </p> 
-          </li>  
-          <li>
-            <p class="card-text"> <a href = "./assets/talks/IAIFI Story.pdf">"Can You Hear the Shape of a Jet? An IAIFI Story"</a>, Local Presentation, 11 August 2022, for IAIFI/NSF Review.  <font class="card-subtitle text-muted">MIT: Massachusetts, United States. <a href = "./assets/talks/IAIFI Story.pdf">Slides [PDF]</a></font>  </p> 
-          </li>  
-          <li>
-            <p class="card-text"> <a href = "https://meetings.aps.org/Meeting/APR22/Session/K08.7">"Can You Hear the Shape of a Jet?"</a>, Talk, 10 April 2022, at APS April Meeting 2022.  <font class="card-subtitle text-muted">New York City: New York, United States. <a href = "./assets/talks/can_you_hear_the_shape_of_a_jet.pdf">Slides [PDF]</a></font>  </p> 
-          </li>  
-        
-
-      </div>
-
-      </div>
-      <div class="card-footer">
-        <a href="#shaper_paper" class="btn btn-light">Link to our corresponding publication, "SHAPER: Can you Hear the Shape of a Jet?"</a>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Moment Pooling -->
-  <div class="card-deck">
-
-  <div class="card floating-box mt-2">
-    
-    <div class="card-body">
-
-      <h3 class="card-title">Moment Pooling</h3>
-
-      
-
-      <div class="row justify-content-left pseudo-nav">
-        <li>
-          <p class="card-text"> <font color=red>★</font><a href = "https://indico.physics.lbl.gov/event/975/contributions/8280/">"Moment Pooling: Gaining Performance and Interpretability Through Physics Inspired Product Structures"</a>, Talk, 2 August 2023, at BOOST 2023.  <font class="card-subtitle text-muted">LBNL, Berkeley, California, United States. <a href = "./assets/talks/(BOOST 2023) Moment Pooling.pdf">Slides [PDF]</a></font>  </p> 
-        </li>  
-        <li>
-          <p class="card-text"> <a href = "https://meetings.aps.org/Meeting/APR23/Session/M11.6">"Moment Pooling: Gaining Performance and Interpretability Through Physics Inspired Product Structures"</a>, Talk, 10 April 2023, at APS April Meeting 2023.  <font class="card-subtitle text-muted">Minneapolis, Minesota, United States. <a href = "./assets/talks/(APS 2023) Moment Pooling-4.pdf">Slides [PDF]</a></font>  </p> 
-        </li>  
-       
-
-    </div>
-
-    </div>
-    
-  </div>
-</div>
-
-  <!-- Frequentist Way -->
-  <div class="card-deck">
-
-  <div class="card floating-box mt-2">
-    
-    <div class="card-body">
-
-      <h3 class="card-title">Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics</h3>
-
-      
-
-
-      <div class="row justify-content-left pseudo-nav">
-        <li>
-          <p class="card-text"> <a href = "https://neurips.cc/virtual/2022/event/56849">"Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"</a>, Poster, 3 December 2022, at Machine Learning and the Physical Sciences.  <font class="card-subtitle text-muted">NeurIPS (Virtual). <a href = "./assets/talks/frequentist_way_poster.png">Poster [PNG]</a></font>  </p> 
-        </li>  
-          
-        <li>
-          <p class="card-text"> <a href = "https://indico.cern.ch/event/980214/contributions/4413598/">"Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"</a>, Talk, 7 July 2021, at ML4Jets2021.  <font class="card-subtitle text-muted">University of Heidelberg (Virtual). <a href = "./assets/talks/Calibration and Correlation ML4Jets.pdf">Slides [PDF]</a></font>  </p> 
-        </li>  
-      
-
-    </div>
-
-    </div>
-    <div class="card-footer">
-      <a href="#freq_way_paper" class="btn btn-light">Link to our corresponding publication (1), "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"</a>
-    </div>
-    <div class="card-footer">
-      <a href="#calibration_priors_paper" class="btn btn-light">Link to our corresponding publication (2), "Bias and Priors in Machine Learning Calibrations for High Energy Physics"</a>
-    </div>
-  </div>
-</div>
-
-
-  
-
-
-     
-
-
-
-
-
-    </div>
-
-
-
-  </div>
-
  
+<!-- ---------- About ---------- -->
+<section id="about" class="container py-5">   <!-- remove section-light -->  <h2 class="mb-3">About Me</h2>
+  <p>
+    I’m a research scientist at the
+    <a href="https://physics.mit.edu/" target="_blank" rel="noopener">Massachusetts Institute of Technology</a>.
+    My background spans particle physics, optimal transport, and machine learning.
+  </p>
 
-
-  <!-- FOOTER -->
-  <footer class="container-fluid">
-    <div class="row justify-content-around">
-      <div class="col-sm-2" style="padding-bottom: 40px">
-        <h2 style="padding-bottom: 10px">Contact</h2>
-        <h6>Got Questions?</h6>
-        <h6>Send me an email at:</h6>
-        <h6 class="email">rikab&#64;mit.edu</h6>
-      </div>
-      <div class="col-sm-2" style="padding-bottom: 40px">
-        <h2 style="padding-bottom: 10px">Resources</h2>
-        <h6><a class="footer-link" href="https://twitter.com/FinitePhysicist">My better Twitter account</a></h6>
-        <a class="footer-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Inspiration Video!</a>
-      </div>
-
+  <div class="row g-5 pt-4">
+    <div class="col-md-4">
+      <h3>Research Interests</h3>
+      <ul class="list-unstyled ms-3">
+        <li>Jet substructure & QCD</li>
+        <li>Future colliders</li>
+        <li>Beyond the Standard Model</li>
+        <li>Optimal transport & ML</li>
+      </ul>
     </div>
-    <p>&copy; 2022-2023 Rikab Gambhir. All rights reserved.</p>
-  </footer>
-  <script type="text/javascript">
+    <div class="col-md-8">
+      <h3>Education</h3>
+      <ul class="list-unstyled ms-3">
+        <li><strong>Ph.D., Theoretical Physics</strong>, MIT (2020‑&nbsp;present)<br>
+            Advisor: <a href="http://jthaler.net/">Jesse Thaler</a></li>
+        <li class="mt-2"><strong>B.S., Physics / Math / Applied Sci.</strong>,
+            Rutgers University (2016‑2020) – <i>summa cum laude</i><br>
+            Advisor: <a href="http://cgisvr.physics.rutgers.edu/cgi-bin/physdb/genpip.pl?Schnetzer">Stephen Schnetzer</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
+<!-- ---------- Research ---------- -->
+<section id="research" class="bg-dark text-white py-5">
+  <div class="container">
+    <h2 class="mb-4">Research & Publications</h2>
+    <div id="researchCards" class="vstack gap-4"></div>
+  </div>
+</section>
 
-  </script>
+<!-- ---------- Talks ---------- -->
+<section id="talks" class="py-5">
+  <div class="container">
+    <h2 class="mb-4">Presentations</h2>
+    <p>
+      Items marked with <span class="text-danger">★</span> are my recommended versions.
+    </p>
+    <div id="talkCards" class="vstack gap-4"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ---------- Footer ---------- -->
+<footer id="footer" class="bg-dark text-light text-center py-4 mt-auto">
+  <p class="mb-1">Questions? <code>rikab@mit.edu</code></p>
+  <p class="mb-0">&copy; 2022‑<span id="year"></span> Rikab Gambhir.</p>
+</footer>
+
+<!-- ---------- Bootstrap JS ---------- -->
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-K57mjh4mQ1yQMoyuJcaiWTa5lVzP4cPBmEczmKSVYLS6URp7Ldv2XYxAPrxhXXJs"
+        crossorigin="anonymous"></script>
+
+<!-- ---------- Card generator ---------- -->
+<script type="module">
+  import { researchData, talkData } from './data.js';
+
+  /* ----- Research cards ----- */
+  const rRoot = document.getElementById('researchCards');
+  researchData.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'card floating-box';
+    card.innerHTML = `
+      <div class="card-body bg-dark text-white">
+        <h3 class="card-title">${p.title}</h3>
+        <div class="row g-4">
+          <div class="col-md-5">
+            <img src="${p.img}" class="img-fluid rounded shadow" alt=""
+                 loading="lazy">
+          </div>
+          <div class="col-md-7">
+            <p class="card-subtitle text-muted mb-2">
+              ${p.authors} — ${p.date}
+            </p>
+            <p>${p.blurb}</p>
+            ${p.links.map(
+              l => `<a href="${l.href}" class="btn btn-sm btn-light me-2"
+                       target="_blank" rel="noopener">${l.text}</a>`
+            ).join('')}
+          </div>
+        </div>
+      </div>`;
+    rRoot.appendChild(card);
+  });
+
+  /* ----- Talk cards ----- */
+  const tRoot = document.getElementById('talkCards');
+  talkData.forEach(cat => {
+    const wrap = document.createElement('div');
+    wrap.className = 'card floating-box';
+    wrap.innerHTML = `
+      <div class="card-body">
+        <h3 class="card-title">${cat.category}</h3>
+        <ul class="list-unstyled mb-0">
+          ${cat.items.map(t => `
+            <li class="mb-2">
+              ${t.featured ? '<span class="text-danger">★</span> ' : ''}
+              <a href="${t.video ?? t.slides}" target="_blank" rel="noopener">
+                ${t.title}
+              </a>,
+              ${t.where}, ${t.date}.
+              ${t.slides
+                ? ` <a href="${t.slides}" target="_blank" rel="noopener">[slides]</a>`
+                : ''}
+            </li>`).join('')}
+        </ul>
+      </div>`;
+    tRoot.appendChild(wrap);
+  });
+
+  /* dynamic footer year */
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
-
 </html>
