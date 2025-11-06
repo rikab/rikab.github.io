@@ -3,6 +3,43 @@
 
 /* ----------  PUBLICATIONS  ---------- */
 export const researchData = [
+
+  {
+    title: "The Pareto Frontier of Resilient Jet Tagging",
+    date: "2025-09-23",
+    authors: "Rikab Gambhir, Matt LeBlanc, Yuanchen Zhou",
+    img: "assets/img/pareto.png",
+    blurb: "We explore the trade-off between performance and resilience in jet tagging. We show that more ``complex'' models, while achieving a higher AUC on jet tagging, are more simulation dependent and this can lead to real downstream uncertainties that diminish their percieved performance advantage over simpler models.",
+    links: [
+      { text: "arXiv 2509.19431", href: "https://arxiv.org/abs/2509.19431" }
+    ]
+  },  /* :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1} */
+
+
+  {
+    title: "Isolating Unisolated Upsilons with Anomaly Detection in CMS Open Data",
+    date: "2025-02-19",
+    authors: "Rikab Gambhir, Radha Mastandrea, Ben Nachman, Jesse Thaler",
+    img: "assets/img/upsilons.png",
+    blurb: "We develop the first study of anti-isolated Upsilon decays in proton-proton collisions, using anomaly detection to separate signal from background in CMS Open Data. We, for the first time, present a successful application of anomaly detection to find a nontrivial signal in real collider data. We also develop a new method for improved sensitivity using full likelihood reweighting.",
+    links: [
+      { text: "arXiv 2502.14036", href: "https://arxiv.org/abs/2502.14036" }
+    ]
+  },  /* :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1} */
+
+
+  {
+    title: "SPECTER: efficient evaluation of the spectral EMD",
+    date: "2024-10-07",
+    authors: "Rikab Gambhir, Andrew Larkoski, Jesse Thaler",
+    img: "assets/img/specter.png",
+    blurb: "We develop “SPECTER”, an extremely fast code framework for evaluating the spectral EMD. We also use the Spectral EMD to define a new set of geometric observables, analogous to SHAPER [see below!]",
+    links: [
+      { text: "arXiv 2410.05379", href: "https://arxiv.org/abs/2410.05379" }
+    ]
+  },  /* :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1} */
+
+
   {
     title: "Moments of Clarity: Streamlining Latent Spaces in Machine Learning using Moment Pooling",
     date: "2024-03-13",
@@ -10,7 +47,8 @@ export const researchData = [
     img: "assets/img/moments.png",
     blurb: "We propose “Moment Pooling”, a multivariate‑moment generalisation of Deep‑Sets that slashes latent dimensions while preserving—and sometimes improving—performance. Demonstrated on quark–gluon jet classification.",
     links: [
-      { text: "arXiv 2403.08854", href: "https://arxiv.org/abs/2403.08854" }
+      { text: "arXiv 2403.08854", href: "https://arxiv.org/abs/2403.08854" },
+      { text: "GitHub", href: "https://github.com/rikab/SPECTER" }
     ]
   },  /* :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1} */
 
@@ -91,6 +129,77 @@ export const talkData = [
   {  /* ------------- INVITED ------------- */
     category: "Invited Talks",
     items: [
+
+      {
+        featured: true,
+        title: "The Shape of Jets",
+        where: "Alabama HEP/Astro Seminar, University of Cincinnati (OH)",
+        date: "2025-10-10",
+        slides: "./assets/talks/The Shape of Jets [Alabama 2025].pdf",
+        video: null
+      },  
+
+      {
+        featured: true,
+        title: "The Shape of Jets",
+        where: "Cincinnati HEP/Astro Seminar, University of Cincinnati (OH)",
+        date: "2025-09-22",
+        slides: "./assets/talks/The Shape of Jets [Cincy 2025].pdf",
+        video: null
+      },  
+
+      {
+        featured: true,
+        title: "Moments of Clarity in Machine Learning for Jet Physics",
+        where: "Harvard, Cambridge (MA)",
+        date: "2025-06-11",
+        slides: "./assets/talks/Talk [Harvard 2025].pdf",
+        video: null
+      },  /* :contentReference[oaicite:14]{index=14}:contentReference[oaicite:15]{index=15} */
+      
+      {
+        featured: true,
+        title: "Moments of Clarity in Machine Learning for Jet Physics",
+        where: "Yale AI/Physics Seminar, New Haven (CT)",
+        date: "2025-03-12",
+        slides: "./assets/talks/Moments of Clarity [Yale 2025].pdf",
+        video: null
+      },  /* :contentReference[oaicite:14]{index=14}:contentReference[oaicite:15]{index=15} */
+      {
+        featured: true,
+        title: "The Shape of Jets",
+        where: "LBNL AI Seminar, (Virtual)",
+        date: "2025-03-04",
+        slides: "./assets/talks/The Shape of Jets [LBNL 2025].pdf",
+        video: null
+      },  /* :contentReference[oaicite:14]{index=14}:contentReference[oaicite:15]{index=15} */
+      
+        {
+        featured: true,
+        title: "Moments of Clarity in Machine Learning for Jet Physics",
+        where: "Rutgers Journal Club, New Brunswick (NJ)",
+        date: "2024-10-18",
+        slides: "./assets/talks/Moments of Clarity [Rutgers 2024].pdf",
+        video: null
+      },  /* :contentReference[oaicite:14]{index=14}:contentReference[oaicite:15]{index=15} */
+      {
+        featured: true,
+        title: "Moments of Clarity in Machine Learning for Jet Physics",
+        where: "Brown Physics Seminar, Providence (RI)",
+        date: "2024-12-18",
+        slides: "./assets/talks/Moments of Clarity [Brown 2024].pdf",
+        video: null
+      },  /* :contentReference[oaicite:14]{index=14}:contentReference[oaicite:15]{index=15} */
+
+      {
+        featured: true,
+        title: "Moments of Clarity in Machine Learning for Jet Physics",
+        where: "UIUC Physics Seminar, Urbana‑Champaign (IL)",
+        date: "2024-10-11",
+        slides: "./assets/talks/Moments of Clarity [UIUC 2024].pdf",
+        video: null
+      },  /* :contentReference[oaicite:14]{index=14}:contentReference[oaicite:15]{index=15} */
+
       {
         featured: true,
         title: "Moments of Clarity in Machine Learning for Jet Physics",
