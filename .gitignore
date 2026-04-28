@@ -1,0 +1,25 @@
+# Claude Code artifacts
+CLAUDE.md
+.claude/
+.claude.local/
+*.claude.local.json
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+main.pdf

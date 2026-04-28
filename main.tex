@@ -1,0 +1,210 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\usepackage{comment}
+\moderncvstyle{classic}    
+\moderncvcolor{red}  
+\usepackage[scale=0.75]{geometry}
+% moderncv loads hyperref itself at \begin{document}, so configure it after the fact.
+\fancyfoot[R]{\thepage}
+
+\AtBeginDocument{%
+  \hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=purple,
+  }%
+}
+
+
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+
+
+\firstname{Rikab}
+\familyname{Gambhir, Ph.D.}
+\title{Curriculum Vitae}                           % optional, remove / comment the line if not wanted
+
+\address{Updated April 2026 \\ 
+\url{rikabgambhir.com}\\}    %  street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \mobile{+1 7323062441}                          % optional
+\email{gambhirb@ucmail.uc.edu} 
+
+
+
+
+
+\begin{document}
+
+\makecvtitle
+
+\section{Focus}
+
+
+I am a theoretical particle physicist interested in \textbf{QCD}, \textbf{jet physics}, and \textbf{collider physics} (both current and future!), and how careful and motivated applications of modern \textbf{machine learning} methods can help us develop analytical tools and new observables for exploring these fields.
+
+
+\section{Academic Positions}
+
+
+\cventry{September 2025-}{Postdoc}{MLHAD Collaboration}{University of Cincinnati}{Cincinnati, Ohio, USA}{}
+
+\cventry{May 2025-August 2025}{Research Specialist}{Center for Theoretical Physics}{Massachusetts Institute of Technology}{Cambridge, Massachusetts, USA}{}
+
+\section{Education}
+
+\cventry{2020-2025}{Doctor of Philosophy}{Center for Theoretical Physics}{Massachusetts Institute of Technology}{Cambridge, Massachusetts, USA}{}
+\cvitem{Advisor}{Jesse Thaler}
+\cvitem{Thesis}{Metrics, Muons, Models, Moments, Measurements, Machine Learning and More: A Manifesto on Collider Physics}
+
+
+\cventry{2016-2020}{Bachelor of Science}{Majors in Physics, Applied Science Engineering, and Mathematics}{Rutgers University Honors College - New Brunswick}{New Jersey, USA}{\textit{GPA : 4.00/4.00, Graduated with Highest Honors, Ranked 1/992 in School of Engineering}}
+\cvitem{Advisor}{Stephen Schnetzer}
+\cvitem{Thesis}{A Search for Fully Hadronic Final State Vector-Like Quark Pair Production in 13TeV pp Collisions using CMS Data}
+% \cventry{}{Bachelor of Science in Applied Science}{Rutgers University - New Brunswick}{New Jersey, USA}{\textit{GPA : 4.00/4.00}}{}
+
+% \cventry{}{Bachelor of Arts in Mathematics}{Rutgers University - New Brunswick}{New Jersey, USA}{\textit{GPA : 4.00/4.00}}{}
+
+
+
+\section{Honors \& Awards}
+\cventry{2022}{MIT Open Data Prize}{Honorable Mention}{}{}{Prize awarded by MIT for use of open data tools}
+\cventry{2020}{Weidner Award}{}{}{}{Prize awarded by the Rutgers Physics Department for academic performance}
+\cventry{2019}{Barry Goldwater Scholar}{}{}{}{Selected by the Barry Goldwater Scholarship and Excellence in Education Foundation and the Department of National Defense Education Program for research}
+\cventry{2019}{Mary Wheeler Wigner Memorial Scholarship}{}{}{}{Scholarship awarded by the Rutgers Physics Department for academic performance}
+\cventry{2018}{Herman Y. Carr Scholarship}{}{}{}{Scholarship awarded by the Rutgers Physics Department for academic performance}
+\cventry{2018}{Kuhl Memorial Engineering Scholarship}{}{}{}{Scholarship awarded by the Rutgers Engineering Department for academic performance and leadership}
+\cventry{2017}{Aresty Summer Science Fellowship}{}{}{}{Fellowship awarded to rising sophomores for conducting research over the summer}
+
+
+
+\section{Mentorship}
+
+\cventry{Summer 2023}{Xinyue Wu}{(MSRP) Undergraduate MIT Independent Research, Supervised by Jesse Thaler}{Using SHAPER to study jet shapes in CMS Open Data}{}{}
+
+\cventry{Summer 2022}{Sergio Diaz}{(MSRP) Undergraduate MIT Independent Research, Supervised by Jesse Thaler}{Using the GaussianAnsatz to study $W$ and $Z$ boson masses}{}{}
+
+\cventry{Summer 2021, 2022}{Athis Osathapan}{Undergraduate MIT Independent Research, Supervised by Jesse Thaler}{Building the Moment-EFN product structure}{}{}
+
+\cventry{Summer 2021}{Pedro Rivera-Cardona}{(MSRP) Undergraduate MIT Summer Research Program, Supervised by Jesse Thaler}{Adding symmetries to Energy Flow Networks}{}{}
+
+% \cvlistitem{Ranked 1/992 in the Rutgers School of Engineering}
+
+% \cvitem{2020}{Graduated Rutgers University with Highest Honors}
+% \cvitem{2016-2020}{Ranked 1/992 in the Rutgers School of Engineering each semester}
+% \cvitem{2016-2020}{Achieved the Rutgers School of Engineering Deans List each semester}
+
+
+% ########## RESEARCH ###########
+
+% Publications and Preprints are auto-generated from content.yaml.
+% Edit content.yaml and run: python3 scripts/build.py
+\section{Refereed Publications}
+\input{cv/publications.tex}
+
+% \section{Works In Progress}
+
+% This section is meant solely to give a snapshot of my current interests. These are in varying stages of ``almost done'' to ``could be a full year away''. Titles, descriptions, and even author lists subject to change!\\
+
+
+% \cventry{}{Anomaly Detection for CMS Open Data}{Rikab Gambhir, Radha Mastandrea, Benjamin Nachman, and Jesse Thaler}{}{}{We use ML-based anomaly detection techniques to search for, or rule out, subtle hints of new physics in the dimuon channel. }
+
+% \cventry{}{Taming perturbation theory in QCD with Normalizing Flows}{Rikab Gambhir and Radha Mastandrea}{}{}{We use Normalizing Flows as a type of regulator on fixed-order perturbation theory to tame large logs and divergences, and explore the physics implications of this regularization.}
+
+% \cventry{}{EECs for Future Colliders}{Steven Ferrante and Rikab Gambhir}{}{}{We study the phenomenological aspects of Energy-Energy Correlators at future high-energy colliders, where electroweak effects may become important.}
+
+
+% \cventry{}{Moment Pooling: Gaining Performance and Interpretability Through Physics Inspired Product Structures}{Rikab Gambhir, Athis Osathapan, and Jesse Thaler}{}{}{We develop new architectures, based on the Energy Flow Network [1810.05165], with built-in product structures to improve both the performance and interpretability of learned observables though a simple factorization.}
+
+% Talks (Invited / Lectures / Contributed) are auto-generated from content.yaml.
+% Edit content.yaml and run: python3 scripts/build.py
+\section{Invited Talks}
+\input{cv/talks.tex}
+
+
+
+
+
+% ########## Community and Outreach ##########
+\section{Community \& Outreach}
+
+\cventry{February 2024-May 2025}{IAIFI Journal Club Organizer}{}{}{}{One of the organizers for the official IAIFI Journal club. Responsible for recruiting and inviting speakers, setting up talks, introducing speakers and managing Q\&A.}
+
+\cventry{October 2023}{Cambridge Science Festival}{}{}{}{Developed the primary demonstration, OpenAI-mer (\url{github.com/rikab/chatXYZ} -- a chatbot impersonating a theoretical physicist), for the festival. Represented IAIFI and ran the demonstration for festival attendees, including high school students and younger.}
+
+\cventry{Summer 2019, 2020}{NJAAPT High School Teacher Qiskit Workshop}{}{}{}{Worked alongside Prof. Stephen Schnetzer to run workshops and tutorials for training high school teachers and advanced students to use quantum computing and Qiskit in the classroom.}
+
+\cventry{2016 - 2020}{Director of the Rutgers Machine Learning \& AI Club}{}{}{}{Gave weekly lectures on deep learning topics, ranging from basic statistics to advanced network architectures, and led students in building and designing their own neural network projects. Part of the Rutgers IEEE umbrella of clubs.}
+
+
+
+\section{Software Libraries \& Code}
+
+In general, (almost) all of my papers have associated analysis and plotting code which I have made public, which can be used to reproduce the results and plots of that paper.
+%
+These are listed alongside their paper in the ``Publications'' section.
+%
+Below are the more general-use software packages I have developed or contributed to and don't necessarily correspond to a single paper -- (almost) all my papers have associated public analysis code alongisde their listing in the ``Publications'' section.
+%
+\\
+
+\cventry{2024-}{ParticleLoader}{Hosted at \url{github.com/rikab/ParticleLoader}}{[Still in Development, Partial Use Possible]}{Python Package [Primary Developer]}{Library for the easy in-line downloading of standardized particle physics datasets.}
+
+\cventry{2024-}{SPECTER}{Hosted at \url{github.com/rikab/SPECTER}}{Install with $\texttt{pip}$ $\texttt{install}$ $\texttt{specterpy}$}{Python Package [Primary Developer]}{SPECTER is a framework for defining, building, and efficiently evaluating \emph{spectral} shape observables, as described in \href{https://arxiv.org/abs/2410.05379}{[2410.05379]}. Examples can be found within the github.}
+
+\cventry{2024-}{Energyflow}{Hosted at \url{energyflow.net}}{Install with $\texttt{pip install energyflow}$}{Python Package [Maintainer]}{Library of legacy tools developed before 2020 for jet physics -- Current package maintainer.}
+
+\cventry{2023-}{SHAPER}{Hosted at \url{github.com/rikab/SHAPER}}{Install with $\texttt{pip install pyshaper}$}{Python Package [Primary Developer]}{SHAPER, or \textbf{S}hape \textbf{H}unting \textbf{A}lgorithm using \textbf{P}arameterized \textbf{E}nergy \textbf{R}econstruction, is a framework for defining, building, and evaluating generalized shape observables for collider physics, as defined in \href{https://arxiv.org/abs/2202.03772}{[2302.12266]}. Tutorial and examples can be found within the github.}
+
+\cventry{2022-}{GaussianAnsatz}{Hosted at \url{github.com/rikab/GaussianAnsatz}}{Install with $\texttt{pip install GaussianAnsatz}$}{Python Package [Primary Developer]}{The Gaussian Ansatz is a machine learning framework for performing frequentist inference, complete with local uncertainty estimation, as described in \href{https://arxiv.org/abs/2205.03413}{[2205.03413]}. Examples can be found within the github.}
+
+
+\section{Teaching}
+
+
+Responsibilities include holding office hours, proctoring and grading exams and quizzes, managing teams of undergraduate teaching assistants, and assisting during class time. For my TEAL-style teaching, additional responsibilities include leading problem solving sessions during class time.
+\\
+
+\cventry{Fall 2023}{MIT 8.02}{Physics II: E\&M}{Teaching Assistant}{TEAL-style}{Under Prof. Michelle Tomasik}
+
+
+
+\cventry{Spring 2023}{MIT 8.011}{Physics I: Mechanics}{Teaching Assistant}{TEAL-Ssyle}{Under Prof. Richard Milner}
+
+\cventry{Fall 2021}{MIT 8.03}{Physics III: Vibrations and Waves}{Teaching Assistant}{}{Under Prof. Long Ju}
+
+
+
+\section{Refereeing and Reviewing}
+
+\cventry{September 2024}{Machine Learning and the Physical Sciences Workshop at NeurIPS 2024}{}{}{}{}
+
+\cventry{October 2023}{Machine Learning and the Physical Sciences Workshop at NeurIPS 2023}{}{}{}{}
+
+\section{Media Coverage}
+
+\cventry{19 July 2023}{Can you hear the shape of physics?}{Imperial College London News}{\href{https://www.imperial.ac.uk/news/246302/can-hear-shape-physics/}{Link}}{}{}
+
+\cventry{14 May 2019}{From Ocean Currents to Theoretical Particles: Three Rutgers Students Receive Goldwater Scholarships}{Rutgers Today}{\href{https://www.rutgers.edu/news/ocean-currents-theoretical-particles-three-rutgers-students-receive-goldwater-scholarships}{Link}}{}{}
+
+\section{Other \& Just for Fun}
+
+
+\cventry{April 2025}{A Search for ``New Physics'', ``Beyond the Standard Model''}{In this \href{https://arxiv.org/pdf/2503.22790}{distinguished work}, I search for `new physics'' and find it.}{}{}{}
+\cventry{April 2023}{ChatJesseT}{Helped to develop ChatJesseT (https://chatjesset.com/), trapping the soul of my PhD advisor in a robotic body}{}{}{}
+\cventry{2021-2023}{Twitter}{Was once the @FinitePhysicist, amassed $\sim$60k followers. Retired. Cited by at least 2 PhD theses that I know of}{}{}{}
+\cventry{2016-2018}{Avagadr.io}{Wolfram Alpha-style app for automatically solving college-level chemistry problems. Was available on the Google Play Store until 2018, 4.415 star lifetime rating}{}{}{}
+
+% \section{Technical skills}
+% \cvitem{\textbf{Programming}}{ C++, Python, Java, Android, Bash, \LaTeX, Qiskit}
+% \cvitem{\textbf{Data Analysis}}{Mathematica, Matlab, ROOT, Keras, Pytorch, Tensorflow, Numpy, Scipy, CMSSW}
+% \cvitem{\textbf{Machine Learning}}{Implementation \& Design of CNN's, RNN's, GAN's, Bayesian Networks, Autoencoders, Neural ODE's, Deep Set Networks}
+
+
+
+\end{document}
