@@ -18,11 +18,28 @@ publications:
   # --- preprints ---
 
 
+  # --- April Fools (joke paper; not counted, not in CV) ---
+  - title: "A Search for ``New Physics'', ``Beyond the Standard Model''"
+    date: 2025-04-01
+    authors: Rikab Gambhir
+    status: preprint
+    slug: april-fools-2025
+    joke: true
+    cv_hidden: true
+    arxiv: "2503.22790"
+    img: assets/img/jester.png
+    blurb: >-
+      In this distinguished work, I search for ``new physics'' and ``beyond the
+      Standard Model'' &mdash; and find them.
+
   - title: "HDSense: An efficient method for ranking observable sensitivity"
     date: 2026-02-02
     authors: Benoît Assi, Christian Bierlich, Rikab Gambhir, Phil Ilten, Tony Menzo, Stephen Mrenna, Manuel Szewc, Michael K. Wilkinson, Jure Zupan
     status: preprint
     arxiv: "2602.01509"
+    slug: hdsense
+    tags: [hadronization, ml, statistics]
+    featured: true
     img: assets/img/hdsense.png
     blurb: >-
        We introduce the High-Dimensional Sensitivity (HDSense) score, a computationally efficient metric for ranking observable sets using only one-dimensional histograms. We apply HDSense to rank a set observables in terms of their constraining power with respect to five parameters of the Lund string model of hadronization implemented in Pythia using simulated leptonic collider events at the Z pole.
@@ -33,6 +50,9 @@ publications:
     authors: Rikab Gambhir, Radha Mastandrea
     status: preprint
     arxiv: "2512.04160"
+    slug: rdf
+    tags: [qcd, statistics, perturbation-theory]
+    featured: true
     img: assets/img/rdf.png
     blurb: >-
       We propose a framework, the Resummed Distribution Function (RDF), that, given a fixed-order perturbative calculation for an observable to some finite order in αsαs​, will ``resum'' the expression in a way that is guaranteed to match the original expression order-by-order and be positive, normalized, and finite. The RDF also enables a more direct notion of perturbative uncertainties, as we can directly vary higher-order parameters and treat them as nuisance parameters. We demonstrate the power of the RDF ansatz by matching to thrust to O(αs3) and extracting αs​ with perturbative uncertainties by fitting the RDF to ALEPH data.
@@ -42,6 +62,9 @@ publications:
     authors: Rikab Gambhir, Matt LeBlanc, Yuanchen Zhou
     status: preprint
     arxiv: "2509.19431"
+    slug: pareto
+    tags: [ml, jets, robustness]
+    featured: true
     img: assets/img/pareto.png
     blurb: >-
       We explore the trade-off between performance and resilience in jet
@@ -56,6 +79,9 @@ publications:
     authors: Rikab Gambhir, Radha Mastandrea, Ben Nachman, Jesse Thaler
     status: refereed
     arxiv: "2502.14036"
+    slug: upsilons
+    tags: [anomaly-detection, ml, open-data, cms]
+    featured: true
     journal:
       name: Phys. Rev. Lett. 135, 021902
       href: https://journals.aps.org/prl/abstract/10.1103/vvv3-5kkl
@@ -76,6 +102,8 @@ publications:
     authors: Rikab Gambhir, Andrew Larkoski, Jesse Thaler
     status: refereed
     arxiv: "2410.05379"
+    slug: specter
+    tags: [optimal-transport, jets, ml]
     journal:
       name: J. High Energ. Phys. 2024, 219
       href: https://link.springer.com/article/10.1007/JHEP12(2024)219
@@ -93,6 +121,8 @@ publications:
     authors: Rikab Gambhir, Athis Osathapan, Jesse Thaler
     status: refereed
     arxiv: "2403.08854"
+    slug: moments
+    tags: [ml, jets, interpretability]
     journal:
       name: Phys. Rev. D 110, 074020
       href: https://doi.org/10.1103/PhysRevD.110.074020
@@ -110,6 +140,8 @@ publications:
     authors: Rikab Gambhir, Benjamin Nachman
     status: refereed
     arxiv: "2402.14067"
+    slug: seeing-double
+    tags: [calibration, ml, cms]
     journal:
       name: Phys. Rev. D 110, 076015
       href: https://doi.org/10.1103/PhysRevD.110.076015
@@ -127,6 +159,8 @@ publications:
     authors: Cari Cesarotti, Rikab Gambhir
     status: refereed
     arxiv: "2310.16110"
+    slug: muon-beam-dump
+    tags: [bsm, muons, future-colliders]
     journal:
       name: J. High Energ. Phys. 2024, 283
       href: https://doi.org/10.1007/JHEP05(2024)283
@@ -143,6 +177,9 @@ publications:
     authors: Demba Ba, Akshunna S. Dogra, Rikab Gambhir, Abiy Tasissa, Jesse Thaler
     status: refereed
     arxiv: "2302.12266"
+    slug: shaper
+    tags: [optimal-transport, jets, ml]
+    featured: true
     journal:
       name: J. High Energ. Phys. 2023, 195
       href: https://link.springer.com/article/10.1007/JHEP06(2023)195
@@ -160,6 +197,8 @@ publications:
     authors: Rikab Gambhir, Benjamin Nachman, Jesse Thaler
     status: refereed
     arxiv: "2205.05084"
+    slug: calibration-priors
+    tags: [ml, calibration, statistics]
     journal:
       name: Phys. Rev. D 106, 036011
       href: https://journals.aps.org/prd/abstract/10.1103/PhysRevD.106.036011
@@ -177,15 +216,14 @@ publications:
     authors: Rikab Gambhir, Benjamin Nachman, Jesse Thaler
     status: refereed
     arxiv: "2205.03413"
+    slug: frequentist-way
+    tags: [ml, calibration, statistics]
     journal:
       name: Phys. Rev. Lett. 129, 082001
       href: https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.129.082001
     code:
       name: GitHub
       href: https://github.com/rikab/GaussianAnsatz/tree/main/JEC
-    links:
-      - text: INSPIRE-HEP
-        href: https://inspirehep.net/literature/2078714
     img: assets/img/Freq_Way.png
     blurb: >-
       Presents a likelihood-based inference framework with Gaussian
@@ -197,6 +235,8 @@ publications:
     authors: CMS Collaboration
     status: refereed
     arxiv: "2008.09835"
+    slug: vlq
+    tags: [bsm, cms]
     journal:
       name: Phys. Rev. D 102, 112004
       href: https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.112004
@@ -403,7 +443,6 @@ talks:
     event: ML4Jets 2025
     event_dates: 18 - 22 August 2025
     location: Caltech, Pasadena, California
-    site_show: false
 
   - title: "Re-Normalizing Flows: Taming Logs and Perturbation Theory in QCD"
     date: 2025-07-30
@@ -413,7 +452,6 @@ talks:
     event: BOOST 2025
     event_dates: 28 July - 1 August 2025
     location: Brown, Providence, Rhode Island
-    site_show: false
 
   - title: Likelihood-based Reweighting for Improved sensitivity in Anomaly Detection
     date: 2025-06-18
@@ -422,7 +460,6 @@ talks:
     event: AD4HEP
     event_dates: June 2025
     location: Columbia University, Nevis Laboratories, New York
-    site_show: false
 
   - title: Isolating Unisolated Upsilons with Anomaly Detection in CMS Open Data
     date: 2025-05-20
@@ -431,7 +468,6 @@ talks:
     event: Pheno 2025
     event_dates: May 2025
     location: University of Pittsburg, Pennsylvania
-    site_show: false
 
   - title: "Re-Normalizing Flows: Taming Logs and Perturbation Theory in QCD"
     date: 2024-11-05
@@ -441,7 +477,6 @@ talks:
     event: ML4Jets 2024
     event_dates: 4-8 November 2024
     location: LPNHE, Paris, France
-    site_show: false
 
   - title: Moments of Clarity in Jet Physics with Machine Learning
     date: 2024-09-24
@@ -450,7 +485,6 @@ talks:
     event: Journal Club Presentation
     event_dates: 24 September 2024
     location: IAIFI Journal Club, MIT
-    site_show: false
 
   - title: "SPECTER: Efficient Evaluation of the Spectral EMD"
     date: 2024-08-15
@@ -571,7 +605,6 @@ talks:
     event_dates: 19 April 2020
     location: Washington D.C
     virtual: true
-    site_show: false
 
   - title: A Search for Fully Hadronic Final State Vector-Like Quark Pair Production in 13 TeV pp Collisions using CMS Data
     date: 2019-07-29
@@ -579,7 +612,6 @@ talks:
     event: 2019 Meeting of the Division of Particles & Fields of the American Physical Society
     event_dates: 29 Jul-2 Aug 2019
     location: Boston, MA
-    site_show: false
 
   - title: How Can We Model Insect Flight Quickly and Accurately?
     date: 2017-08-04
@@ -587,7 +619,6 @@ talks:
     event: 2017 Rutgers Summer Aresty Symposium
     event_dates: 4 Aug 2017
     location: New Brunswick, NJ
-    site_show: false
 
   # ===== Site-only paper-themed talks (already in CV under different entries
   # or part of older recordings the CV doesn't list) =====
@@ -633,3 +664,53 @@ talks:
     slides: ./assets/talks/(Grad Seminar 2024) Muon Beam Dump-1.pdf
     featured: true
     cv_hidden: true
+
+# ----------------------------------------------------------------------------
+# Software libraries (rendered in the website's Software section).
+# Each entry: name, role, install (optional), github, paper (optional cross-ref
+# to a publication slug), blurb.
+# ----------------------------------------------------------------------------
+software:
+  - name: SPECTER
+    role: Primary developer
+    install: pip install specterpy
+    github: https://github.com/rikab/SPECTER
+    paper: specter
+    blurb: >-
+      Framework for defining, building, and efficiently evaluating spectral
+      shape observables for collider physics.
+
+  - name: SHAPER
+    role: Primary developer
+    install: pip install pyshaper
+    github: https://github.com/rikab/SHAPER
+    paper: shaper
+    blurb: >-
+      Shape Hunting Algorithm using Parameterized Energy Reconstruction —
+      a framework for defining, building, and evaluating generalized shape
+      observables.
+
+  - name: GaussianAnsatz
+    role: Primary developer
+    install: pip install GaussianAnsatz
+    github: https://github.com/rikab/GaussianAnsatz
+    paper: frequentist-way
+    blurb: >-
+      Machine-learning framework for frequentist inference, complete with
+      local uncertainty estimation.
+
+  - name: ParticleLoader
+    role: Primary developer
+    github: https://github.com/rikab/ParticleLoader
+    blurb: >-
+      Library for in-line downloading of standardized particle-physics
+      datasets. Still in development; partial use possible.
+
+  - name: Energyflow
+    role: Maintainer
+    install: pip install energyflow
+    homepage: https://energyflow.network
+    github: https://github.com/thaler-lab/EnergyFlow
+    blurb: >-
+      Established library of jet-physics tools developed before 2020. Current
+      package maintainer.

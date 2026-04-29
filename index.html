@@ -1,221 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Rikab Gambhir, Ph.D.</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rikab Gambhir, Ph.D.</title>
+
+  <meta name="description" content="Rikab Gambhir — theoretical physicist at the University of Cincinnati. Jet physics, QCD, machine learning for collider physics.">
+  <meta property="og:title" content="Rikab Gambhir, Ph.D.">
+  <meta property="og:description" content="Theoretical physicist. Jets, QCD, ML for collider physics.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rikabgambhir.com">
+  <meta property="og:image" content="assets/img/fun_headshot.jpg">
+
   <link rel="shortcut icon" href="favicon.ico" type="image/icon">
   <link rel="icon" href="favicon.ico" type="image/icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CDN Imports (CSS & JS) -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
-    crossorigin="anonymous"></script>
 
-  
-  <!-- Custom CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="assets/academicons/css/academicons.min.css"/>
-  <link rel="stylesheet" type="text/css" href="css/animations.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  
-  
-  <!-- Custom JS -->
-  <script src="js/main.js"></script>
-</head>
+  <link rel="stylesheet" href="assets/academicons/css/academicons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/retro.css">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
-  <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&
-              family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet">
-
-  <meta name="google-site-verification" content="JY83yB4L21zRVvDarmmI5D7XRR4Pzl5SDU_LKLa7nV4" />
+  <meta name="google-site-verification" content="JY83yB4L21zRVvDarmmI5D7XRR4Pzl5SDU_LKLa7nV4">
 </head>
 
 <body>
-  
 
-  <!--Main Body  -->
-  <header class="text-center py-5 text-white">
-  <img src="assets/img/fun_headshot.jpg" alt="Rikab Gambhir"
-       id="splash-logo" class="rounded-circle mb-3 shadow"
-       loading="lazy">
-  <h1 class="display-5 fw-bold mb-2">Rikab Gambhir</h1>
-  <p class="lead mb-4">Theoretical Physicist &nbsp;•&nbsp; Ph.D., MIT</p>
+  <!-- Viewing-mode toggle (top-left). Flips between modern and retro. -->
+  <button id="viewmode-toggle" type="button" aria-label="Toggle viewing mode">
+    📟 Retro mode
+  </button>
 
-
-  <!-- Socials -->
-  <div class="container-fluid splash-blurb">
-    <!-- <div class="row justify-content-center socials">
-      <div class="col-lg-6">
-        <p class="fade-in two"> Student researcher interested in beyond Standard Model searches at the Large Hadron Collider as well as various dark matter candidate searches</p>
-      </div>
-    </div> -->
-    <div class="row justify-content-center socials">
-
-      <a class="btn btn-light btn-social fade-in two" href="https://github.com/rikab"><i
-          class="fa fa-github"></i></a>
-      <a class="btn btn-light btn-social fade-in three" href="https://twitter.com/cornkab"><i
-          class="fa fa-twitter"></i></a>
-
-      <a class="btn btn-light fade-in btn-social four" href="https://www.linkedin.com/in/rikab-gambhir-457375136"><i
-          class="fa fa-linkedin"></i></a>
-
-        <a class="btn btn-light fade-in btn-social four" href="https://scholar.google.com/citations?hl=en&view_op=list_works&authuser=3&gmla=AJsN-F7fjk7SfJMbdl9JJ4hibFTlbazwsDWem6LDvvUZMd6tZSIjPIkFzSJvTdxq_LXSOjM6JGsSfdQl_aJX03GyfG9DEAtvChq0BcuOXrfIK52IDn7i--g&user=RkNe2TQAAAAJ"><i
-            class="ai ai-google-scholar"></i></a>
-
+  <!-- Sticky top nav, hidden until you scroll past hero -->
+  <nav id="topnav" class="topnav" aria-label="Page navigation">
+    <a href="#top" class="topnav-brand">Rikab Gambhir</a>
+    <div class="topnav-links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#talks">Talks</a>
+      <a href="#software">Software</a>
+      <a href="assets/pdf/rikab_CV.pdf">CV</a>
     </div>
-  </div>
+  </nav>
 
-  <!-- Buttons -->
-  <div class="container-fluid">
-    <div class="row justify-content-center pseudo-nav">
-      <div class="col-lg-2">
-        <a class="btn btn-light btn-bounce fade-in four" href="./assets/pdf/rikab_CV.pdf">CV</a>
+  <!-- Hero -->
+  <header id="top" class="hero">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <img src="assets/img/fun_headshot.jpg" alt="Rikab Gambhir" class="hero-portrait" loading="eager">
+      <h1 class="hero-name">Rikab Gambhir</h1>
+      <p class="hero-tagline">
+        Theoretical physicist &middot; postdoc, MLHAD Collaboration, University of Cincinnati
+      </p>
+
+      <div class="hero-socials">
+        <a href="https://github.com/rikab" aria-label="GitHub"><i class="fa fa-github"></i></a>
+        <a href="https://twitter.com/cornkab" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/rikab-gambhir-457375136" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+        <a href="https://scholar.google.com/citations?hl=en&user=RkNe2TQAAAAJ" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://inspirehep.net/authors/3088466?ui-citation-summary=true" aria-label="INSPIRE-HEP"><i class="ai ai-inspire"></i></a>
+        <a href="mailto:gambhirb@ucmail.uc.edu" aria-label="Email"><i class="fa fa-envelope"></i></a>
       </div>
-      <div class="col-lg-2">
-        <a class="btn btn-light btn-bounce fade-in five page-scroll smoothScroll" href="#about_me">About Me</a>
-      </div>
-      <div class="col-lg-2">
-        <a class="btn btn-light btn-bounce fade-in five page-scroll smoothScroll" href="#research">Research</a>
-      </div>
-      <div class="col-lg-2">
-        <a class="btn btn-light btn-bounce fade-in five page-scroll smoothScroll" href="#talks">Presentations</a>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="assets/pdf/rikab_CV.pdf">Curriculum Vitae</a>
+        <a class="btn" href="#research">Research</a>
+        <a class="btn" href="#talks">Talks</a>
       </div>
     </div>
-  </div>
+  </header>
 
- 
-<!-- ---------- About ---------- -->
-<section id="about" class="container py-5 text-white" >   <!-- remove section-light --> 
-   <h2 class="mb-3">About Me</h2>
-  <p>
-    I’m a postdoctoral fellow at the
-    <a href="https://www.artsci.uc.edu/natural-sciences/physics.html" target="_blank" rel="noopener">University of Cincinnati</a>.
-    My background spans particle physics, optimal transport, and machine learning.
-  </p>
+  <main>
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="section-inner narrow">
+        <h2>About</h2>
+        <p>
+          I&rsquo;m a postdoctoral researcher with the
+          <a href="https://mlhad.org" target="_blank" rel="noopener">MLHAD Collaboration</a>
+          at the <a href="https://www.uc.edu/" target="_blank" rel="noopener">University of Cincinnati</a>.
+          I work at the intersection of <strong>jet physics</strong>, <strong>QCD</strong>, and
+          <strong>machine learning</strong> &mdash; building tools and observables that make
+          collider physics easier to reason about.
+        </p>
+        <p>
+          Before Cincinnati I was a graduate student and research specialist at the
+          <a href="https://physics.mit.edu/" target="_blank" rel="noopener">MIT Center for Theoretical Physics</a>,
+          working with <a href="http://jthaler.net/" target="_blank" rel="noopener">Jesse Thaler</a>.
+          My thesis is &ldquo;Metrics, Muons, Models, Moments, Measurements, Machine Learning and More:
+          A Manifesto on Collider Physics&rdquo;.
+        </p>
+        <p class="about-meta">
+          Reach me at <a href="mailto:gambhirb@ucmail.uc.edu">gambhirb@ucmail.uc.edu</a>.
+          Full history is in the <a href="assets/pdf/rikab_CV.pdf">CV</a>.
+        </p>
+      </div>
+    </section>
 
-  <div class="row g-5 pt-4">
-    <div class="col-md-4">
-      <h3>Research Interests</h3>
-      <ul class="list-unstyled ms-3">
-        <li>Jet substructure & QCD</li>
-        <li>Future colliders</li>
-        <li>Beyond the Standard Model</li>
-        <li>Optimal transport & ML</li>
-      </ul>
-    </div>
-    <div class="col-md-8">
-      <h3>Education</h3>
-      <ul class="list-unstyled ms-3">
-        <li><strong>Ph.D., Theoretical Physics</strong>, MIT (2020‑2025)<br>
-            Advisor: <a href="http://jthaler.net/">Jesse Thaler</a></li>
-        <li class="mt-2"><strong>B.S., Physics / Math / Applied Sci.</strong>,
-            Rutgers University (2016‑2020) – <i>summa cum laude</i><br>
-            Advisor: <a href="http://cgisvr.physics.rutgers.edu/cgi-bin/physdb/genpip.pl?Schnetzer">Stephen Schnetzer</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <!-- Featured research -->
+    <section id="featured" class="section">
+      <div class="section-inner">
+        <h2>Featured Research</h2>
+        <p class="section-blurb">A few papers I'd recommend starting with.</p>
+        <div id="featuredCards" class="grid grid-featured"></div>
+      </div>
+    </section>
 
-<!-- ---------- Research ---------- -->
-<section id="research" class="bg-dark text-white py-5">
-  <div class="container">
-    <h2 class="mb-4">Research & Publications</h2>
-    <div id="researchCards" class="vstack gap-4"></div>
-  </div>
-</section>
+    <!-- All research -->
+    <section id="research" class="section section-alt">
+      <div class="section-inner">
+        <h2>All Research <span class="count" id="researchCount"></span></h2>
+        <p class="section-blurb">
+          Click any card to read the abstract, copy the BibTeX, or jump to the talks I gave on it.
+        </p>
+        <div id="researchCards" class="grid grid-cards"></div>
+      </div>
+    </section>
 
-<!-- ---------- Talks ---------- -->
-<section id="talks" class="py-5">
-  <div class="container">
-    <h2 class="mb-4">Presentations</h2>
-    <p>
-      Items marked with <span class="text-danger">★</span> are my recommended versions.
-    </p>
-    <div id="talkCards" class="vstack gap-4"></div>
-  </div>
-</section>
+    <!-- Talks -->
+    <section id="talks" class="section">
+      <div class="section-inner">
+        <h2>Talks <span class="count" id="talkCount"></span></h2>
+        <p class="section-blurb">
+          Selected presentations. <span class="featured-mark" aria-hidden="true">★</span> marks
+          my recommended version of a given talk.
+        </p>
 
-</main>
-
-<!-- ---------- Footer ---------- -->
-<footer id="footer" class="bg-dark text-light text-center py-4 mt-auto">
-  <p class="mb-1">Questions? <code>gambhirb@ucmail.uc.edu</code></p>
-  <p class="mb-0">&copy; 2022‑<span id="year"></span> Rikab Gambhir.</p>
-</footer>
-
-<!-- ---------- Bootstrap JS ---------- -->
-<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-K57mjh4mQ1yQMoyuJcaiWTa5lVzP4cPBmEczmKSVYLS6URp7Ldv2XYxAPrxhXXJs"
-        crossorigin="anonymous"></script>
-
-<!-- ---------- Card generator ---------- -->
-<script type="module">
-  import { researchData, talkData } from './data.js';
-
-  /* ----- Research cards ----- */
-  const rRoot = document.getElementById('researchCards');
-  researchData.forEach(p => {
-    const card = document.createElement('div');
-    card.className = 'card floating-box';
-    card.innerHTML = `
-      <div class="card-body">
-        <h3 class="card-title">${p.title}</h3>
-        <div class="row g-4">
-          <div class="col-md-5">
-            <img src="${p.img}" class="img-fluid rounded shadow" alt=""
-                 loading="lazy">
+        <div class="filterbar" role="region" aria-label="Filter talks">
+          <div class="filter-segmented" role="tablist" aria-label="View mode">
+            <button class="seg is-active" data-view="sections" type="button">By type</button>
+            <button class="seg" data-view="combined" type="button">All combined</button>
           </div>
-          <div class="col-md-7">
-            <p class="card-subtitle text-muted mb-2">
-              ${p.authors} — ${p.date}
-            </p>
-            <p>${p.blurb}</p>
-            ${p.links.map(
-              l => `<a href="${l.href}" class="btn btn-sm btn-dark me-2"
-                       target="_blank" rel="noopener">${l.text}</a>`
-            ).join('')}
-          </div>
+          <label class="filter-control">
+            Year
+            <select id="yearFilter" aria-label="Filter by year">
+              <option value="">all</option>
+            </select>
+          </label>
+          <div class="filter-chips" id="topicFilter" aria-label="Filter by topic"></div>
+          <label class="filter-toggle">
+            <input type="checkbox" id="featuredOnly">
+            featured only
+          </label>
+          <button id="clearFilters" class="filter-clear" type="button">clear</button>
         </div>
-      </div>`;
-    rRoot.appendChild(card);
-  });
 
-  /* ----- Talk cards ----- */
-  const tRoot = document.getElementById('talkCards');
-  talkData.forEach(cat => {
-    const wrap = document.createElement('div');
-    wrap.className = 'card floating-box';
-    wrap.innerHTML = `
-      <div class="card-body">
-        <h3 class="card-title">${cat.category}</h3>
-        <ul class="list-unstyled mb-0">
-          ${cat.items.map(t => `
-            <li class="mb-2">
-              ${t.featured ? '<span class="text-danger">★</span> ' : ''}
-              <a href="${t.video ?? t.slides}" target="_blank" rel="noopener">
-                ${t.title}
-              </a>,
-              ${t.where}, ${t.date}.
-              ${t.slides
-                ? ` <a href="${t.slides}" target="_blank" rel="noopener">[slides]</a>`
-                : ''}
-            </li>`).join('')}
-        </ul>
-      </div>`;
-    tRoot.appendChild(wrap);
-  });
+        <div id="talkList" class="talk-list"></div>
+      </div>
+    </section>
 
-  /* dynamic footer year */
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    <!-- Software -->
+    <section id="software" class="section section-alt">
+      <div class="section-inner">
+        <h2>Software</h2>
+        <p class="section-blurb">
+          Open-source libraries I develop or maintain. Most have an associated paper.
+        </p>
+        <div id="softwareCards" class="grid grid-software"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-inner narrow footer-inner">
+      <div class="footer-block">
+        <p>
+          <code>rikab@mit.edu</code> &middot;
+          <code>gambhirb@ucmail.uc.edu</code>
+        </p>
+        <p class="footer-socials">
+          <a href="https://github.com/rikab" aria-label="GitHub"><i class="fa fa-github"></i></a>
+          <a href="https://twitter.com/cornkab" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/rikab-gambhir-457375136" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?hl=en&user=RkNe2TQAAAAJ" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+          <a href="https://github.com/rikab/rikab.github.io" aria-label="Site source"><i class="fa fa-code"></i></a>
+        </p>
+      </div>
+      <p class="footer-fineprint">
+        &copy; 2022&ndash;<span id="footerYear"></span> Rikab Gambhir.
+        Once was the <a href="https://twitter.com/finitephysicist">@FinitePhysicist</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

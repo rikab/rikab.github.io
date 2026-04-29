@@ -1,0 +1,640 @@
+/* =============================================================================
+   retro.css — 1990s viewing mode
+   ----------------------------------------------------------------------------
+   Every rule below is scoped under `body.retro`. Modern site is untouched.
+
+   Edit liberally. The first block is the palette (six tokens); change those
+   and the whole retro look re-themes. Sections below are grouped by area
+   (hero / cards / talks / footer / decorations).
+   ========================================================================== */
+
+body.retro {
+  /* ---------- palette (one place to retheme everything) ---------- */
+  --r-bg:        #008080;     /* CGA teal */
+  --r-fg:        #ffff00;     /* default yellow text on teal */
+  --r-paper:     #c0c0c0;     /* Win95 grey panel */
+  --r-paper-2:   #ffffff;     /* white "page" */
+  --r-link:      #0000ee;     /* unvisited blue */
+  --r-link-vis:  #551a8b;     /* visited purple */
+  --r-link-act:  #ff0000;
+  --r-pink:      #ff00ff;
+  --r-green:     #00ff00;
+  --r-cyan:      #00ffff;
+  --r-orange:    #ff8c00;
+
+  /* tiled SVG starfield (no asset file required) */
+  background:
+    var(--r-bg)
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><g fill='%23ffff00' opacity='0.85'><circle cx='4' cy='4' r='1'/><circle cx='14' cy='9' r='0.7'/><circle cx='24' cy='5' r='0.9'/><circle cx='8' cy='18' r='0.6'/><circle cx='20' cy='22' r='1'/><circle cx='28' cy='28' r='0.8'/></g></svg>")
+    repeat;
+  color: var(--r-fg);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  text-align: center;            /* center EVERYTHING — peak 90s */
+}
+
+/* ---------- toggle button (also styled in modern mode for placement) ---------- */
+#viewmode-toggle {
+  position: fixed;
+  top: 14px; left: 14px;
+  z-index: 100;
+  font-family: var(--font-sans);
+  font-size: .82rem;
+  padding: .35rem .8rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all var(--t-fast);
+}
+#viewmode-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+body.retro #viewmode-toggle {
+  font-family: 'MS Sans Serif', 'Times New Roman', serif;
+  font-size: 13px;
+  background: var(--r-paper);
+  color: #000;
+  border: 3px outset #ffffff;
+  border-radius: 0;
+  padding: 4px 14px;
+  font-weight: bold;
+  box-shadow: 2px 2px 0 #000;
+}
+body.retro #viewmode-toggle:active { border-style: inset; }
+
+/* ============================================================================
+   GLOBAL RETRO RULES
+   ========================================================================= */
+body.retro a            { color: var(--r-link); text-decoration: underline; }
+body.retro a:visited    { color: var(--r-link-vis); }
+body.retro a:active     { color: var(--r-link-act); }
+body.retro a:hover      { color: #000; background: #ffff00; }
+body.retro code         { font-family: 'Courier New', monospace; background: #000; color: var(--r-green); border: 0; padding: 0 4px; }
+body.retro p            { line-height: 1.45; }
+body.retro h1, body.retro h2, body.retro h3, body.retro h4 {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+  letter-spacing: 0;
+  margin: .3em auto;
+  text-align: center;
+}
+body.retro hr {
+  height: 8px;
+  border: 0;
+  background: linear-gradient(90deg, #ff0000, #ff8c00, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+  margin: 2rem auto;
+  width: 90%;
+}
+body.retro .hero-canvas { display: none; }       /* kill the Feynman canvas */
+
+/* ============================================================================
+   TOP NAV: classic horizontal list of links separated by pipes
+   ========================================================================= */
+body.retro .topnav {
+  position: static;
+  transform: none;
+  background: var(--r-paper);
+  border-bottom: 4px ridge #ffd700;
+  padding: 6px 12px;
+  backdrop-filter: none;
+  text-align: center;
+  display: block;
+}
+body.retro .topnav-brand { display: none; }
+body.retro .topnav-links {
+  display: inline-block;
+  font-family: 'Times New Roman', serif;
+  font-size: 14px;
+}
+body.retro .topnav-links a { color: var(--r-link) !important; margin: 0 6px; }
+body.retro .topnav-links a + a::before { content: ' | '; color: #000; }
+body.retro .topnav-links a.is-active { color: var(--r-link-act) !important; }
+
+/* ============================================================================
+   "Welcome!" banner (injected by JS)
+   ========================================================================= */
+body.retro .retro-welcome {
+  margin: 18px auto 6px;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 1.6rem;
+  color: var(--r-pink);
+  text-shadow: 2px 2px 0 #000, 4px 4px 0 #ffff00;
+  animation: retro-wiggle 1.6s ease-in-out infinite;
+}
+
+/* ============================================================================
+   HERO
+   ========================================================================= */
+body.retro .hero {
+  background: transparent;
+  border-bottom: 6px ridge #ffd700;
+  min-height: auto;
+  padding: 1.5rem 1rem 2rem;
+  text-align: center;
+}
+body.retro .hero-content { display: block; }
+body.retro .hero-portrait {
+  width: 200px; height: 200px;
+  border: 8px ridge #ffd700;
+  border-radius: 0;
+  box-shadow: 6px 6px 0 #000, 12px 12px 0 var(--r-pink);
+  margin: 0 auto 1rem;
+}
+body.retro .hero-name {
+  font-family: 'Impact', 'Comic Sans MS', cursive;
+  font-size: clamp(2.6rem, 8vw, 5.5rem);
+  letter-spacing: 0;
+  background: linear-gradient(180deg, #ff00ff, #ff8000, #ffff00, #00ff00, #00ffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 2px #000;
+  text-shadow: 5px 5px 0 #ff00ff;
+  margin: .2em 0;
+}
+body.retro .hero-tagline {
+  display: inline-block;
+  background: #000;
+  color: var(--r-green);
+  font-family: 'Courier New', monospace;
+  font-style: normal;
+  border: 3px inset #888;
+  padding: 4px 14px;
+}
+
+body.retro .hero-socials a {
+  border-radius: 0;
+  border: 2px outset #ffffff;
+  background: var(--r-paper);
+  color: #000;
+}
+body.retro .hero-socials a:hover { color: var(--r-link-act); transform: none; background: #ffff00; }
+
+/* generic .btn = Win95 button */
+body.retro .btn,
+body.retro .hero-cta .btn {
+  font-family: 'MS Sans Serif', 'Times New Roman', serif;
+  font-size: 13px;
+  font-weight: bold;
+  background: var(--r-paper);
+  color: #000;
+  border: 3px outset #ffffff;
+  border-radius: 0;
+  padding: 5px 14px;
+  text-decoration: none;
+}
+body.retro .btn:hover { background: #ffff80; color: #000; border-color: #ffffff; }
+body.retro .btn:active { border-style: inset; }
+body.retro .btn-primary { background: #ffff00; }
+
+/* ============================================================================
+   "Under construction" / live counter banner (injected by JS)
+   ========================================================================= */
+body.retro .retro-decor {
+  text-align: center;
+  background: #000;
+  color: var(--r-green);
+  font-family: 'Courier New', monospace;
+  padding: 12px;
+  border-top: 4px ridge #ffd700;
+  border-bottom: 4px ridge #ffd700;
+}
+body.retro .retro-decor .construction {
+  display: inline-block;
+  background: #ffff00;
+  color: #000;
+  padding: 4px 16px;
+  border: 3px solid #000;
+  margin: 6px;
+  font-weight: bold;
+  font-family: 'Impact', 'Comic Sans MS', cursive;
+  letter-spacing: 2px;
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 6px, rgba(0,0,0,.7) 6px, rgba(0,0,0,.7) 12px);
+}
+body.retro .retro-decor .construction span {
+  background: #ffff00;
+  padding: 0 8px;
+}
+body.retro .retro-decor .counter {
+  display: inline-block;
+  background: #000;
+  color: var(--r-green);
+  border: 2px inset #888;
+  padding: 2px 12px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 6px;
+  font-weight: bold;
+}
+body.retro .retro-decor .netscape {
+  color: var(--r-fg);
+  font-style: italic;
+  margin: 6px 12px;
+}
+
+/* ============================================================================
+   Marquee
+   ========================================================================= */
+body.retro .retro-marquee {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 1.3rem;
+  color: var(--r-pink);
+  background: #ffff00;
+  border-top: 4px ridge #ffd700;
+  border-bottom: 4px ridge #ffd700;
+  padding: 6px 0;
+}
+
+/* ============================================================================
+   SECTIONS
+   ========================================================================= */
+body.retro .section { padding: 1rem; background: transparent !important; }
+body.retro .section-inner { max-width: 900px; margin: 0 auto; }
+body.retro .section h2 {
+  display: inline-block;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 1.7rem;
+  background: linear-gradient(90deg, #ff00ff, #ffff00, #00ffff);
+  color: #000;
+  padding: 6px 22px;
+  border: 4px ridge #ffd700;
+  text-shadow: 1px 1px 0 #fff;
+  text-align: center;
+}
+body.retro .section h2 .count {
+  background: #000;
+  color: var(--r-green);
+  padding: 1px 6px;
+  border: 1px inset #888;
+  font-family: 'Courier New', monospace;
+  font-size: .6em;
+}
+body.retro .section-blurb {
+  text-align: center;
+  background: var(--r-paper);
+  color: #000;
+  font-style: italic;
+  padding: 6px 12px;
+  border: 2px inset #888;
+  max-width: none;
+  margin: 8px auto 16px;
+  display: inline-block;
+}
+
+/* ABOUT */
+body.retro #about .section-inner {
+  background: #ffffe0;
+  border: 6px ridge #ffd700;
+  padding: 24px;
+  color: #000;
+}
+body.retro #about p { color: #000; max-width: none; text-align: center; font-size: 1.05rem; }
+body.retro #about strong { background: #ffff00; color: #000; padding: 0 3px; border-bottom: 2px solid #000; }
+
+/* ============================================================================
+   CARDS — flatten everything. No grid, no shadows, no rounded corners.
+   Each "card" is a centered stacked block. Rainbow HRs between them.
+   ========================================================================= */
+body.retro .grid {
+  display: block !important;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+body.retro .card {
+  display: block;
+  background: var(--r-paper-2) !important;
+  color: #000;
+  border: 5px ridge #ffd700;
+  border-radius: 0;
+  box-shadow: 8px 8px 0 #000;
+  margin: 0 auto 2rem;
+  padding: 14px 18px;
+  text-align: center;
+  position: relative;
+}
+body.retro .card:hover {
+  border-color: #ffd700;
+  box-shadow: 8px 8px 0 var(--r-pink);
+  transform: none;
+}
+/* card row: stack image + body vertically, both centered */
+body.retro .card-row {
+  display: block !important;
+  grid-template-columns: none !important;
+  text-align: center;
+  padding: 0;
+  gap: 0;
+}
+body.retro .card-thumb {
+  width: 220px; height: 220px;
+  margin: 8px auto 14px;
+  border: 4px ridge #888;
+  background: #fff;
+  aspect-ratio: 1 / 1;
+}
+body.retro .card-body { display: block; text-align: center; }
+body.retro .card-title {
+  font-family: 'Comic Sans MS', cursive;
+  color: var(--r-pink);
+  font-size: 1.35rem;
+  text-shadow: 1px 1px 0 #ffff00;
+  margin: 0 0 .25em;
+}
+body.retro .card-meta { color: #000; font-size: .95rem; margin: .25em auto .5em; }
+body.retro .card-meta .self {
+  background: #ffff00;
+  color: #000;
+  padding: 0 4px;
+  border-bottom: 2px solid #000;
+  font-weight: bold;
+}
+body.retro .card-blurb { color: #000; font-style: italic; margin: 0 auto .8em; max-width: 56ch; }
+body.retro .card-tags { justify-content: center; margin: .25em auto .5em; }
+body.retro .card-tags .tag {
+  font-family: 'Times New Roman', serif;
+  font-size: .85rem;
+  background: var(--r-fg);
+  color: #000;
+  border: 2px outset #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 2px 8px;
+}
+body.retro .card-links { justify-content: center; }
+
+/* Rainbow HR between consecutive paper cards */
+body.retro #researchCards .card + .card::before,
+body.retro #featuredCards .card + .card::before {
+  content: '';
+  display: block;
+  height: 6px;
+  width: 80%;
+  margin: -1.2rem auto 1.2rem;
+  background: linear-gradient(90deg, #ff0000, #ff8c00, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+}
+
+/* expand toggle */
+body.retro .card-expand {
+  background: var(--r-paper);
+  color: #000;
+  border: 3px outset #ffffff;
+  font-family: 'MS Sans Serif', serif;
+  font-weight: bold;
+  display: block;
+  width: auto;
+  margin: 12px auto;
+  padding: 4px 14px;
+}
+body.retro .card-expand:hover { background: #ffff80; }
+body.retro .card-detail {
+  background: #ffffe0;
+  color: #000;
+  border: 3px ridge #888;
+  margin: .5em auto;
+  text-align: left;
+  padding: 12px;
+}
+body.retro .card-detail h4 {
+  color: var(--r-link-act);
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: left;
+  border-bottom: 2px dotted #888;
+}
+body.retro .card-bibtex {
+  background: #fff; color: #000;
+  border: 2px inset #888;
+  font-family: 'Courier New', monospace;
+}
+body.retro .copy-btn {
+  background: var(--r-paper);
+  color: #000;
+  border: 2px outset #888;
+  border-radius: 0;
+}
+body.retro .related-talks { padding: 0; list-style: none; }
+body.retro .related-talks li::before { content: '➡️ '; }
+
+/* featured ★ */
+body.retro .card-star {
+  color: #ffff00;
+  text-shadow: 2px 2px 0 var(--r-pink), -2px -2px 0 var(--r-cyan);
+  animation: retro-blink 0.9s steps(2, start) infinite;
+  font-size: 2rem;
+  position: absolute; top: -10px; right: 10px;
+}
+
+/* "NEW!" badge on the most recent paper (injected by JS) */
+body.retro .new-badge {
+  display: inline-block;
+  background: #ff0000;
+  color: #ffff00;
+  font-family: 'Impact', 'Comic Sans MS', cursive;
+  padding: 4px 12px;
+  border: 3px ridge #ffff00;
+  margin-bottom: 8px;
+  animation: retro-blink 0.7s steps(2, start) infinite;
+  text-shadow: 2px 2px 0 #000;
+  letter-spacing: 2px;
+}
+
+/* April Fools card */
+body.retro .card-joke {
+  background: linear-gradient(180deg, #ffe0a0, #ffd060) !important;
+  border: 6px ridge var(--r-pink);
+  box-shadow: 10px 10px 0 var(--r-pink);
+}
+body.retro .card-joke .card-title { color: #c00; }
+body.retro .joke-badge {
+  background: #ffff00;
+  color: #c00;
+  border: 2px ridge #c00;
+  border-radius: 0;
+  font-family: 'Comic Sans MS', cursive;
+  text-transform: none;
+  position: static;
+  display: inline-block;
+  margin: 0 0 .25em;
+}
+
+/* ============================================================================
+   FILTER BAR
+   ========================================================================= */
+body.retro .filterbar {
+  background: var(--r-paper);
+  border: 4px ridge #ffffff;
+  border-radius: 0;
+  color: #000;
+  display: block;
+  padding: 12px;
+  text-align: center;
+}
+body.retro .filterbar > * { margin: 4px 8px; }
+body.retro .filter-control { color: #000; }
+body.retro .filter-control select {
+  background: #fff; color: #000; border: 2px inset #888; border-radius: 0;
+  font-family: 'Times New Roman', serif;
+  padding: 2px 4px;
+}
+body.retro .chip,
+body.retro .filter-segmented .seg,
+body.retro .filter-clear {
+  background: var(--r-paper);
+  color: #000;
+  border: 2px outset #ffffff;
+  border-radius: 0;
+  font-family: 'MS Sans Serif', 'Times New Roman', serif;
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 3px 10px;
+}
+body.retro .chip.is-active,
+body.retro .filter-segmented .seg.is-active {
+  background: #ffff00;
+  color: #000;
+  border-style: inset;
+}
+body.retro .filter-segmented {
+  border: 2px ridge #888;
+  border-radius: 0;
+  background: var(--r-paper);
+  display: inline-flex;
+}
+body.retro .filter-toggle { color: #000; }
+
+/* ============================================================================
+   TALKS LIST
+   ========================================================================= */
+body.retro .talk-list { text-align: left; max-width: 800px; margin: 0 auto; }
+body.retro .talk-cat-block {
+  background: var(--r-paper-2);
+  color: #000;
+  border: 4px ridge #ffd700;
+  padding: 12px 20px;
+  margin-bottom: 1.5rem;
+}
+body.retro .cat-header {
+  font-family: 'Comic Sans MS', cursive;
+  background: var(--r-green);
+  color: #000;
+  padding: 4px 10px;
+  border: 2px ridge #888;
+  text-shadow: none;
+  text-align: left;
+}
+body.retro .year-header {
+  position: static;
+  background: #ffff80;
+  color: #000;
+  border: 2px ridge #888;
+  font-family: 'Courier New', monospace;
+  margin: .8rem 0 .3rem;
+  padding: 3px 8px;
+  font-weight: bold;
+}
+body.retro .talk-row {
+  background: transparent;
+  color: #000;
+  border-bottom: 1px dotted #888;
+  padding: .5rem 0;
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 8px;
+}
+body.retro .talk-row:hover { background: #ffffe0; }
+body.retro .talk-row.is-open { background: #ffff80; }
+body.retro .talk-title { color: #000; font-weight: bold; }
+body.retro .talk-row.is-featured .talk-title::before { color: #ff0; text-shadow: 1px 1px 0 #f0f; }
+body.retro .talk-where { color: #000; font-style: italic; }
+body.retro .talk-icon { background: var(--r-paper); border: 2px outset #ffffff; border-radius: 0; color: #000; }
+body.retro .talk-detail { color: #000; }
+body.retro .meta-line { color: #000; font-weight: bold; }
+body.retro .cat-badge {
+  background: var(--r-fg);
+  color: #000;
+  border: 2px ridge #000;
+  border-radius: 0;
+  font-family: 'Times New Roman', serif;
+}
+
+/* ============================================================================
+   SOFTWARE — single column, table-style
+   ========================================================================= */
+body.retro #softwareCards { max-width: 760px; margin: 0 auto; }
+body.retro .sw-card {
+  background: var(--r-paper-2);
+  color: #000;
+  border: 5px ridge #ffd700;
+  border-radius: 0;
+  box-shadow: 6px 6px 0 #000;
+  margin-bottom: 1.5rem;
+  padding: 16px 20px;
+  text-align: center;
+}
+body.retro .sw-card:hover { transform: none; box-shadow: 6px 6px 0 var(--r-pink); }
+body.retro .sw-name { color: var(--r-pink); font-family: 'Comic Sans MS', cursive; font-size: 1.4rem; text-shadow: 1px 1px 0 #ffff00; }
+body.retro .sw-role { color: #000; }
+body.retro .sw-blurb { color: #000; font-style: italic; max-width: 60ch; margin: 0 auto 1rem; }
+body.retro .sw-install { background: #000; border: 2px inset #888; }
+body.retro .sw-install code { background: #000; color: var(--r-green); }
+body.retro .sw-links { justify-content: center; }
+
+/* ============================================================================
+   FOOTER + paper-nav (prev / random / next → INSPIRE pages)
+   ========================================================================= */
+body.retro .site-footer {
+  background: transparent;
+  border-top: 6px ridge #ffd700;
+  color: var(--r-fg);
+  font-family: 'Times New Roman', serif;
+  text-align: center;
+}
+body.retro .footer-fineprint { color: var(--r-fg); }
+body.retro .footer-block code { color: #ffff80; background: transparent; }
+
+body.retro .retro-papernav {
+  background: var(--r-paper);
+  color: #000;
+  border: 4px ridge #ffffff;
+  margin: 1.5rem auto;
+  padding: 10px 14px;
+  font-family: 'MS Sans Serif', 'Times New Roman', serif;
+  max-width: 600px;
+  display: inline-block;
+}
+body.retro .retro-papernav .nav-title {
+  font-family: 'Comic Sans MS', cursive;
+  color: var(--r-pink);
+  margin-bottom: 6px;
+}
+body.retro .retro-papernav a { font-weight: bold; padding: 0 12px; }
+
+body.retro .retro-lastupdated {
+  font-family: 'Courier New', monospace;
+  color: var(--r-cyan);
+  font-size: .85rem;
+  margin-top: 8px;
+}
+
+/* ============================================================================
+   ANIMATIONS
+   ========================================================================= */
+@keyframes retro-blink { to { visibility: hidden; } }
+@keyframes retro-wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50%      { transform: rotate(2deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.retro .card-star,
+  body.retro .new-badge,
+  body.retro .retro-welcome { animation: none; }
+}
+
+body.retro ::selection { background: var(--r-pink); color: #000; }
+body.retro :focus-visible { outline: 3px solid var(--r-link-act); }

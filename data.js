@@ -3,435 +3,1114 @@
 
 export const researchData = [
   {
-    title: "HDSense: An efficient method for ranking observable sensitivity",
-    date: "2026-02-02",
-    authors: "Benoît Assi, Christian Bierlich, Rikab Gambhir, Phil Ilten, Tony Menzo, Stephen Mrenna, Manuel Szewc, Michael K. Wilkinson, Jure Zupan",
-    img: "assets/img/hdsense.png",
-    blurb: "We introduce the High-Dimensional Sensitivity (HDSense) score, a computationally efficient metric for ranking observable sets using only one-dimensional histograms. We apply HDSense to rank a set observables in terms of their constraining power with respect to five parameters of the Lund string model of hadronization implemented in Pythia using simulated leptonic collider events at the Z pole.",
-    links: [
-      { text: "arXiv 2602.01509", href: "https://arxiv.org/abs/2602.01509" },
+    "slug": "hdsense",
+    "title": "HDSense: An efficient method for ranking observable sensitivity",
+    "date": "2026-02-02",
+    "authors": "Benoît Assi, Christian Bierlich, Rikab Gambhir, Phil Ilten, Tony Menzo, Stephen Mrenna, Manuel Szewc, Michael K. Wilkinson, Jure Zupan",
+    "img": "assets/img/hdsense.png",
+    "blurb": "We introduce the High-Dimensional Sensitivity (HDSense) score, a computationally efficient metric for ranking observable sets using only one-dimensional histograms. We apply HDSense to rank a set observables in terms of their constraining power with respect to five parameters of the Lund string model of hadronization implemented in Pythia using simulated leptonic collider events at the Z pole.",
+    "abstract": "",
+    "tags": [
+      "hadronization",
+      "ml",
+      "statistics"
     ],
+    "featured": true,
+    "joke": false,
+    "status": "preprint",
+    "bibtex": "@inproceedings{Assi:2026wyo,\n    author = \"Assi, Beno{\\^\\i}t and Bierlich, Christian and Gambhir, Rikab and Ilten, Phil and Menzo, Tony and Mrenna, Stephen and Szewc, Manuel and Wilkinson, Michael K. and Zupan, Jure\",\n    title = \"{HDSense: An efficient method for ranking observable sensitivity}\",\n    eprint = \"2602.01509\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"FERMILAB-PUB-26-0034-CSAID\",\n    month = \"2\",\n    year = \"2026\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2602.01509"
+      },
+      {
+        "text": "arXiv 2602.01509",
+        "href": "https://arxiv.org/abs/2602.01509"
+      }
+    ],
+    "talks": [
+      "hd-sense-an-efficient-method-for-ranking-2026-03-09"
+    ]
   },
   {
-    title: "Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized",
-    date: "2025-12-05",
-    authors: "Rikab Gambhir, Radha Mastandrea",
-    img: "assets/img/rdf.png",
-    blurb: "We propose a framework, the Resummed Distribution Function (RDF), that, given a fixed-order perturbative calculation for an observable to some finite order in αsαs​, will ``resum'' the expression in a way that is guaranteed to match the original expression order-by-order and be positive, normalized, and finite. The RDF also enables a more direct notion of perturbative uncertainties, as we can directly vary higher-order parameters and treat them as nuisance parameters. We demonstrate the power of the RDF ansatz by matching to thrust to O(αs3) and extracting αs​ with perturbative uncertainties by fitting the RDF to ALEPH data.",
-    links: [
-      { text: "arXiv 2512.04160", href: "https://arxiv.org/abs/2512.04160" },
+    "slug": "rdf",
+    "title": "Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized",
+    "date": "2025-12-05",
+    "authors": "Rikab Gambhir, Radha Mastandrea",
+    "img": "assets/img/rdf.png",
+    "blurb": "We propose a framework, the Resummed Distribution Function (RDF), that, given a fixed-order perturbative calculation for an observable to some finite order in αsαs​, will ``resum'' the expression in a way that is guaranteed to match the original expression order-by-order and be positive, normalized, and finite. The RDF also enables a more direct notion of perturbative uncertainties, as we can directly vary higher-order parameters and treat them as nuisance parameters. We demonstrate the power of the RDF ansatz by matching to thrust to O(αs3) and extracting αs​ with perturbative uncertainties by fitting the RDF to ALEPH data.",
+    "abstract": "",
+    "tags": [
+      "qcd",
+      "statistics",
+      "perturbation-theory"
     ],
+    "featured": true,
+    "joke": false,
+    "status": "preprint",
+    "bibtex": "@article{Gambhir:2025lka,\n    author = \"Gambhir, Rikab and Mastandrea, Radha\",\n    title = \"{Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized}\",\n    eprint = \"2512.04160\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    month = \"12\",\n    year = \"2025\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2512.04160"
+      },
+      {
+        "text": "arXiv 2512.04160",
+        "href": "https://arxiv.org/abs/2512.04160"
+      }
+    ],
+    "talks": [
+      "resummed-distribution-functions-making-p-2026-04-02",
+      "re-normalizing-flows-taming-logs-and-per-2025-07-30",
+      "re-normalizing-flows-taming-logs-and-per-2024-11-05"
+    ]
   },
   {
-    title: "The Pareto Frontier of Resilient Jet Tagging",
-    date: "2025-09-23",
-    authors: "Rikab Gambhir, Matt LeBlanc, Yuanchen Zhou",
-    img: "assets/img/pareto.png",
-    blurb: "We explore the trade-off between performance and resilience in jet tagging. We show that more ``complex'' models, while achieving a higher AUC on jet tagging, are more simulation dependent and this can lead to real downstream uncertainties that diminish their percieved performance advantage over simpler models.",
-    links: [
-      { text: "arXiv 2509.19431", href: "https://arxiv.org/abs/2509.19431" },
+    "slug": "pareto",
+    "title": "The Pareto Frontier of Resilient Jet Tagging",
+    "date": "2025-09-23",
+    "authors": "Rikab Gambhir, Matt LeBlanc, Yuanchen Zhou",
+    "img": "assets/img/pareto.png",
+    "blurb": "We explore the trade-off between performance and resilience in jet tagging. We show that more ``complex'' models, while achieving a higher AUC on jet tagging, are more simulation dependent and this can lead to real downstream uncertainties that diminish their percieved performance advantage over simpler models.",
+    "abstract": "",
+    "tags": [
+      "ml",
+      "jets",
+      "robustness"
     ],
+    "featured": true,
+    "joke": false,
+    "status": "preprint",
+    "bibtex": "@inproceedings{Gambhir:2025xim,\n    author = \"Gambhir, Rikab and LeBlanc, Matt and Zhou, Yuanchen\",\n    title = \"{The Pareto Frontier of Resilient Jet Tagging}\",\n    booktitle = \"{39th Annual Conference on Neural Information Processing Systems}: {Includes Machine Learning and the Physical Sciences (ML4PS)}\",\n    eprint = \"2509.19431\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MIT-CTP 5929\",\n    month = \"9\",\n    year = \"2025\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2509.19431"
+      },
+      {
+        "text": "arXiv 2509.19431",
+        "href": "https://arxiv.org/abs/2509.19431"
+      }
+    ],
+    "talks": [
+      "the-pareto-frontier-of-resilient-jet-tag-2025-08-21"
+    ]
   },
   {
-    title: "Isolating Unisolated Upsilons with Anomaly Detection in CMS Open Data",
-    date: "2025-02-19",
-    authors: "Rikab Gambhir, Radha Mastandrea, Ben Nachman, Jesse Thaler",
-    img: "assets/img/upsilons.png",
-    blurb: "We develop the first study of anti-isolated Upsilon decays in proton-proton collisions, using anomaly detection to separate signal from background in CMS Open Data. We, for the first time, present a successful application of anomaly detection to find a nontrivial signal in real collider data. We also develop a new method for improved sensitivity using full likelihood reweighting.",
-    links: [
-      { text: "arXiv 2502.14036", href: "https://arxiv.org/abs/2502.14036" },
-      { text: "Phys. Rev. Lett. 135, 021902", href: "https://journals.aps.org/prl/abstract/10.1103/vvv3-5kkl" },
-      { text: "GitHub", href: "https://github.com/hep-lbdl/dimuonAD/" },
+    "slug": "april-fools-2025",
+    "title": "A Search for ``New Physics'', ``Beyond the Standard Model''",
+    "date": "2025-04-01",
+    "authors": "Rikab Gambhir",
+    "img": "assets/img/jester.png",
+    "blurb": "In this distinguished work, I search for ``new physics'' and ``beyond the Standard Model'' &mdash; and find them.",
+    "abstract": "",
+    "tags": [],
+    "featured": false,
+    "joke": true,
+    "status": "preprint",
+    "bibtex": "@article{Gambhir:2025gjs,\n    author = \"Gambhir, Rikab\",\n    title = \"{A Search for ''New Physics'' ''Beyond the Standard Model'' in Open Data with Machine Learning}\",\n    eprint = \"2503.22790\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    month = \"3\",\n    year = \"2025\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2503.22790"
+      },
+      {
+        "text": "arXiv 2503.22790",
+        "href": "https://arxiv.org/abs/2503.22790"
+      }
     ],
+    "talks": []
   },
   {
-    title: "SPECTER: efficient evaluation of the spectral EMD",
-    date: "2024-10-07",
-    authors: "Rikab Gambhir, Andrew Larkoski, Jesse Thaler",
-    img: "assets/img/specter.png",
-    blurb: "We develop \"SPECTER\", an extremely fast code framework for evaluating the spectral EMD. We also use the Spectral EMD to define a new set of geometric observables, analogous to SHAPER [see below!]",
-    links: [
-      { text: "arXiv 2410.05379", href: "https://arxiv.org/abs/2410.05379" },
-      { text: "J. High Energ. Phys. 2024, 219", href: "https://link.springer.com/article/10.1007/JHEP12(2024)219" },
-      { text: "GitHub", href: "https://github.com/rikab/SPECTER" },
+    "slug": "upsilons",
+    "title": "Isolating Unisolated Upsilons with Anomaly Detection in CMS Open Data",
+    "date": "2025-02-19",
+    "authors": "Rikab Gambhir, Radha Mastandrea, Ben Nachman, Jesse Thaler",
+    "img": "assets/img/upsilons.png",
+    "blurb": "We develop the first study of anti-isolated Upsilon decays in proton-proton collisions, using anomaly detection to separate signal from background in CMS Open Data. We, for the first time, present a successful application of anomaly detection to find a nontrivial signal in real collider data. We also develop a new method for improved sensitivity using full likelihood reweighting.",
+    "abstract": "",
+    "tags": [
+      "anomaly-detection",
+      "ml",
+      "open-data",
+      "cms"
     ],
+    "featured": true,
+    "joke": false,
+    "status": "refereed",
+    "bibtex": "@article{Gambhir:2025afb,\n    author = \"Gambhir, Rikab and Mastandrea, Radha and Nachman, Benjamin and Thaler, Jesse\",\n    title = \"{Isolating Unisolated Upsilons with Anomaly Detection in CMS Open Data}\",\n    eprint = \"2502.14036\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MIT-CTP 5843\",\n    doi = \"10.1103/vvv3-5kkl\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"135\",\n    number = \"2\",\n    pages = \"021902\",\n    year = \"2025\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2502.14036"
+      },
+      {
+        "text": "arXiv 2502.14036",
+        "href": "https://arxiv.org/abs/2502.14036"
+      },
+      {
+        "text": "Phys. Rev. Lett. 135, 021902",
+        "href": "https://journals.aps.org/prl/abstract/10.1103/vvv3-5kkl"
+      },
+      {
+        "text": "GitHub",
+        "href": "https://github.com/hep-lbdl/dimuonAD/"
+      }
+    ],
+    "talks": [
+      "likelihood-based-reweighting-for-improve-2025-06-18",
+      "isolating-unisolated-upsilons-with-anoma-2025-05-20"
+    ]
   },
   {
-    title: "Moments of Clarity: Streamlining Latent Spaces in Machine Learning using Moment Pooling",
-    date: "2024-03-13",
-    authors: "Rikab Gambhir, Athis Osathapan, Jesse Thaler",
-    img: "assets/img/moments.png",
-    blurb: "We propose \"Moment Pooling\", a multivariate-moment generalisation of Deep-Sets that slashes latent dimensions while preserving—and sometimes improving—performance. Demonstrated on quark–gluon jet classification.",
-    links: [
-      { text: "arXiv 2403.08854", href: "https://arxiv.org/abs/2403.08854" },
-      { text: "Phys. Rev. D 110, 074020", href: "https://doi.org/10.1103/PhysRevD.110.074020" },
-      { text: "GitHub", href: "https://github.com/rikab/MomentAnalysis" },
+    "slug": "specter",
+    "title": "SPECTER: efficient evaluation of the spectral EMD",
+    "date": "2024-10-07",
+    "authors": "Rikab Gambhir, Andrew Larkoski, Jesse Thaler",
+    "img": "assets/img/specter.png",
+    "blurb": "We develop \"SPECTER\", an extremely fast code framework for evaluating the spectral EMD. We also use the Spectral EMD to define a new set of geometric observables, analogous to SHAPER [see below!]",
+    "abstract": "",
+    "tags": [
+      "optimal-transport",
+      "jets",
+      "ml"
     ],
+    "featured": false,
+    "joke": false,
+    "status": "refereed",
+    "bibtex": "@article{Gambhir:2024ndc,\n    author = \"Gambhir, Rikab and Larkoski, Andrew J. and Thaler, Jesse\",\n    title = \"{SPECTER: efficient evaluation of the spectral EMD}\",\n    eprint = \"2410.05379\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MIT-CTP 5771\",\n    doi = \"10.1007/JHEP12(2024)219\",\n    journal = \"JHEP\",\n    volume = \"12\",\n    pages = \"219\",\n    year = \"2025\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2410.05379"
+      },
+      {
+        "text": "arXiv 2410.05379",
+        "href": "https://arxiv.org/abs/2410.05379"
+      },
+      {
+        "text": "J. High Energ. Phys. 2024, 219",
+        "href": "https://link.springer.com/article/10.1007/JHEP12(2024)219"
+      },
+      {
+        "text": "GitHub",
+        "href": "https://github.com/rikab/SPECTER"
+      }
+    ],
+    "talks": [
+      "specter-efficient-evaluation-of-the-spec-2024-08-15",
+      "specter-efficient-evaluation-of-the-spec-2024-07-31",
+      "specter-efficient-evaluation-of-the-spec-2023-11-08"
+    ]
   },
   {
-    title: "Seeing Double: Calibrating Two Jets at Once",
-    date: "2024-02-21",
-    authors: "Rikab Gambhir, Benjamin Nachman",
-    img: "assets/img/Seeing_Double.png",
-    blurb: "Exploits momentum-conservation correlations between dijets to improve CMS jet-energy calibration by 3–5 %, equivalent to a ~35 % quadrature improvement in resolution.",
-    links: [
-      { text: "arXiv 2402.14067", href: "https://arxiv.org/abs/2402.14067" },
-      { text: "Phys. Rev. D 110, 076015", href: "https://doi.org/10.1103/PhysRevD.110.076015" },
-      { text: "GitHub", href: "https://github.com/rikab/SeeingDouble" },
+    "slug": "moments",
+    "title": "Moments of Clarity: Streamlining Latent Spaces in Machine Learning using Moment Pooling",
+    "date": "2024-03-13",
+    "authors": "Rikab Gambhir, Athis Osathapan, Jesse Thaler",
+    "img": "assets/img/moments.png",
+    "blurb": "We propose \"Moment Pooling\", a multivariate-moment generalisation of Deep-Sets that slashes latent dimensions while preserving—and sometimes improving—performance. Demonstrated on quark–gluon jet classification.",
+    "abstract": "",
+    "tags": [
+      "ml",
+      "jets",
+      "interpretability"
     ],
+    "featured": false,
+    "joke": false,
+    "status": "refereed",
+    "bibtex": "@article{Gambhir:2024dtf,\n    author = \"Gambhir, Rikab and Osathapan, Athis and Thaler, Jesse\",\n    title = \"{Streamlining latent spaces in machine learning using moment pooling}\",\n    eprint = \"2403.08854\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MIT-CTP 5689\",\n    doi = \"10.1103/PhysRevD.110.074020\",\n    journal = \"Phys. Rev. D\",\n    volume = \"110\",\n    number = \"7\",\n    pages = \"074020\",\n    year = \"2024\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2403.08854"
+      },
+      {
+        "text": "arXiv 2403.08854",
+        "href": "https://arxiv.org/abs/2403.08854"
+      },
+      {
+        "text": "Phys. Rev. D 110, 074020",
+        "href": "https://doi.org/10.1103/PhysRevD.110.074020"
+      },
+      {
+        "text": "GitHub",
+        "href": "https://github.com/rikab/MomentAnalysis"
+      }
+    ],
+    "talks": [
+      "moments-of-clarity-in-machine-learning-f-2025-06-11",
+      "moments-of-clarity-in-machine-learning-f-2025-03-12",
+      "moments-of-clarity-in-machine-learning-f-2024-12-18",
+      "moments-of-clarity-in-machine-learning-f-2024-10-18",
+      "moments-of-clarity-in-machine-learning-f-2024-10-11",
+      "moments-of-clarity-in-jet-physics-with-m-2024-09-24",
+      "moments-of-clarity-in-machine-learning-f-2024-05-28",
+      "moment-pooling-performance-interpretabil-2023-08-02",
+      "moment-pooling-performance-interpretabil-2023-04-17"
+    ]
   },
   {
-    title: "The New Physics Case for Beam-Dump Experiments with Accelerated Muon Beams",
-    date: "2023-10-24",
-    authors: "Cari Cesarotti, Rikab Gambhir",
-    img: "assets/img/beam_dump.png",
-    blurb: "Shows that even low-energy muon beam-dumps can open unexplored BSM parameter space from 10 GeV up to a few TeV.",
-    links: [
-      { text: "arXiv 2310.16110", href: "https://arxiv.org/abs/2310.16110" },
-      { text: "J. High Energ. Phys. 2024, 283", href: "https://doi.org/10.1007/JHEP05(2024)283" },
-      { text: "GitHub", href: "https://github.com/rikab/MuonBeamDump" },
+    "slug": "seeing-double",
+    "title": "Seeing Double: Calibrating Two Jets at Once",
+    "date": "2024-02-21",
+    "authors": "Rikab Gambhir, Benjamin Nachman",
+    "img": "assets/img/Seeing_Double.png",
+    "blurb": "Exploits momentum-conservation correlations between dijets to improve CMS jet-energy calibration by 3–5 %, equivalent to a ~35 % quadrature improvement in resolution.",
+    "abstract": "",
+    "tags": [
+      "calibration",
+      "ml",
+      "cms"
     ],
+    "featured": false,
+    "joke": false,
+    "status": "refereed",
+    "bibtex": "@article{Gambhir:2024tgs,\n    author = \"Gambhir, Rikab and Nachman, Benjamin\",\n    title = \"{Calibrating two jets at once}\",\n    eprint = \"2402.14067\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MIT-CTP 5680\",\n    doi = \"10.1103/PhysRevD.110.076015\",\n    journal = \"Phys. Rev. D\",\n    volume = \"110\",\n    number = \"7\",\n    pages = \"076015\",\n    year = \"2024\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2402.14067"
+      },
+      {
+        "text": "arXiv 2402.14067",
+        "href": "https://arxiv.org/abs/2402.14067"
+      },
+      {
+        "text": "Phys. Rev. D 110, 076015",
+        "href": "https://doi.org/10.1103/PhysRevD.110.076015"
+      },
+      {
+        "text": "GitHub",
+        "href": "https://github.com/rikab/SeeingDouble"
+      }
+    ],
+    "talks": []
   },
   {
-    title: "SHAPER: Can You Hear the Shape of a Jet?",
-    date: "2023-02-26",
-    authors: "Demba Ba, Akshunna S. Dogra, Rikab Gambhir, Abiy Tasissa, Jesse Thaler",
-    img: "assets/img/SHAPER.gif",
-    blurb: "Earth-Mover's Distance emerges as the natural metric for collider events; introduces the SHAPER framework for new IRC-safe shape observables.",
-    links: [
-      { text: "arXiv 2302.12266", href: "https://arxiv.org/abs/2302.12266" },
-      { text: "J. High Energ. Phys. 2023, 195", href: "https://link.springer.com/article/10.1007/JHEP06(2023)195" },
-      { text: "GitHub", href: "https://github.com/rikab/SHAPER" },
+    "slug": "muon-beam-dump",
+    "title": "The New Physics Case for Beam-Dump Experiments with Accelerated Muon Beams",
+    "date": "2023-10-24",
+    "authors": "Cari Cesarotti, Rikab Gambhir",
+    "img": "assets/img/beam_dump.png",
+    "blurb": "Shows that even low-energy muon beam-dumps can open unexplored BSM parameter space from 10 GeV up to a few TeV.",
+    "abstract": "",
+    "tags": [
+      "bsm",
+      "muons",
+      "future-colliders"
     ],
+    "featured": false,
+    "joke": false,
+    "status": "refereed",
+    "bibtex": "@article{Cesarotti:2023sje,\n    author = \"Cesarotti, Cari and Gambhir, Rikab\",\n    title = \"{The new physics case for beam-dump experiments with accelerated muon beams}\",\n    eprint = \"2310.16110\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MIT-CTP 5606\",\n    doi = \"10.1007/JHEP05(2024)283\",\n    journal = \"JHEP\",\n    volume = \"05\",\n    pages = \"283\",\n    year = \"2024\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2310.16110"
+      },
+      {
+        "text": "arXiv 2310.16110",
+        "href": "https://arxiv.org/abs/2310.16110"
+      },
+      {
+        "text": "J. High Energ. Phys. 2024, 283",
+        "href": "https://doi.org/10.1007/JHEP05(2024)283"
+      },
+      {
+        "text": "GitHub",
+        "href": "https://github.com/rikab/MuonBeamDump"
+      }
+    ],
+    "talks": [
+      "the-new-physics-case-for-muon-beam-dump--2024-05-16",
+      "the-new-physics-case-for-muon-beam-dump--2024-03-19"
+    ]
   },
   {
-    title: "Bias and Priors in Machine-Learning Calibrations for High-Energy Physics",
-    date: "2022-05-11",
-    authors: "Rikab Gambhir, Benjamin Nachman, Jesse Thaler",
-    img: "assets/img/Calibration_Priors.png",
-    blurb: "Demonstrates how simulation- and data-derived calibrations inherit sample-specific biases; shows Gaussian Ansatz mitigates prior dependence.",
-    links: [
-      { text: "arXiv 2205.05084", href: "https://arxiv.org/abs/2205.05084" },
-      { text: "Phys. Rev. D 106, 036011", href: "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.106.036011" },
-      { text: "Notebook repo", href: "https://github.com/hep-lbdl/calibrationpriors" },
+    "slug": "shaper",
+    "title": "SHAPER: Can You Hear the Shape of a Jet?",
+    "date": "2023-02-26",
+    "authors": "Demba Ba, Akshunna S. Dogra, Rikab Gambhir, Abiy Tasissa, Jesse Thaler",
+    "img": "assets/img/SHAPER.gif",
+    "blurb": "Earth-Mover's Distance emerges as the natural metric for collider events; introduces the SHAPER framework for new IRC-safe shape observables.",
+    "abstract": "",
+    "tags": [
+      "optimal-transport",
+      "jets",
+      "ml"
     ],
+    "featured": true,
+    "joke": false,
+    "status": "refereed",
+    "bibtex": "@article{Ba:2023hix,\n    author = \"Ba, Demba and Dogra, Akshunna S. and Gambhir, Rikab and Tasissa, Abiy and Thaler, Jesse\",\n    title = \"{SHAPER: can you hear the shape of a jet?}\",\n    eprint = \"2302.12266\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MIT-CTP 5535\",\n    doi = \"10.1007/JHEP06(2023)195\",\n    journal = \"JHEP\",\n    volume = \"06\",\n    pages = \"195\",\n    year = \"2023\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2302.12266"
+      },
+      {
+        "text": "arXiv 2302.12266",
+        "href": "https://arxiv.org/abs/2302.12266"
+      },
+      {
+        "text": "J. High Energ. Phys. 2023, 195",
+        "href": "https://link.springer.com/article/10.1007/JHEP06(2023)195"
+      },
+      {
+        "text": "GitHub",
+        "href": "https://github.com/rikab/SHAPER"
+      }
+    ],
+    "talks": [
+      "the-shape-of-jets-2026-03-17",
+      "the-shape-of-jets-2025-10-10",
+      "the-shape-of-jets-2025-09-22",
+      "the-shape-of-jets-2025-03-04",
+      "an-iaifi-story-can-you-hear-the-shape-of-2023-05-16",
+      "can-you-hear-the-shape-of-a-jet-2023-03-17",
+      "can-you-hear-the-shape-of-a-jet-2022-11-04",
+      "can-you-hear-the-shape-of-a-jet-2022-08-15",
+      "can-you-hear-the-shape-of-a-jet-iaifi-ns-2022-08-11",
+      "can-you-hear-the-shape-of-a-jet-2022-04-10"
+    ]
   },
   {
-    title: "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High-Energy Physics",
-    date: "2022-05-09",
-    authors: "Rikab Gambhir, Benjamin Nachman, Jesse Thaler",
-    img: "assets/img/Freq_Way.png",
-    blurb: "Presents a likelihood-based inference framework with Gaussian uncertainty estimates and mutual-information diagnostics.",
-    links: [
-      { text: "arXiv 2205.03413", href: "https://arxiv.org/abs/2205.03413" },
-      { text: "Phys. Rev. Lett. 129, 082001", href: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.129.082001" },
-      { text: "GitHub", href: "https://github.com/rikab/GaussianAnsatz/tree/main/JEC" },
-      { text: "INSPIRE-HEP", href: "https://inspirehep.net/literature/2078714" },
+    "slug": "calibration-priors",
+    "title": "Bias and Priors in Machine-Learning Calibrations for High-Energy Physics",
+    "date": "2022-05-11",
+    "authors": "Rikab Gambhir, Benjamin Nachman, Jesse Thaler",
+    "img": "assets/img/Calibration_Priors.png",
+    "blurb": "Demonstrates how simulation- and data-derived calibrations inherit sample-specific biases; shows Gaussian Ansatz mitigates prior dependence.",
+    "abstract": "",
+    "tags": [
+      "ml",
+      "calibration",
+      "statistics"
     ],
+    "featured": false,
+    "joke": false,
+    "status": "refereed",
+    "bibtex": "@article{Gambhir:2022dut,\n    author = \"Gambhir, Rikab and Nachman, Benjamin and Thaler, Jesse\",\n    title = \"{Bias and priors in machine learning calibrations for high energy physics}\",\n    eprint = \"2205.05084\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MIT-CTP 5432\",\n    doi = \"10.1103/PhysRevD.106.036011\",\n    journal = \"Phys. Rev. D\",\n    volume = \"106\",\n    number = \"3\",\n    pages = \"036011\",\n    year = \"2022\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2205.05084"
+      },
+      {
+        "text": "arXiv 2205.05084",
+        "href": "https://arxiv.org/abs/2205.05084"
+      },
+      {
+        "text": "Phys. Rev. D 106, 036011",
+        "href": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.106.036011"
+      },
+      {
+        "text": "Notebook repo",
+        "href": "https://github.com/hep-lbdl/calibrationpriors"
+      }
+    ],
+    "talks": []
   },
   {
-    title: "Search for bottom-type vector-like-quark pair production in a fully hadronic final state at √s = 13 TeV",
-    date: "2020-12-07",
-    authors: "CMS Collaboration",
-    img: "assets/img/exclusion.png",
-    blurb: "Sets the then-tightest limits on VLQ→hadronic decays using the full Run-2 CMS data set.",
-    links: [
-      { text: "arXiv 2008.09835", href: "https://arxiv.org/abs/2008.09835" },
-      { text: "Phys. Rev. D 102, 112004", href: "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.112004" },
+    "slug": "frequentist-way",
+    "title": "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High-Energy Physics",
+    "date": "2022-05-09",
+    "authors": "Rikab Gambhir, Benjamin Nachman, Jesse Thaler",
+    "img": "assets/img/Freq_Way.png",
+    "blurb": "Presents a likelihood-based inference framework with Gaussian uncertainty estimates and mutual-information diagnostics.",
+    "abstract": "",
+    "tags": [
+      "ml",
+      "calibration",
+      "statistics"
     ],
+    "featured": false,
+    "joke": false,
+    "status": "refereed",
+    "bibtex": "@article{Gambhir:2022gua,\n    author = \"Gambhir, Rikab and Nachman, Benjamin and Thaler, Jesse\",\n    title = \"{Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics}\",\n    eprint = \"2205.03413\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    reportNumber = \"MIT-CTP 5431\",\n    doi = \"10.1103/PhysRevLett.129.082001\",\n    journal = \"Phys. Rev. Lett.\",\n    volume = \"129\",\n    number = \"8\",\n    pages = \"082001\",\n    year = \"2022\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2205.03413"
+      },
+      {
+        "text": "arXiv 2205.03413",
+        "href": "https://arxiv.org/abs/2205.03413"
+      },
+      {
+        "text": "Phys. Rev. Lett. 129, 082001",
+        "href": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.129.082001"
+      },
+      {
+        "text": "GitHub",
+        "href": "https://github.com/rikab/GaussianAnsatz/tree/main/JEC"
+      }
+    ],
+    "talks": [
+      "learning-uncertainties-the-frequentist-w-2022-12-03",
+      "learning-uncertainties-the-frequentist-w-2022-11-22",
+      "learning-uncertainties-the-frequentist-w-2022-09-13",
+      "learning-uncertainties-the-frequentist-w-2021-07-07"
+    ]
   },
+  {
+    "slug": "vlq",
+    "title": "Search for bottom-type vector-like-quark pair production in a fully hadronic final state at √s = 13 TeV",
+    "date": "2020-12-07",
+    "authors": "CMS Collaboration",
+    "img": "assets/img/exclusion.png",
+    "blurb": "Sets the then-tightest limits on VLQ→hadronic decays using the full Run-2 CMS data set.",
+    "abstract": "",
+    "tags": [
+      "bsm",
+      "cms"
+    ],
+    "featured": false,
+    "joke": false,
+    "status": "refereed",
+    "bibtex": "@article{CMS:2020ttz,\n    author = \"Sirunyan, Albert M and others\",\n    collaboration = \"CMS\",\n    title = \"{A search for bottom-type, vector-like quark pair production in a fully hadronic final state in proton-proton collisions at $\\sqrt{s} =$ 13 TeV}\",\n    eprint = \"2008.09835\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ex\",\n    reportNumber = \"CMS-B2G-19-005, CERN-EP-2020-154\",\n    doi = \"10.1103/PhysRevD.102.112004\",\n    journal = \"Phys. Rev. D\",\n    volume = \"102\",\n    pages = \"112004\",\n    year = \"2020\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2008.09835"
+      },
+      {
+        "text": "arXiv 2008.09835",
+        "href": "https://arxiv.org/abs/2008.09835"
+      },
+      {
+        "text": "Phys. Rev. D 102, 112004",
+        "href": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.112004"
+      }
+    ],
+    "talks": [
+      "a-search-for-fully-hadronic-final-state--2020-04-19",
+      "a-search-for-fully-hadronic-final-state--2019-07-29"
+    ]
+  }
 ];
 
 export const talkData = [
   {
-    category: "Invited Talks",
-    items: [
-      {
-        featured: true,
-        title: "Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics",
-        where: "HEP Lunch Seminar, UChicago",
-        date: "2026-04-27",
-        slides: "./assets/talks/[UChicago 2026] Interpreting “Interpretability”.pdf",
-        video: null,
-      },
-      {
-        featured: true,
-        title: "Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics",
-        where: "IAIFI Lunch Seminar, MIT",
-        date: "2026-04-16",
-        slides: "./assets/talks/[IAIFI 2026] Interpreting “Interpretability”.pdf",
-        video: null,
-      },
-      {
-        featured: true,
-        title: "Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized",
-        where: "Institut de Physique Théorique (IPhT)",
-        date: "2026-04-02",
-        slides: "./assets/talks/[IPHT 2026] RDFs.pdf",
-        video: null,
-      },
-      {
-        featured: true,
-        title: "The Shape of Jets",
-        where: "KITP Particle Theory Initiative",
-        date: "2026-03-17",
-        slides: "./assets/talks/[KITP 2026] The Shape of Jets.pdf",
-        video: "https://online.kitp.ucsb.edu/online/quarkgluon26/gambhir/",
-      },
-      {
-        featured: true,
-        title: "The Shape of Jets",
-        where: "Alabama HEP/Astro Seminar, University of Alabama (AL)",
-        date: "2025-10-10",
-        slides: "./assets/talks/The Shape of Jets [Alabama 2025].pdf",
-        video: "https://physics.ua.edu/2025/10/14/high-energy-and-particle-physics-seminar/",
-      },
-      {
-        featured: true,
-        title: "The Shape of Jets",
-        where: "Cincinnati HEP/Astro Seminar, University of Cincinnati (OH)",
-        date: "2025-09-22",
-        slides: "./assets/talks/The Shape of Jets [Cincy 2025].pdf",
-        video: null,
-      },
-      {
-        featured: true,
-        title: "Moments of Clarity in Machine Learning for Jet Physics",
-        where: "Harvard, Cambridge (MA)",
-        date: "2025-06-11",
-        slides: "./assets/talks/Talk [Harvard 2025].pdf",
-        video: null,
-      },
-      {
-        featured: true,
-        title: "Moments of Clarity in Machine Learning for Jet Physics",
-        where: "Yale AI/Physics Seminar, New Haven (CT)",
-        date: "2025-03-12",
-        slides: "./assets/talks/Moments of Clarity [Yale 2025].pdf",
-        video: null,
-      },
-      {
-        featured: true,
-        title: "The Shape of Jets",
-        where: "LBNL AI Seminar, (Virtual)",
-        date: "2025-03-04",
-        slides: "./assets/talks/The Shape of Jets [LBNL 2025].pdf",
-        video: null,
-      },
-      {
-        featured: true,
-        title: "Moments of Clarity in Machine Learning for Jet Physics",
-        where: "Brown Physics Seminar, Providence (RI)",
-        date: "2024-12-18",
-        slides: "./assets/talks/Moments of Clarity [Brown 2024].pdf",
-        video: null,
-      },
-      {
-        featured: true,
-        title: "Moments of Clarity in Machine Learning for Jet Physics",
-        where: "Rutgers Journal Club, New Brunswick (NJ)",
-        date: "2024-10-18",
-        slides: "./assets/talks/Moments of Clarity [Rutgers 2024].pdf",
-        video: null,
-      },
-      {
-        featured: true,
-        title: "Moments of Clarity in Machine Learning for Jet Physics",
-        where: "UIUC Physics Seminar, Urbana-Champaign (IL)",
-        date: "2024-10-11",
-        slides: "./assets/talks/Moments of Clarity [UIUC 2024].pdf",
-        video: null,
-      },
-      {
-        featured: true,
-        title: "Moments of Clarity in Machine Learning for Jet Physics",
-        where: "SLAC AI Seminar (virtual)",
-        date: "2024-05-28",
-        slides: "./assets/talks/(SLAC 2024) ML And Colliders.pdf",
-        video: "https://stanford.zoom.us/rec/share/oJLuBcLOiD_OrJjNc7C01kq09xQYhaK3CYpn0VzyXFCsdt1xMp24ZwBSzMcIoXyh.BKP0GP6--Qu0LthP",
-      },
-      {
-        featured: true,
-        title: "How Do I Take My Cup of CMS Open Data?",
-        where: "CMS Open-Data Workshop 2023, Fermilab (IL)",
-        date: "2023-07-11",
-        slides: "./assets/talks/(Fermilab 2023) CMS Open Data-2.pdf",
-        video: "https://indico.fnal.gov/event/58914/timetable/",
-      },
-      {
-        featured: true,
-        title: "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics",
-        where: "ATLAS Jet/Etmiss Seminar, CERN (virtual)",
-        date: "2022-11-22",
-        slides: "./assets/talks/(ATLAS) Frequentist Way.pdf",
-        video: "https://indico.cern.ch/event/1223571/",
-      },
-      {
-        featured: false,
-        title: "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics",
-        where: "Astro/Particle-ML Seminar, UCI (virtual)",
-        date: "2022-09-13",
-        slides: "./assets/talks/(UCI) Frequentist Way-1-1.pdf",
-        video: null,
-      },
-    ],
+    "id": "interpreting-interpretability-and-explai-2026-04-27",
+    "title": "Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics",
+    "where": "HEP Lunch Seminar, UChicago",
+    "date": "2026-04-27",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/[UChicago 2026] Interpreting “Interpretability”.pdf",
+    "video": null,
+    "featured": true,
+    "paper": null,
+    "abstract": ""
   },
   {
-    category: "HDSense",
-    items: [
-      {
-        featured: false,
-        title: "HD Sense: An efficient method for ranking observable sensitivity",
-        where: "LPCC MCWG Tuning Forum",
-        date: "2026-03-09",
-        slides: "./assets/talks/[LPCC 2026] HD Sense.pdf",
-        video: "https://indico.cern.ch/event/1648114/",
-      },
-    ],
+    "id": "interpreting-interpretability-and-explai-2026-04-16",
+    "title": "Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics",
+    "where": "IAIFI Lunch Seminar, MIT",
+    "date": "2026-04-16",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/[IAIFI 2026] Interpreting “Interpretability”.pdf",
+    "video": null,
+    "featured": true,
+    "paper": null,
+    "abstract": ""
   },
   {
-    category: "SPECTER – Spectral EMD",
-    items: [
-      {
-        featured: true,
-        title: "SPECTER: Efficient Evaluation of the Spectral EMD",
-        where: "IAIFI Workshop, MIT Media Lab",
-        date: "2024-08-15",
-        slides: "./assets/talks/(IAIFI 2024) SPECTER.pdf",
-        video: "https://iaifi.org/summer-workshop",
-      },
-      {
-        featured: false,
-        title: "SPECTER: Efficient Evaluation of the Spectral EMD",
-        where: "BOOST 2024, Genova (Italy)",
-        date: "2024-07-31",
-        slides: "./assets/talks/(BOOST 2024) SPECTER.pdf",
-        video: "https://agenda.infn.it/event/37093/contributions/234299/",
-      },
-      {
-        featured: false,
-        title: "SPECTER: Efficient Evaluation of the Spectral EMD",
-        where: "ML4Jets 2023, DESY Hamburg",
-        date: "2023-11-08",
-        slides: "./assets/talks/(ML4Jets 2023) SPECTER-2.pdf",
-        video: "https://indico.cern.ch/event/1253794/contributions/5588542/",
-      },
-    ],
+    "id": "resummed-distribution-functions-making-p-2026-04-02",
+    "title": "Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized",
+    "where": "Institut de Physique Théorique (IPhT)",
+    "date": "2026-04-02",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/[IPHT 2026] RDFs.pdf",
+    "video": null,
+    "featured": true,
+    "paper": "rdf",
+    "abstract": ""
   },
   {
-    category: "Muon Beam Dumps",
-    items: [
-      {
-        featured: false,
-        title: "The New Physics Case for Muon Beam Dump Experiments",
-        where: "DPF-Pheno 2024, Univ. Pittsburgh",
-        date: "2024-05-16",
-        slides: "./assets/talks/(Pheno 2024) Muon Beam Dump.pdf",
-        video: "https://indico.cern.ch/event/1358339/contributions/5899388/",
-      },
-      {
-        featured: true,
-        title: "The New Physics Case for Muon Beam-Dump Experiments",
-        where: "MIT CTP Graduate Seminar",
-        date: "2024-03-19",
-        slides: "./assets/talks/(Grad Seminar 2024) Muon Beam Dump-1.pdf",
-        video: null,
-      },
-    ],
+    "id": "the-shape-of-jets-2026-03-17",
+    "title": "The Shape of Jets",
+    "where": "KITP Particle Theory Initiative",
+    "date": "2026-03-17",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/[KITP 2026] The Shape of Jets.pdf",
+    "video": "https://online.kitp.ucsb.edu/online/quarkgluon26/gambhir/",
+    "featured": true,
+    "paper": "shaper",
+    "abstract": ""
   },
   {
-    category: "Moment Pooling",
-    items: [
-      {
-        featured: true,
-        title: "Moment Pooling: Performance & Interpretability via Physics-Inspired Products",
-        where: "BOOST 2023, LBNL Berkeley",
-        date: "2023-08-02",
-        slides: "./assets/talks/(BOOST 2023) Moment Pooling.pdf",
-        video: "https://indico.physics.lbl.gov/event/975/contributions/8280/",
-      },
-      {
-        featured: false,
-        title: "Moment Pooling: Performance & Interpretability via Physics-Inspired Products",
-        where: "APS April Meeting 2023, Minneapolis",
-        date: "2023-04-17",
-        slides: "./assets/talks/(APS 2023) Moment Pooling-4.pdf",
-        video: "https://meetings.aps.org/Meeting/APR23/Session/M11.6",
-      },
-    ],
+    "id": "hd-sense-an-efficient-method-for-ranking-2026-03-09",
+    "title": "HD Sense: An efficient method for ranking observable sensitivity",
+    "where": "LPCC MCWG Tuning Forum",
+    "date": "2026-03-09",
+    "category": "contributed",
+    "topic": "HDSense",
+    "slides": "./assets/talks/[LPCC 2026] HD Sense.pdf",
+    "video": "https://indico.cern.ch/event/1648114/",
+    "featured": false,
+    "paper": "hdsense",
+    "abstract": ""
   },
   {
-    category: "Can You Hear the Shape of a Jet?",
-    items: [
-      {
-        featured: false,
-        title: "An IAIFI Story – Can You Hear the Shape of a Jet?",
-        where: "IAIFI Engineering Advisory Board",
-        date: "2023-05-16",
-        slides: "./assets/talks/(IAIFI 2023) Can you hear the shape of a jet_.pdf",
-        video: null,
-      },
-      {
-        featured: true,
-        title: "Can You Hear the Shape of a Jet?",
-        where: "MIT CTP Graduate Seminar",
-        date: "2023-03-17",
-        slides: "./assets/talks/(Grad Seminar 2023) Can you hear the shape of a jet .pdf",
-        video: null,
-      },
-      {
-        featured: false,
-        title: "Can You Hear the Shape of a Jet?",
-        where: "ML4Jets 2022, Rutgers University",
-        date: "2022-11-04",
-        slides: "./assets/talks/(ML4Jets 2022) Can you hear the shape of a jet .pdf",
-        video: "https://indico.cern.ch/event/1159913/contributions/5062759/",
-      },
-      {
-        featured: false,
-        title: "Can You Hear the Shape of a Jet?",
-        where: "BOOST 2022, Univ. Hamburg",
-        date: "2022-08-15",
-        slides: "./assets/talks/(BOOST 2022) Can you hear the shape of a jet -2.pdf",
-        video: "https://indico.cern.ch/event/1144064/contributions/4940343/",
-      },
-      {
-        featured: false,
-        title: "Can You Hear the Shape of a Jet? – IAIFI/NSF Review",
-        where: "MIT, Cambridge (MA)",
-        date: "2022-08-11",
-        slides: "./assets/talks/IAIFI Story.pdf",
-        video: null,
-      },
-      {
-        featured: false,
-        title: "Can You Hear the Shape of a Jet?",
-        where: "APS April Meeting 2022, New York City",
-        date: "2022-04-10",
-        slides: "./assets/talks/can_you_hear_the_shape_of_a_jet.pdf",
-        video: "https://meetings.aps.org/Meeting/APR22/Session/K08.7",
-      },
-    ],
+    "id": "interpreting-interpretability-and-explai-2026-02-17",
+    "title": "Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics",
+    "where": "VERaiPHY, Nikhef",
+    "date": "2026-02-17",
+    "category": "contributed",
+    "topic": "",
+    "slides": "./assets/talks/[NIKHEF 2026] Interpreting “Interpretability”.pdf",
+    "video": "https://indico.cern.ch/event/1617006/contributions/6877944/",
+    "featured": false,
+    "paper": null,
+    "abstract": ""
   },
   {
-    category: "Frequentist Way – Calibration & Correlation",
-    items: [
-      {
-        featured: false,
-        title: "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics",
-        where: "ML & Physical Sciences @ NeurIPS 2022",
-        date: "2022-12-03",
-        slides: "./assets/talks/frequentist_way_poster.png",
-        video: "https://neurips.cc/virtual/2022/event/56849",
-      },
-      {
-        featured: false,
-        title: "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics",
-        where: "ML4Jets 2021, Univ. Heidelberg (virtual)",
-        date: "2021-07-07",
-        slides: "./assets/talks/Calibration and Correlation ML4Jets.pdf",
-        video: "https://indico.cern.ch/event/980214/contributions/4413598/",
-      },
-    ],
+    "id": "interpreting-interpretability-in-ml-and--2025-11-21",
+    "title": "Interpreting ``Interpretability'' in ML and Physics",
+    "where": "",
+    "date": "2025-11-21",
+    "category": "lectures",
+    "topic": "",
+    "slides": null,
+    "video": null,
+    "featured": false,
+    "paper": null,
+    "abstract": ""
   },
+  {
+    "id": "the-shape-of-jets-2025-10-10",
+    "title": "The Shape of Jets",
+    "where": "Alabama HEP/Astro Seminar, University of Alabama (AL)",
+    "date": "2025-10-10",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/The Shape of Jets [Alabama 2025].pdf",
+    "video": "https://physics.ua.edu/2025/10/14/high-energy-and-particle-physics-seminar/",
+    "featured": true,
+    "paper": "shaper",
+    "abstract": ""
+  },
+  {
+    "id": "the-shape-of-jets-2025-09-22",
+    "title": "The Shape of Jets",
+    "where": "Cincinnati HEP/Astro Seminar, University of Cincinnati (OH)",
+    "date": "2025-09-22",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/The Shape of Jets [Cincy 2025].pdf",
+    "video": null,
+    "featured": true,
+    "paper": "shaper",
+    "abstract": ""
+  },
+  {
+    "id": "the-pareto-frontier-of-resilient-jet-tag-2025-08-21",
+    "title": "The Pareto Frontier of Resilient Jet Tagging",
+    "where": "ML4Jets 2025, Caltech (CA)",
+    "date": "2025-08-21",
+    "category": "contributed",
+    "topic": "Pareto Frontier",
+    "slides": null,
+    "video": null,
+    "featured": false,
+    "paper": "pareto",
+    "abstract": ""
+  },
+  {
+    "id": "re-normalizing-flows-taming-logs-and-per-2025-07-30",
+    "title": "Re-Normalizing Flows: Taming Logs and Perturbation Theory in QCD",
+    "where": "BOOST 2025, Brown University (RI)",
+    "date": "2025-07-30",
+    "category": "contributed",
+    "topic": "Resummed Distribution Functions",
+    "slides": null,
+    "video": null,
+    "featured": false,
+    "paper": "rdf",
+    "abstract": ""
+  },
+  {
+    "id": "machine-learning-tutorials-2025-06-21",
+    "title": "Machine Learning Tutorials",
+    "where": "",
+    "date": "2025-06-21",
+    "category": "lectures",
+    "topic": "",
+    "slides": null,
+    "video": null,
+    "featured": false,
+    "paper": null,
+    "abstract": ""
+  },
+  {
+    "id": "likelihood-based-reweighting-for-improve-2025-06-18",
+    "title": "Likelihood-based Reweighting for Improved sensitivity in Anomaly Detection",
+    "where": "AD4HEP 2025, Columbia (NY)",
+    "date": "2025-06-18",
+    "category": "contributed",
+    "topic": "",
+    "slides": null,
+    "video": null,
+    "featured": false,
+    "paper": "upsilons",
+    "abstract": ""
+  },
+  {
+    "id": "moments-of-clarity-in-machine-learning-f-2025-06-11",
+    "title": "Moments of Clarity in Machine Learning for Jet Physics",
+    "where": "Harvard, Cambridge (MA)",
+    "date": "2025-06-11",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/Talk [Harvard 2025].pdf",
+    "video": null,
+    "featured": true,
+    "paper": "moments",
+    "abstract": ""
+  },
+  {
+    "id": "isolating-unisolated-upsilons-with-anoma-2025-05-20",
+    "title": "Isolating Unisolated Upsilons with Anomaly Detection in CMS Open Data",
+    "where": "Pheno 2025, Univ. Pittsburgh (PA)",
+    "date": "2025-05-20",
+    "category": "contributed",
+    "topic": "",
+    "slides": null,
+    "video": null,
+    "featured": false,
+    "paper": "upsilons",
+    "abstract": ""
+  },
+  {
+    "id": "moments-of-clarity-in-machine-learning-f-2025-03-12",
+    "title": "Moments of Clarity in Machine Learning for Jet Physics",
+    "where": "Yale AI/Physics Seminar, New Haven (CT)",
+    "date": "2025-03-12",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/Moments of Clarity [Yale 2025].pdf",
+    "video": null,
+    "featured": true,
+    "paper": "moments",
+    "abstract": ""
+  },
+  {
+    "id": "the-shape-of-jets-2025-03-04",
+    "title": "The Shape of Jets",
+    "where": "LBNL AI Seminar, (Virtual)",
+    "date": "2025-03-04",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/The Shape of Jets [LBNL 2025].pdf",
+    "video": null,
+    "featured": true,
+    "paper": "shaper",
+    "abstract": ""
+  },
+  {
+    "id": "moments-of-clarity-in-machine-learning-f-2024-12-18",
+    "title": "Moments of Clarity in Machine Learning for Jet Physics",
+    "where": "Brown Physics Seminar, Providence (RI)",
+    "date": "2024-12-18",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/Moments of Clarity [Brown 2024].pdf",
+    "video": null,
+    "featured": true,
+    "paper": "moments",
+    "abstract": ""
+  },
+  {
+    "id": "re-normalizing-flows-taming-logs-and-per-2024-11-05",
+    "title": "Re-Normalizing Flows: Taming Logs and Perturbation Theory in QCD",
+    "where": "ML4Jets 2024, LPNHE Paris (France)",
+    "date": "2024-11-05",
+    "category": "contributed",
+    "topic": "Resummed Distribution Functions",
+    "slides": null,
+    "video": null,
+    "featured": false,
+    "paper": "rdf",
+    "abstract": ""
+  },
+  {
+    "id": "moments-of-clarity-in-machine-learning-f-2024-10-18",
+    "title": "Moments of Clarity in Machine Learning for Jet Physics",
+    "where": "Rutgers Journal Club, New Brunswick (NJ)",
+    "date": "2024-10-18",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/Moments of Clarity [Rutgers 2024].pdf",
+    "video": null,
+    "featured": true,
+    "paper": "moments",
+    "abstract": ""
+  },
+  {
+    "id": "moments-of-clarity-in-machine-learning-f-2024-10-11",
+    "title": "Moments of Clarity in Machine Learning for Jet Physics",
+    "where": "UIUC Physics Seminar, Urbana-Champaign (IL)",
+    "date": "2024-10-11",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/Moments of Clarity [UIUC 2024].pdf",
+    "video": null,
+    "featured": true,
+    "paper": "moments",
+    "abstract": ""
+  },
+  {
+    "id": "moments-of-clarity-in-jet-physics-with-m-2024-09-24",
+    "title": "Moments of Clarity in Jet Physics with Machine Learning",
+    "where": "IAIFI Journal Club, MIT",
+    "date": "2024-09-24",
+    "category": "contributed",
+    "topic": "",
+    "slides": null,
+    "video": null,
+    "featured": false,
+    "paper": "moments",
+    "abstract": ""
+  },
+  {
+    "id": "specter-efficient-evaluation-of-the-spec-2024-08-15",
+    "title": "SPECTER: Efficient Evaluation of the Spectral EMD",
+    "where": "IAIFI Workshop, MIT Media Lab",
+    "date": "2024-08-15",
+    "category": "contributed",
+    "topic": "SPECTER – Spectral EMD",
+    "slides": "./assets/talks/(IAIFI 2024) SPECTER.pdf",
+    "video": "https://iaifi.org/summer-workshop",
+    "featured": true,
+    "paper": "specter",
+    "abstract": ""
+  },
+  {
+    "id": "specter-efficient-evaluation-of-the-spec-2024-07-31",
+    "title": "SPECTER: Efficient Evaluation of the Spectral EMD",
+    "where": "BOOST 2024, Genova (Italy)",
+    "date": "2024-07-31",
+    "category": "contributed",
+    "topic": "SPECTER – Spectral EMD",
+    "slides": "./assets/talks/(BOOST 2024) SPECTER.pdf",
+    "video": "https://agenda.infn.it/event/37093/contributions/234299/",
+    "featured": false,
+    "paper": "specter",
+    "abstract": ""
+  },
+  {
+    "id": "moments-of-clarity-in-machine-learning-f-2024-05-28",
+    "title": "Moments of Clarity in Machine Learning for Jet Physics",
+    "where": "SLAC AI Seminar (virtual)",
+    "date": "2024-05-28",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/(SLAC 2024) ML And Colliders.pdf",
+    "video": "https://stanford.zoom.us/rec/share/oJLuBcLOiD_OrJjNc7C01kq09xQYhaK3CYpn0VzyXFCsdt1xMp24ZwBSzMcIoXyh.BKP0GP6--Qu0LthP",
+    "featured": true,
+    "paper": "moments",
+    "abstract": ""
+  },
+  {
+    "id": "the-new-physics-case-for-muon-beam-dump--2024-05-16",
+    "title": "The New Physics Case for Muon Beam Dump Experiments",
+    "where": "DPF-Pheno 2024, Univ. Pittsburgh",
+    "date": "2024-05-16",
+    "category": "contributed",
+    "topic": "Muon Beam Dumps",
+    "slides": "./assets/talks/(Pheno 2024) Muon Beam Dump.pdf",
+    "video": "https://indico.cern.ch/event/1358339/contributions/5899388/",
+    "featured": false,
+    "paper": "muon-beam-dump",
+    "abstract": ""
+  },
+  {
+    "id": "the-new-physics-case-for-muon-beam-dump--2024-03-19",
+    "title": "The New Physics Case for Muon Beam-Dump Experiments",
+    "where": "MIT CTP Graduate Seminar",
+    "date": "2024-03-19",
+    "category": "contributed",
+    "topic": "Muon Beam Dumps",
+    "slides": "./assets/talks/(Grad Seminar 2024) Muon Beam Dump-1.pdf",
+    "video": null,
+    "featured": true,
+    "paper": "muon-beam-dump",
+    "abstract": ""
+  },
+  {
+    "id": "specter-efficient-evaluation-of-the-spec-2023-11-08",
+    "title": "SPECTER: Efficient Evaluation of the Spectral EMD",
+    "where": "ML4Jets 2023, DESY Hamburg",
+    "date": "2023-11-08",
+    "category": "contributed",
+    "topic": "SPECTER – Spectral EMD",
+    "slides": "./assets/talks/(ML4Jets 2023) SPECTER-2.pdf",
+    "video": "https://indico.cern.ch/event/1253794/contributions/5588542/",
+    "featured": false,
+    "paper": "specter",
+    "abstract": ""
+  },
+  {
+    "id": "moment-pooling-performance-interpretabil-2023-08-02",
+    "title": "Moment Pooling: Performance & Interpretability via Physics-Inspired Products",
+    "where": "BOOST 2023, LBNL Berkeley",
+    "date": "2023-08-02",
+    "category": "contributed",
+    "topic": "Moment Pooling",
+    "slides": "./assets/talks/(BOOST 2023) Moment Pooling.pdf",
+    "video": "https://indico.physics.lbl.gov/event/975/contributions/8280/",
+    "featured": true,
+    "paper": "moments",
+    "abstract": ""
+  },
+  {
+    "id": "how-do-i-take-my-cup-of-cms-open-data-2023-07-11",
+    "title": "How Do I Take My Cup of CMS Open Data?",
+    "where": "CMS Open-Data Workshop 2023, Fermilab (IL)",
+    "date": "2023-07-11",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/(Fermilab 2023) CMS Open Data-2.pdf",
+    "video": "https://indico.fnal.gov/event/58914/timetable/",
+    "featured": true,
+    "paper": null,
+    "abstract": ""
+  },
+  {
+    "id": "an-iaifi-story-can-you-hear-the-shape-of-2023-05-16",
+    "title": "An IAIFI Story – Can You Hear the Shape of a Jet?",
+    "where": "IAIFI Engineering Advisory Board",
+    "date": "2023-05-16",
+    "category": "contributed",
+    "topic": "Can You Hear the Shape of a Jet?",
+    "slides": "./assets/talks/(IAIFI 2023) Can you hear the shape of a jet_.pdf",
+    "video": null,
+    "featured": false,
+    "paper": "shaper",
+    "abstract": ""
+  },
+  {
+    "id": "moment-pooling-performance-interpretabil-2023-04-17",
+    "title": "Moment Pooling: Performance & Interpretability via Physics-Inspired Products",
+    "where": "APS April Meeting 2023, Minneapolis",
+    "date": "2023-04-17",
+    "category": "contributed",
+    "topic": "Moment Pooling",
+    "slides": "./assets/talks/(APS 2023) Moment Pooling-4.pdf",
+    "video": "https://meetings.aps.org/Meeting/APR23/Session/M11.6",
+    "featured": false,
+    "paper": "moments",
+    "abstract": ""
+  },
+  {
+    "id": "can-you-hear-the-shape-of-a-jet-2023-03-17",
+    "title": "Can You Hear the Shape of a Jet?",
+    "where": "MIT CTP Graduate Seminar",
+    "date": "2023-03-17",
+    "category": "contributed",
+    "topic": "Can You Hear the Shape of a Jet?",
+    "slides": "./assets/talks/(Grad Seminar 2023) Can you hear the shape of a jet .pdf",
+    "video": null,
+    "featured": true,
+    "paper": "shaper",
+    "abstract": ""
+  },
+  {
+    "id": "learning-uncertainties-the-frequentist-w-2022-12-03",
+    "title": "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics",
+    "where": "ML & Physical Sciences @ NeurIPS 2022",
+    "date": "2022-12-03",
+    "category": "contributed",
+    "topic": "Frequentist Way – Calibration & Correlation",
+    "slides": "./assets/talks/frequentist_way_poster.png",
+    "video": "https://neurips.cc/virtual/2022/event/56849",
+    "featured": false,
+    "paper": "frequentist-way",
+    "abstract": ""
+  },
+  {
+    "id": "learning-uncertainties-the-frequentist-w-2022-11-22",
+    "title": "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics",
+    "where": "ATLAS Jet/Etmiss Seminar, CERN (virtual)",
+    "date": "2022-11-22",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/(ATLAS) Frequentist Way.pdf",
+    "video": "https://indico.cern.ch/event/1223571/",
+    "featured": true,
+    "paper": "frequentist-way",
+    "abstract": ""
+  },
+  {
+    "id": "can-you-hear-the-shape-of-a-jet-2022-11-04",
+    "title": "Can You Hear the Shape of a Jet?",
+    "where": "ML4Jets 2022, Rutgers University",
+    "date": "2022-11-04",
+    "category": "contributed",
+    "topic": "Can You Hear the Shape of a Jet?",
+    "slides": "./assets/talks/(ML4Jets 2022) Can you hear the shape of a jet .pdf",
+    "video": "https://indico.cern.ch/event/1159913/contributions/5062759/",
+    "featured": false,
+    "paper": "shaper",
+    "abstract": ""
+  },
+  {
+    "id": "learning-uncertainties-the-frequentist-w-2022-09-13",
+    "title": "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics",
+    "where": "Astro/Particle-ML Seminar, UCI (virtual)",
+    "date": "2022-09-13",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/(UCI) Frequentist Way-1-1.pdf",
+    "video": null,
+    "featured": false,
+    "paper": "frequentist-way",
+    "abstract": ""
+  },
+  {
+    "id": "can-you-hear-the-shape-of-a-jet-2022-08-15",
+    "title": "Can You Hear the Shape of a Jet?",
+    "where": "BOOST 2022, Univ. Hamburg",
+    "date": "2022-08-15",
+    "category": "contributed",
+    "topic": "Can You Hear the Shape of a Jet?",
+    "slides": "./assets/talks/(BOOST 2022) Can you hear the shape of a jet -2.pdf",
+    "video": "https://indico.cern.ch/event/1144064/contributions/4940343/",
+    "featured": false,
+    "paper": "shaper",
+    "abstract": ""
+  },
+  {
+    "id": "can-you-hear-the-shape-of-a-jet-iaifi-ns-2022-08-11",
+    "title": "Can You Hear the Shape of a Jet? – IAIFI/NSF Review",
+    "where": "MIT, Cambridge (MA)",
+    "date": "2022-08-11",
+    "category": "contributed",
+    "topic": "Can You Hear the Shape of a Jet?",
+    "slides": "./assets/talks/IAIFI Story.pdf",
+    "video": null,
+    "featured": false,
+    "paper": "shaper",
+    "abstract": ""
+  },
+  {
+    "id": "can-you-hear-the-shape-of-a-jet-2022-04-10",
+    "title": "Can You Hear the Shape of a Jet?",
+    "where": "APS April Meeting 2022, New York City",
+    "date": "2022-04-10",
+    "category": "contributed",
+    "topic": "Can You Hear the Shape of a Jet?",
+    "slides": "./assets/talks/can_you_hear_the_shape_of_a_jet.pdf",
+    "video": "https://meetings.aps.org/Meeting/APR22/Session/K08.7",
+    "featured": false,
+    "paper": "shaper",
+    "abstract": ""
+  },
+  {
+    "id": "learning-uncertainties-the-frequentist-w-2021-07-07",
+    "title": "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics",
+    "where": "ML4Jets 2021, Univ. Heidelberg (virtual)",
+    "date": "2021-07-07",
+    "category": "contributed",
+    "topic": "Frequentist Way – Calibration & Correlation",
+    "slides": "./assets/talks/Calibration and Correlation ML4Jets.pdf",
+    "video": "https://indico.cern.ch/event/980214/contributions/4413598/",
+    "featured": false,
+    "paper": "frequentist-way",
+    "abstract": ""
+  },
+  {
+    "id": "a-search-for-fully-hadronic-final-state--2020-04-19",
+    "title": "A Search for Fully Hadronic Final State Vector-Like Quark Pair Production in 13 TeV pp Collisions using CMS Data",
+    "where": "",
+    "date": "2020-04-19",
+    "category": "contributed",
+    "topic": "",
+    "slides": null,
+    "video": null,
+    "featured": false,
+    "paper": "vlq",
+    "abstract": ""
+  },
+  {
+    "id": "a-search-for-fully-hadronic-final-state--2019-07-29",
+    "title": "A Search for Fully Hadronic Final State Vector-Like Quark Pair Production in 13 TeV pp Collisions using CMS Data",
+    "where": "",
+    "date": "2019-07-29",
+    "category": "contributed",
+    "topic": "",
+    "slides": null,
+    "video": null,
+    "featured": false,
+    "paper": "vlq",
+    "abstract": ""
+  },
+  {
+    "id": "how-can-we-model-insect-flight-quickly-a-2017-08-04",
+    "title": "How Can We Model Insect Flight Quickly and Accurately?",
+    "where": "",
+    "date": "2017-08-04",
+    "category": "contributed",
+    "topic": "",
+    "slides": null,
+    "video": null,
+    "featured": false,
+    "paper": null,
+    "abstract": ""
+  }
+];
+
+export const softwareData = [
+  {
+    "name": "SPECTER",
+    "role": "Primary developer",
+    "install": "pip install specterpy",
+    "github": "https://github.com/rikab/SPECTER",
+    "homepage": "",
+    "paper": "specter",
+    "blurb": "Framework for defining, building, and efficiently evaluating spectral shape observables for collider physics."
+  },
+  {
+    "name": "SHAPER",
+    "role": "Primary developer",
+    "install": "pip install pyshaper",
+    "github": "https://github.com/rikab/SHAPER",
+    "homepage": "",
+    "paper": "shaper",
+    "blurb": "Shape Hunting Algorithm using Parameterized Energy Reconstruction — a framework for defining, building, and evaluating generalized shape observables."
+  },
+  {
+    "name": "GaussianAnsatz",
+    "role": "Primary developer",
+    "install": "pip install GaussianAnsatz",
+    "github": "https://github.com/rikab/GaussianAnsatz",
+    "homepage": "",
+    "paper": "frequentist-way",
+    "blurb": "Machine-learning framework for frequentist inference, complete with local uncertainty estimation."
+  },
+  {
+    "name": "ParticleLoader",
+    "role": "Primary developer",
+    "install": "",
+    "github": "https://github.com/rikab/ParticleLoader",
+    "homepage": "",
+    "paper": null,
+    "blurb": "Library for in-line downloading of standardized particle-physics datasets. Still in development; partial use possible."
+  },
+  {
+    "name": "Energyflow",
+    "role": "Maintainer",
+    "install": "pip install energyflow",
+    "github": "https://github.com/thaler-lab/EnergyFlow",
+    "homepage": "https://energyflow.network",
+    "paper": null,
+    "blurb": "Established library of jet-physics tools developed before 2020. Current package maintainer."
+  }
 ];
