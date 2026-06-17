@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~*~ Rikab's COOL Homepage ~*~</title>
+<style>
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  @keyframes rainbow {
+    0%   { color: #ff0000; }
+    16%  { color: #ff8800; }
+    33%  { color: #ffff00; }
+    50%  { color: #00ff00; }
+    66%  { color: #00aaff; }
+    83%  { color: #cc00ff; }
+    100% { color: #ff0000; }
+  }
+  @keyframes rainbow-bg {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-12px); }
+  }
+  @keyframes drift {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(30vw, 20vh); }
+    50%  { transform: translate(60vw, 5vh); }
+    75%  { transform: translate(90vw, 35vh); }
+    100% { transform: translate(110vw, 0); }
+  }
+  @keyframes wobble {
+    0%, 100% { transform: rotate(-3deg); }
+    50%      { transform: rotate(3deg); }
+  }
+  @keyframes glow {
+    0%, 100% { text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff; }
+    50%      { text-shadow: 0 0 20px #fff, 0 0 30px #00ffff; }
+  }
+
+  body {
+    background-color: #000033;
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60'><text x='5' y='15' fill='%23ffff00' font-size='12'>★</text><text x='35' y='40' fill='%23ffffff' font-size='10'>✦</text><text x='15' y='55' fill='%2300ffff' font-size='8'>✧</text></svg>");
+    background-repeat: repeat;
+    font-family: "Comic Sans MS", "Trebuchet MS", cursive, sans-serif;
+    color: #ffff00;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* floating particles in the background */
+  .particle {
+    position: fixed;
+    top: 50%;
+    left: -50px;
+    font-size: 24px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.7;
+  }
+  .p1 { animation: drift 18s linear infinite;          top: 10%; }
+  .p2 { animation: drift 24s linear infinite 3s;       top: 30%; color: #ff00ff; }
+  .p3 { animation: drift 15s linear infinite 6s;       top: 55%; color: #00ffff; }
+  .p4 { animation: drift 28s linear infinite 9s;       top: 75%; color: #ffff00; }
+  .p5 { animation: drift 20s linear infinite 12s;      top: 90%; color: #00ff00; }
+
+  .frame {
+    position: relative;
+    z-index: 1;
+    background: #c0c0c0;
+    border: 4px outset #ffffff;
+    color: #000000;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 820px;
+  }
+
+  h1 {
+    font-family: "Impact", "Arial Black", "Comic Sans MS", sans-serif;
+    font-size: 60px;
+    animation: rainbow 2s infinite linear, wobble 3s ease-in-out infinite;
+    text-shadow: 3px 3px 0 #000;
+    margin: 10px 0 5px 0;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    color: #ff00ff;
+    text-decoration: underline;
+    font-size: 30px;
+    animation: glow 2s ease-in-out infinite;
+    margin: 20px 0 10px 0;
+  }
+
+  .blink     { animation: blink 1s steps(2) infinite; }
+  .spin      { display: inline-block; animation: spin 3s linear infinite; }
+  .bounce    { display: inline-block; animation: bounce 0.6s ease infinite; }
+
+  marquee {
+    background: #ff00ff;
+    color: #ffff00;
+    padding: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    border-top: 3px ridge #ffff00;
+    border-bottom: 3px ridge #ffff00;
+    text-shadow: 2px 2px 0 #000;
+  }
+  marquee.bottom {
+    background: #00ffff;
+    color: #ff00ff;
+  }
+
+  hr.fancy {
+    height: 8px;
+    border: 0;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
+    background-size: 200% 100%;
+    animation: rainbow-bg 3s linear infinite;
+    margin: 20px 0;
+  }
+
+  a {
+    color: #0000ee;
+    font-weight: bold;
+  }
+  a:visited { color: #551a8b; }
+  a:hover {
+    color: #ff0000;
+    background: #ffff00;
+  }
+
+  .counter {
+    display: inline-block;
+    background: #000;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: 3px inset #666;
+    letter-spacing: 6px;
+    text-shadow: 0 0 4px #00ff00;
+  }
+
+  .under-construction {
+    display: inline-block;
+    background: repeating-linear-gradient(45deg, #ffcc00, #ffcc00 12px, #000 12px, #000 24px);
+    color: #fff;
+    padding: 12px 24px;
+    border: 4px solid #000;
+    font-weight: bold;
+    font-size: 22px;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    animation: wobble 1s ease-in-out infinite;
+  }
+
+  .netscape-badge {
+    display: inline-block;
+    background: linear-gradient(180deg, #0a0a4a 0%, #4040c0 100%);
+    color: #ffffff;
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    padding: 6px 14px;
+    border: 2px outset #aaa;
+    font-size: 14px;
+    text-shadow: 1px 1px 0 #000;
+  }
+
+  .mac-badge {
+    display: inline-block;
+    background: linear-gradient(180deg, #ff6699, #cc0033);
+    color: #fff;
+    padding: 6px 14px;
+    border: 2px outset #aaa;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .res-badge {
+    display: inline-block;
+    background: #000;
+    color: #00ff00;
+    padding: 6px 14px;
+    border: 2px inset #888;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+  }
+
+  table.layout {
+    margin: 10px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  table.layout td {
+    border: 3px ridge #00aaff;
+    padding: 14px;
+    background: #ffffff;
+    vertical-align: top;
+  }
+
+  ul.cool-list { list-style: none; padding-left: 0; }
+  ul.cool-list li {
+    margin: 8px 0;
+    font-size: 17px;
+  }
+  ul.cool-list li::before {
+    content: "🔥 ";
+  }
+
+  .new-tag {
+    display: inline-block;
+    background: #ff0000;
+    color: #ffff00;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    animation: blink 0.8s steps(2) infinite;
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+
+  .webring {
+    background: #000;
+    color: #00ff00;
+    padding: 18px;
+    border: 3px inset #444;
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+  }
+  .webring a { color: #00ffff; }
+  .webring a:hover { color: #ffff00; background: #000; }
+
+  .guestbook-icon {
+    display: inline-block;
+    font-size: 56px;
+    animation: bounce 0.8s ease infinite;
+  }
+
+  .email-link::before {
+    content: "📧 ";
+    display: inline-block;
+    animation: bounce 1s ease infinite;
+  }
+
+  .signature {
+    font-size: 12px;
+    color: #444;
+    margin-top: 20px;
+  }
+
+  .whats-new {
+    background: #ffffcc;
+    border: 2px dashed #ff0000;
+    padding: 14px;
+    text-align: left;
+    font-size: 15px;
+  }
+  .whats-new h3 {
+    margin-top: 0;
+    color: #cc0000;
+  }
+
+  .award {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffd700, #ff8800);
+    color: #000;
+    padding: 10px 16px;
+    border: 3px ridge #ffaa00;
+    font-weight: bold;
+    margin: 4px;
+    font-size: 14px;
+    transform: rotate(-2deg);
+  }
+  .award:nth-child(even) {
+    transform: rotate(2deg);
+    background: linear-gradient(135deg, #88ddff, #0088cc);
+  }
+
+  .corner-curl {
+    background: #ffffff;
+    color: #000;
+    padding: 14px;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 #888;
+  }
+
+  .quark {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 0 2px;
+    vertical-align: middle;
+  }
+  .quark.r { background: radial-gradient(#ffaaaa, #ff0000); }
+  .quark.g { background: radial-gradient(#aaffaa, #00aa00); }
+  .quark.b { background: radial-gradient(#aaaaff, #0000ff); }
+
+  .scroll-text {
+    font-family: "Courier New", monospace;
+    background: #000;
+    color: #ffaa00;
+    padding: 8px;
+    border: 2px inset #444;
+  }
+</style>
+</head>
+<body>
+
+<!-- floating physics particles in the background -->
+<div class="particle p1">⚛️</div>
+<div class="particle p2">✨</div>
+<div class="particle p3">🌟</div>
+<div class="particle p4">💫</div>
+<div class="particle p5">⚡</div>
+
+<marquee scrollamount="8">★彡 WELCOME TO RIKAB'S HOMEPAGE!! 彡★ &nbsp;~~~&nbsp; NOW WITH 100% MORE PARTICLES &nbsp;~~~&nbsp; COMING SOON: ANIMATED GIFs OF QUARKS &nbsp;~~~&nbsp; THANK YOU 4 VISITING!! &nbsp;~~~&nbsp; TELL YOUR FRIENDS!! &nbsp;~~~&nbsp;</marquee>
+
+<div class="frame">
+
+  <h1>~* RIKAB GAMBHIR *~</h1>
+  <p class="blink" style="font-size: 24px; color: #ff0000; font-weight: bold; margin: 0;">★ A T O M&nbsp;&nbsp;S M A S H E R ★</p>
+  <p style="font-size: 14px; color: #444; margin-top: 4px;">Particle Physicist &middot; Jet Wrangler &middot; HTML Enjoyer</p>
+
+  <hr class="fancy">
+
+  <p style="font-size: 17px;">
+    Hi there, cyber-surfer!! 🏄 Welcome to my <span class="blink">SUPER COOL</span> corner of the
+    <em>Information Superhighway</em>!! My name is <strong>Rikab</strong> and I am a
+    <span style="background: yellow; padding: 2px 6px;">PARTICLE PHYSICIST</span>!!
+  </p>
+
+  <p>
+    This page is best viewed in <span class="netscape-badge">Netscape Navigator 4.0</span>
+    at <span class="res-badge">800 × 600</span>
+    on a <span class="mac-badge">Macintosh</span>
+    <span class="new-tag">NEW!</span>
+  </p>
+
+  <p>
+    <span class="under-construction">🚧 UNDER CONSTRUCTION 🚧</span>
+  </p>
+
+  <hr class="fancy">
+
+  <h2>★ About Me ★</h2>
+
+  <table class="layout">
+    <tr>
+      <td style="width: 220px;">
+        <div class="spin" style="font-size: 80px;">⚛️</div>
+        <p><b>That's me!</b><br>
+        (or my favorite particle, anyway. I&nbsp;don't have a&nbsp;scanner yet.)</p>
+        <p style="font-size: 13px;">
+          quarks: <span class="quark r"></span><span class="quark g"></span><span class="quark b"></span>
+        </p>
+      </td>
+      <td style="text-align: left;">
+        <p>I study what happens when you smash teeny tiny things together <b>REALLY REALLY HARD</b>!! When you do that, lots of <em>other</em> tiny things come flying out — and we call those <span style="color: #ff0000; font-weight: bold;">JETS</span>!! 🚀</p>
+        <p>My favorite things to think about include:</p>
+        <ul class="cool-list">
+          <li><b>Energy Flow Polynomials</b> &mdash; math that is GROOVY 🎷</li>
+          <li><b>Jet Substructure</b> &mdash; jets WITHIN jets 🤯</li>
+          <li><b>Optimal Transport</b> &mdash; NOT about UPS trucks 📦</li>
+          <li><b>Machine Learning</b> &mdash; we teach computers physics!! 🤖</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <hr class="fancy">
+
+  <h2>★ What's New?! ★</h2>
+
+  <div class="whats-new">
+    <h3>🆕 Updates from Rikab's Lab! 🆕</h3>
+    <p><b>11/14/97</b> &mdash; Made this homepage!!! Took ALL day in NOTEPAD 😤</p>
+    <p><b>11/12/97</b> &mdash; Found a really cool jet. (it had like 4 prongs)</p>
+    <p><b>11/08/97</b> &mdash; Bought a NEW mousepad. Has a wizard on it 🧙</p>
+    <p><b>11/01/97</b> &mdash; Started thinking about energy flow. <span class="new-tag">HOT!</span></p>
+  </div>
+
+  <hr class="fancy">
+
+  <h2>★ My Cool Links ★</h2>
+
+  <p><a href="#">📜 My Papers (TONS of them!!)</a></p>
+  <p><a href="#">🎓 Where I Went To School</a></p>
+  <p><a href="#">🐱 Pictures of My Friend's Cat (he is FAT)</a></p>
+  <p><a href="#">⚛️ The Particle Data Group (BOOKMARK IT!)</a></p>
+  <p><a href="#">🌌 Why Quarks Are AWESOME &mdash; an ESSAY</a></p>
+  <p><a href="#">🍕 Pizza Places Near the Lab</a></p>
+
+  <hr class="fancy">
+
+  <h2>★ Awards I've Won ★</h2>
+  <p>
+    <span class="award">🏆 Cool Site of the Day!</span>
+    <span class="award">⭐ Geocities Pick</span>
+    <span class="award">🌟 Top 5% of the WEB!</span>
+    <span class="award">🎖️ Hot Hot HOT site!</span>
+  </p>
+
+  <hr class="fancy">
+
+  <h2>★ Sign My Guestbook!! ★</h2>
+
+  <p><span class="guestbook-icon">📖</span></p>
+  <p style="font-size: 22px;">
+    <a href="#"><b>&gt;&gt; CLICK HERE TO SIGN!! &lt;&lt;</b></a>
+  </p>
+  <p class="scroll-text">[ last 3 entries: "cool page!" -bob &middot; "love the quarks" -alice &middot; "pls fix marquee" -webmaster ]</p>
+
+  <hr class="fancy">
+
+  <h2>★ Contact Me ★</h2>
+
+  <p class="email-link" style="font-size: 18px;">
+    <a href="mailto:rikab@example.com"><b>rikab @ the internet . com</b></a>
+  </p>
+  <p style="font-size: 13px;">(no spam plz!! 🚫)</p>
+
+  <hr class="fancy">
+
+  <h2>★ Visitor Counter ★</h2>
+
+  <p>You are visitor number:</p>
+  <div class="counter">0000042</div>
+  <p style="font-size: 12px;">(since November 8, 1997 &middot; powered by GeoCounter™)</p>
+
+  <hr class="fancy">
+
+  <div class="webring">
+    <p style="font-size: 16px; margin-top: 0;">=== THE PARTICLE PHYSICS WEBRING ===</p>
+    <p>[ <a href="#">&lt;&lt; Prev</a> &nbsp;|&nbsp; <a href="#">Random</a> &nbsp;|&nbsp; <a href="#">List Sites</a> &nbsp;|&nbsp; <a href="#">Next &gt;&gt;</a> ]</p>
+    <p style="margin-bottom: 0;">This page is part of the <b>Particle Physics Webring</b><br>
+    maintained by <a href="#">Some Guy at CERN</a></p>
+  </div>
+
+  <hr class="fancy">
+
+  <div class="corner-curl signature">
+    <p style="margin: 0;">
+      © 1997 Rikab Gambhir &nbsp;|&nbsp; Last updated: 11/14/97 at 3:42 AM<br>
+      This page made with <b>NOTEPAD ✏️</b> and LOTS of love ❤️<br>
+      Thanks to my friend <b>Jesse</b> for showing me how to do tables.
+    </p>
+  </div>
+
+  <p>
+    <span class="netscape-badge">Get Netscape NOW!</span>
+    &nbsp;
+    <span class="mac-badge">Made on a Mac</span>
+    &nbsp;
+    <span class="res-badge">HTML 3.2 ✓</span>
+  </p>
+
+</div>
+
+<marquee class="bottom" scrollamount="6" direction="right">⭐ THANKS 4 VISITING!! ⭐&nbsp;&nbsp; COME BACK SOON!! ⭐&nbsp;&nbsp; TELL YOUR FRIENDS!! ⭐&nbsp;&nbsp; PARTICLES RULE!! ⭐&nbsp;&nbsp;</marquee>
+
+</body>
+</html>

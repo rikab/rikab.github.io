@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
+
+  <!-- Title for the page -->
+  <title>Rikab Gambhir</title>
+
+  <!-- Metadata for SEO and links-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rikab Gambhir, Ph.D.</title>
-
   <meta name="description" content="Rikab Gambhir — theoretical physicist at the University of Cincinnati. Jet physics, QCD, machine learning for collider physics.">
-  <meta property="og:title" content="Rikab Gambhir, Ph.D.">
+  
+  <!-- Open Graph Metadata for social media sharing -->
+  <meta property="og:title" content="Rikab Gambhir">
   <meta property="og:description" content="Theoretical physicist. Jets, QCD, ML for collider physics.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rikabgambhir.com">
   <meta property="og:image" content="assets/img/fun_headshot.jpg">
 
+  <!-- Stuff for old browsers -->
   <link rel="shortcut icon" href="favicon.ico" type="image/icon">
   <link rel="icon" href="favicon.ico" type="image/icon">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Fonts and icons: preconnect to font server to load, then fetch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome icons -->
   <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="assets/academicons/css/academicons.min.css">
+  
+  <!-- Custom styles -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/retro.css">
+  <link rel="stylesheet" href="css/vhs.css">
+  <link rel="stylesheet" href="css/popup.css">
 
+  <!-- Google Site Verification -->
   <meta name="google-site-verification" content="JY83yB4L21zRVvDarmmI5D7XRR4Pzl5SDU_LKLa7nV4">
+
 </head>
 
+<!-- Body -->
 <body>
 
-  <!-- Viewing-mode toggle (top-left). Flips between modern and retro. -->
+  <!-- Viewing-mode toggle on top left -->
   <button id="viewmode-toggle" type="button" aria-label="Toggle viewing mode">
-    📟 Retro mode
+    📺 VHS mode
   </button>
 
-  <!-- Sticky top nav, hidden until you scroll past hero -->
-  <nav id="topnav" class="topnav" aria-label="Page navigation">
+  <!-- Sticky top nav -->
+  <nav id="topnav" class="topnav" aria-label="Page navigation"> 
     <a href="#top" class="topnav-brand">Rikab Gambhir</a>
     <div class="topnav-links">
       <a href="#about">About</a>
@@ -48,7 +65,11 @@
 
   <!-- Hero -->
   <header id="top" class="hero">
+
+    <!-- Reserve space for the canvas, called by js/hero.js later -->
     <canvas class="hero-canvas" aria-hidden="true"></canvas>
+
+    <!-- Main content -->
     <div class="hero-content">
       <img src="assets/img/fun_headshot.jpg" alt="Rikab Gambhir" class="hero-portrait" loading="eager">
       <h1 class="hero-name">Rikab Gambhir</h1>
@@ -56,6 +77,7 @@
         Theoretical physicist &middot; postdoc, MLHAD Collaboration, University of Cincinnati
       </p>
 
+      <!-- Social media links -->
       <div class="hero-socials">
         <a href="https://github.com/rikab" aria-label="GitHub"><i class="fa fa-github"></i></a>
         <a href="https://twitter.com/cornkab" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
@@ -65,6 +87,7 @@
         <a href="mailto:gambhirb@ucmail.uc.edu" aria-label="Email"><i class="fa fa-envelope"></i></a>
       </div>
 
+      <!-- Call-to-action buttons -->
       <div class="hero-cta">
         <a class="btn btn-primary" href="assets/pdf/rikab_CV.pdf">Curriculum Vitae</a>
         <a class="btn" href="#research">Research</a>
@@ -87,11 +110,8 @@
           collider physics easier to reason about.
         </p>
         <p>
-          Before Cincinnati I was a graduate student and research specialist at the
-          <a href="https://physics.mit.edu/" target="_blank" rel="noopener">MIT Center for Theoretical Physics</a>,
-          working with <a href="http://jthaler.net/" target="_blank" rel="noopener">Jesse Thaler</a>.
-          My thesis is &ldquo;Metrics, Muons, Models, Moments, Measurements, Machine Learning and More:
-          A Manifesto on Collider Physics&rdquo;.
+          Before Cincinnati, I did my PhD at the
+          <a href="https://physics.mit.edu/" target="_blank" rel="noopener">MIT Center for Theoretical Physics</a>, and before that, I did my undergrad in physics, applied sciences engineering, and mathematics at <a href="https://physics.rutgers.edu/" target="_blank" rel="noopener">Rutgers University</a>.
         </p>
         <p class="about-meta">
           Reach me at <a href="mailto:gambhirb@ucmail.uc.edu">gambhirb@ucmail.uc.edu</a>.
@@ -116,12 +136,54 @@
         <p class="section-blurb">
           Click any card to read the abstract, copy the BibTeX, or jump to the talks I gave on it.
         </p>
+
+        <!-- Statistics-->
+        
+        <!-- Details / Summary collapsable headers -->
+        <details id="stats" class="stats-details">
+          <summary>Show statistics <span class="stats-summary-meta" id="statsHeadlineCompact"></span></summary>
+         
+         
+          <div class="stats-inner">
+            <p class="section-blurb">
+              Live from <a href="https://inspirehep.net" target="_blank" rel="noopener">INSPIRE-HEP</a>.
+              Refreshed weekly.
+            </p>
+            <div id="statsHeadline" class="stats-headline"></div>
+            <div class="stats-grid">
+
+              <!-- Citations -->
+              <figure class="stats-chart">
+                <figcaption>
+                  <span class="legend"><span class="swatch sw-red"></span> Total citations</span>
+                  <span class="legend"><span class="swatch sw-amber"></span> Excluding self</span>
+                </figcaption>
+
+                <!-- Placeholder svg image, build by js/charts.js -->
+                <svg id="chartCitations" class="chart" role="img" aria-label="Total citations over time"></svg>
+              </figure>
+
+              <!-- h-index -->
+              <figure class="stats-chart">
+                <figcaption><span class="legend"><span class="swatch sw-red"></span> h-index</span></figcaption>
+                <svg id="chartHIndex" class="chart" role="img" aria-label="h-index over time"></svg>
+              </figure>
+
+            </div>
+          </div>
+        </details>
+
+        <!-- js names to make tag chips (pill buttoms) work -->
+        <div id="tagFilterBanner" class="tag-filter-banner" hidden></div>
         <div id="researchCards" class="grid grid-cards"></div>
+
       </div>
     </section>
 
     <!-- Talks -->
     <section id="talks" class="section">
+
+      <!-- class names so js/talks.js can find them and populate -->
       <div class="section-inner">
         <h2>Talks <span class="count" id="talkCount"></span></h2>
         <p class="section-blurb">
@@ -164,6 +226,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="section-inner narrow footer-inner">
       <div class="footer-block">
@@ -179,6 +242,8 @@
           <a href="https://github.com/rikab/rikab.github.io" aria-label="Site source"><i class="fa fa-code"></i></a>
         </p>
       </div>
+
+      <!-- ID so the javascript can update the year in js/nav.js -->
       <p class="footer-fineprint">
         &copy; 2022&ndash;<span id="footerYear"></span> Rikab Gambhir.
         Once was the <a href="https://twitter.com/finitephysicist">@FinitePhysicist</a>.
@@ -186,6 +251,7 @@
     </div>
   </footer>
 
+  <!-- Load the main javascript, which will load the rest -->
   <script type="module" src="js/main.js"></script>
 </body>
 </html>

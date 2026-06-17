@@ -6,6 +6,7 @@ CLAUDE.md
 
 # Private editing notes
 EDITING.md
+REVIEW*.md
 
 # Editor / OS
 .DS_Store
@@ -17,8 +18,11 @@ EDITING.md
 __pycache__/
 *.pyc
 
-# Build cache (INSPIRE-HEP BibTeX downloads)
+# Build cache (INSPIRE-HEP downloads)
 cache/
+# ...but track citation timelines so the weekly cron can persist them
+!cache/inspire-citations/
+!cache/inspire-citations/**
 
 # LaTeX build artifacts
 *.aux
