@@ -30,7 +30,7 @@ body.vhs .vhs-subtitle-text {
   filter: url(#vhs-chroma);
 }
 
-/* ---- hide modern layout ---- */
+/* ##### hide modern layout ##### */
 body.vhs #about,
 body.vhs #featured,
 body.vhs #research,
@@ -39,7 +39,7 @@ body.vhs #software,
 body.vhs #topnav,
 body.vhs .hero { display: none !important; }
 
-/* ---- CRT overlay ---- */
+/* ##### CRT overlay ##### */
 body.vhs::before {
   content: '';
   position: fixed; inset: 0;
@@ -93,7 +93,7 @@ body.vhs .vhs-tracking-bar {
 
 body.vhs main { animation: vhs-flicker 0.22s steps(2) infinite; }
 
-/* ---- top ticker ---- */
+/* ##### top ticker ##### */
 body.vhs .vhs-ticker {
   position: relative;
   background: var(--v-red);
@@ -117,7 +117,7 @@ body.vhs .vhs-ticker-track {
   white-space: nowrap;
 }
 
-/* ---- broadcast screen ---- */
+/* ##### broadcast screen ##### */
 body.vhs #vhs-broadcast {
   margin: 0;
   max-width: none;
@@ -135,7 +135,7 @@ body.vhs #vhs-broadcast {
   flex-direction: column;
 }
 
-/* ---- slide layout: image|info / payments / email ---- */
+/* ##### slide layout: image|info / payments / email ##### */
 body.vhs .slide {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
@@ -286,7 +286,7 @@ body.vhs .slide-benefit {
   margin-top: 4px;
 }
 
-/* ---- payments row ---- */
+/* ##### payments row ##### */
 body.vhs .slide-payments {
   grid-area: payments;
   display: flex;
@@ -382,7 +382,7 @@ body.vhs .slide-guarantee {
   text-shadow: 1px 1px 0 var(--v-black);
 }
 
-/* ---- email link ---- */
+/* ##### email link ##### */
 body.vhs .slide-email {
   grid-area: email;
   text-align: center;
@@ -413,7 +413,7 @@ body.vhs .slide-email-link:hover {
   color: var(--v-yellow-soft);
 }
 
-/* ---- color-bars test pattern ---- */
+/* ##### color-bars test pattern ##### */
 body.vhs .vhs-color-bars {
   position: fixed; inset: 0;
   pointer-events: none;
@@ -484,7 +484,7 @@ body.vhs .vhs-cb-sp {
 body.vhs .vhs-cb-play { left: 14px; }
 body.vhs .vhs-cb-sp   { right: 14px; }
 
-/* ---- footer ---- */
+/* ##### footer ##### */
 body.vhs .site-footer {
   background: var(--v-blue-deep);
   color: var(--v-cream);
@@ -504,7 +504,7 @@ body.vhs #viewmode-toggle {
   font-family: 'Arial Black', sans-serif;
 }
 
-/* ---- scrollbar ---- */
+/* ##### scrollbar ##### */
 body.vhs::-webkit-scrollbar { width: 14px; height: 14px; }
 body.vhs::-webkit-scrollbar-track { background: var(--v-blue-deep); }
 body.vhs::-webkit-scrollbar-thumb {
@@ -513,7 +513,7 @@ body.vhs::-webkit-scrollbar-thumb {
 }
 body.vhs::-webkit-scrollbar-thumb:hover { background: var(--v-yellow); }
 
-/* ---- keyframes ---- */
+/* ##### keyframes ##### */
 @keyframes vhs-flicker {
   0%   { opacity: 1; }
   50%  { opacity: 0.94; }
@@ -540,7 +540,7 @@ body.vhs::-webkit-scrollbar-thumb:hover { background: var(--v-yellow); }
   to   { transform: scale(1); opacity: 1; }
 }
 
-/* ---- bonus-talks callout ---- */
+/* ##### bonus-talks callout ##### */
 body.vhs .slide-bonus {
   display: flex;
   flex-direction: column;
@@ -601,7 +601,7 @@ body.vhs .slide-bonus-pill:hover {
   border-color: var(--v-red);
 }
 
-/* ---- mobile ---- */
+/* ##### mobile ##### */
 @media (max-width: 700px) {
   body.vhs::before {
     background:
@@ -636,7 +636,7 @@ body.vhs .slide-bonus-pill:hover {
   body.vhs .slide-bonus { transform: none; }
 }
 
-/* ---- channel indicator ---- */
+/* ##### channel indicator ##### */
 body.vhs .vhs-channel {
   position: fixed;
   top: 14px; right: 14px;
@@ -653,7 +653,7 @@ body.vhs .vhs-channel {
   box-shadow: 0 0 10px rgba(0, 255, 102, 0.35);
 }
 
-/* ---- subtitle band ---- */
+/* ##### subtitle band ##### */
 body.vhs .vhs-subtitle {
   position: fixed;
   bottom: 22px;
@@ -681,7 +681,7 @@ body.vhs .vhs-subtitle-text {
   white-space: pre-wrap;
 }
 
-/* ---- static-lines overlay ---- */
+/* ##### static-lines overlay ##### */
 body.vhs .vhs-static-lines {
   position: fixed;
   left: 0; right: 0;
@@ -722,7 +722,7 @@ body.vhs .vhs-static-lines {
   100% { transform: translateY(11px); }
 }
 
-/* ---- CRT warping ---- */
+/* ##### CRT warping ##### */
 body.vhs #vhs-broadcast {
   border-radius: 18px / 22px;
   box-shadow:
@@ -735,7 +735,7 @@ body.vhs .slide {
   transform-origin: center top;
 }
 
-/* ---- prefers-reduced-motion ---- */
+/* ##### prefers-reduced-motion ##### */
 @media (prefers-reduced-motion: reduce) {
   body.vhs main,
   body.vhs::after,

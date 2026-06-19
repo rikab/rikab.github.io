@@ -3,6 +3,50 @@
 
 export const research_data = [
   {
+    "id": "vistas",
+    "title": "Vistas: A Visualization Interface for Particle Collision Simulations",
+    "date": "2026-06-17",
+    "authors": "Benoît Assi, Christian Bierlich, Rikab Gambhir, Phil Ilten, Tony Menzo, Stephen Mrenna, Manuel Szewc, Michael K. Wilkinson, Jure Zupan",
+    "img": "assets/img/vistas.png",
+    "blurb": "We introduce Vistas, a tool for visualizing high-energy particle physics collisions simulated by the Pythia Monte-Carlo event generator. Particles produced from each of these stages are represented as lines in an interactive three-dimensional graph structure, where each line is along the direction of its particle's three-momentum vector. The event can be rotated, translated and zoomed, and details for each particle can be accessed by selecting the relevant particle line. Additionally, particle lines from all stages of the simulation can be toggled on and off and can be filtered by particle-level kinematic selection requirements. This interactive environment provides an intuitive interpretation of Pythia simulation output, including detailed features such as color flow, beam remnants, and multiple parton interactions, making it a useful tool in physics education settings, from outreach activities to graduate particle-physics courses.",
+    "abstract": "",
+    "tags": [
+      "hadronization",
+      "ml",
+      "statistics"
+    ],
+    "featured": false,
+    "joke": false,
+    "status": "preprint",
+    "bibtex": "@article{Assi:2026xih,\n    author = \"Assi, Benoit and Bierlich, Christan and Gambhir, Rikab and Ilten, Philip and Menzo, Tony and Mrenna, Stephen and Szewc, Manuel and Wilkinson, Michael K. and Youssef, Ahmed and Zupan, Jure\",\n    title = \"{Vistas: A Visualization Interface for Particle Collision Simulations}\",\n    eprint = \"2606.19524\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"physics.ed-ph\",\n    reportNumber = \"FERMILAB-PUB-26-0384-CSAID, MCNET-26-15\",\n    month = \"6\",\n    year = \"2026\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2606.19524"
+      },
+      {
+        "text": "arXiv 2606.19524",
+        "href": "https://arxiv.org/abs/2606.19524"
+      }
+    ],
+    "talks": [],
+    "citations": [
+      {
+        "month": "2026-06",
+        "count": 0
+      }
+    ],
+    "citations_excl_self": [
+      {
+        "month": "2026-06",
+        "count": 0
+      }
+    ],
+    "citations_total": 0,
+    "citations_total_excl_self": 0,
+    "citation_start": "2026-06"
+  },
+  {
     "id": "hdsense",
     "title": "HDSense: An efficient method for ranking observable sensitivity",
     "date": "2026-02-02",
@@ -80,6 +124,7 @@ export const research_data = [
       }
     ],
     "talks": [
+      "resummed-distribution-functions-making-p-2026-04-30",
       "resummed-distribution-functions-making-p-2026-04-02",
       "re-normalizing-flows-taming-logs-and-per-2025-07-30",
       "re-normalizing-flows-taming-logs-and-per-2024-11-05"
@@ -88,16 +133,24 @@ export const research_data = [
       {
         "month": "2025-12",
         "count": 0
+      },
+      {
+        "month": "2026-06",
+        "count": 1
       }
     ],
     "citations_excl_self": [
       {
         "month": "2025-12",
         "count": 0
+      },
+      {
+        "month": "2026-06",
+        "count": 1
       }
     ],
-    "citations_total": 0,
-    "citations_total_excl_self": 0,
+    "citations_total": 1,
+    "citations_total_excl_self": 1,
     "citation_start": "2025-12"
   },
   {
@@ -287,7 +340,7 @@ export const research_data = [
       },
       {
         "month": "2026-05",
-        "count": 20
+        "count": 21
       }
     ],
     "citations_excl_self": [
@@ -321,11 +374,11 @@ export const research_data = [
       },
       {
         "month": "2026-05",
-        "count": 9
+        "count": 10
       }
     ],
-    "citations_total": 20,
-    "citations_total_excl_self": 9,
+    "citations_total": 21,
+    "citations_total_excl_self": 10,
     "citation_start": "2025-02"
   },
   {
@@ -741,6 +794,10 @@ export const research_data = [
       {
         "month": "2026-04",
         "count": 27
+      },
+      {
+        "month": "2026-06",
+        "count": 28
       }
     ],
     "citations_excl_self": [
@@ -811,10 +868,14 @@ export const research_data = [
       {
         "month": "2026-04",
         "count": 22
+      },
+      {
+        "month": "2026-06",
+        "count": 23
       }
     ],
-    "citations_total": 27,
-    "citations_total_excl_self": 22,
+    "citations_total": 28,
+    "citations_total_excl_self": 23,
     "citation_start": "2023-10"
   },
   {
@@ -1219,7 +1280,7 @@ export const research_data = [
         "href": "https://arxiv.org/abs/2008.09835"
       },
       {
-        "text": "Phys. Rev. D 102, 112004",
+        "text": "Phys. Rev. D 102, IPhT, Saclay, France112004",
         "href": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.112004"
       }
     ],
@@ -1614,6 +1675,19 @@ export const research_data = [
 ];
 
 export const talk_data = [
+  {
+    "id": "resummed-distribution-functions-making-p-2026-04-30",
+    "title": "Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized",
+    "where": "Fermilab Theory Seminar",
+    "date": "2026-04-30",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/[Fermilab 2026] RDFs.pdf",
+    "video": null,
+    "featured": true,
+    "paper": "rdf",
+    "abstract": ""
+  },
   {
     "id": "interpreting-interpretability-and-explai-2026-04-27",
     "title": "Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics",
@@ -2544,8 +2618,13 @@ export const author_citations = [
   },
   {
     "month": "2026-05",
-    "total": 214,
-    "excl_self": 170
+    "total": 215,
+    "excl_self": 171
+  },
+  {
+    "month": "2026-06",
+    "total": 217,
+    "excl_self": 173
   }
 ];
 
@@ -2590,4 +2669,4 @@ export const author_h_index = [
 
 export const author_timeline_start = "2020-01";
 
-export const current_month = "2026-05";
+export const current_month = "2026-06";

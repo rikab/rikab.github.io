@@ -32,6 +32,18 @@ publications:
       In this distinguished work, I search for ``new physics'' and ``beyond the
       Standard Model'' &mdash; and find them.
 
+  - title: "Vistas: A Visualization Interface for Particle Collision Simulations"
+    date: 2026-06-17
+    authors: Benoît Assi, Christian Bierlich, Rikab Gambhir, Phil Ilten, Tony Menzo, Stephen Mrenna, Manuel Szewc, Michael K. Wilkinson, Jure Zupan
+    status: preprint
+    arxiv: "2606.19524"
+    id: vistas
+    tags: [hadronization, ml, statistics]
+    img: assets/img/vistas.png
+    blurb: >-
+        We introduce Vistas, a tool for visualizing high-energy particle physics collisions simulated by the Pythia Monte-Carlo event generator. Particles produced from each of these stages are represented as lines in an interactive three-dimensional graph structure, where each line is along the direction of its particle's three-momentum vector. The event can be rotated, translated and zoomed, and details for each particle can be accessed by selecting the relevant particle line. Additionally, particle lines from all stages of the simulation can be toggled on and off and can be filtered by particle-level kinematic selection requirements. This interactive environment provides an intuitive interpretation of Pythia simulation output, including detailed features such as color flow, beam remnants, and multiple parton interactions, making it a useful tool in physics education settings, from outreach activities to graduate particle-physics courses.
+
+
   - title: "HDSense: An efficient method for ranking observable sensitivity"
     date: 2026-02-02
     authors: Benoît Assi, Christian Bierlich, Rikab Gambhir, Phil Ilten, Tony Menzo, Stephen Mrenna, Manuel Szewc, Michael K. Wilkinson, Jure Zupan
@@ -236,7 +248,7 @@ publications:
     id: vlq
     tags: [bsm, cms]
     journal:
-      name: Phys. Rev. D 102, 112004
+      name: Phys. Rev. D 102, IPhT, Saclay, FranceIPhT, Saclay, France112004
       href: https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.112004
     img: assets/img/exclusion.png
     blurb: >-
@@ -247,6 +259,14 @@ publications:
 talks:
 
   # ===== INVITED =====
+
+  - title: "Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized"
+    date: 2026-04-30
+    category: invited
+    where: Fermilab Theory Seminar
+    location: Fermilab, Batavia (IL)
+    slides: ./assets/talks/[Fermilab 2026] RDFs.pdf
+    featured: true
 
   - title: Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics
     date: 2026-04-27
