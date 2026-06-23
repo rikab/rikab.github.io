@@ -1280,7 +1280,7 @@ export const research_data = [
         "href": "https://arxiv.org/abs/2008.09835"
       },
       {
-        "text": "Phys. Rev. D 102, IPhT, Saclay, France112004",
+        "text": "Phys. Rev. D 102, IPhT, Saclay, FranceIPhT, Saclay, France112004",
         "href": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.112004"
       }
     ],
@@ -1675,6 +1675,19 @@ export const research_data = [
 ];
 
 export const talk_data = [
+  {
+    "id": "interpreting-interpretability-and-explai-2026-06-22",
+    "title": "Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics",
+    "where": "Fermilab AI Lecture Series",
+    "date": "2026-06-22",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/[Fermilab 2026] Interpreting “Interpretability”.pdf",
+    "video": null,
+    "featured": true,
+    "paper": null,
+    "abstract": ""
+  },
   {
     "id": "resummed-distribution-functions-making-p-2026-04-30",
     "title": "Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized",

@@ -260,6 +260,15 @@ talks:
 
   # ===== INVITED =====
 
+  - title: Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics
+    date: 2026-06-22
+    category: invited
+    where: Fermilab AI Lecture Series
+    location: Fermilab, Batavia (IL)
+    slides: ./assets/talks/[Fermilab 2026] Interpreting “Interpretability”.pdf
+    featured: true
+
+
   - title: "Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized"
     date: 2026-04-30
     category: invited

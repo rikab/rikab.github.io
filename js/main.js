@@ -1,7 +1,7 @@
 // main js file
 
 // imports from other js modules and data file (hashed to force cache reloads, from build.py)
-import {research_data, talk_data, software_data, author_citations, author_h_index, author_timeline_start, current_month } from '../data.js?v=2a0d2282'; 
+import {research_data, talk_data, software_data, author_citations, author_h_index, author_timeline_start, current_month } from '../data.js?v=26b50dd9'; 
 import { render_papers, wire_cards, wire_tag_filter } from './papers.js';
 import { init_talks } from './talks.js';
 import { render_software } from './software.js';
