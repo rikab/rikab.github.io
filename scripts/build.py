@@ -10,14 +10,14 @@ if __name__ == "__main__" and __package__ is None:
 
 import yaml
 
-from .cv_tex import write_cv_tex
+from .cv_tex import compile_cv_pdf, write_cv_tex
 from .data_js import (
     attach_talks_to_pubs, build_publications, build_software, build_talks,
     write_data_js,
 )
 from .timelines import build_author_timelines
 from .util import (
-    OUT_DATA_JS, OUT_PUBS_TEX, OUT_TALKS_TEX, SRC,
+    CV_PDF_OUT, OUT_DATA_JS, OUT_PUBS_TEX, OUT_TALKS_TEX, SRC,
 )
 
 
@@ -47,6 +47,11 @@ def main():
     print(f"Wrote {OUT_PUBS_TEX.relative_to(OUT_DATA_JS.parent.parent)}")
     print(f"Wrote {OUT_TALKS_TEX.relative_to(OUT_DATA_JS.parent.parent)}")
     print(f"Cache-bust: data.js?v={version}")
+
+    # compile main.tex and refresh the served pdf unless told not to
+    if "--no-cv" not in sys.argv:
+        if compile_cv_pdf():
+            print(f"Wrote {CV_PDF_OUT.relative_to(CV_PDF_OUT.parent.parent.parent)}")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,12 @@
 # cv .tex render
 
+import shutil
+import subprocess
+import tempfile
+from pathlib import Path
+
 from .util import (
-    GEN_HEADER_TEX, OUT_PUBS_TEX, OUT_TALKS_TEX,
+    CV_MAIN_TEX, CV_PDF_OUT, GEN_HEADER_TEX, OUT_PUBS_TEX, OUT_TALKS_TEX, ROOT,
     parse_date, pretty_day_month_year, pretty_month_year, tex_escape,
 )
 
@@ -145,3 +150,39 @@ def write_cv_tex(pubs_raw, talks_raw):
     OUT_PUBS_TEX.parent.mkdir(parents=True, exist_ok=True)
     OUT_PUBS_TEX.write_text(render_publications_tex(pubs_raw))
     OUT_TALKS_TEX.write_text(render_talks_tex(talks_raw))
+
+
+# compile main.tex and copy the pdf to assets/pdf; skip if no tex engine
+def compile_cv_pdf():
+
+    # need latexmk or pdflatex; skip cleanly so the CI build with no TeX still works
+    engine = shutil.which("latexmk") or shutil.which("pdflatex")
+    if engine is None:
+        print("Skipping CV pdf: no latexmk/pdflatex on PATH")
+        return False
+
+    # build in a scratch dir so aux files never touch the repo
+    with tempfile.TemporaryDirectory() as build_dir:
+
+        # latexmk resolves its own pass count; plain pdflatex needs two
+        using_latexmk = engine.endswith("latexmk")
+        if using_latexmk:
+            cmd = [engine, "-pdf", "-interaction=nonstopmode", "-halt-on-error", "-output-directory=" + build_dir, CV_MAIN_TEX.name]
+        else:
+            cmd = [engine, "-interaction=nonstopmode", "-halt-on-error", "-output-directory=" + build_dir, CV_MAIN_TEX.name]
+        passes = 1 if using_latexmk else 2
+
+        # run from repo root so \input{cv/...} and the photo resolve
+        for pass_number in range(passes):
+            result = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)
+            if result.returncode != 0:
+                print("CV pdf compile failed; tail of latex output:")
+                print(result.stdout[-2000:])
+                return False
+
+        # overwrite the served pdf with the freshly built one
+        built_pdf = Path(build_dir) / (CV_MAIN_TEX.stem + ".pdf")
+        CV_PDF_OUT.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(built_pdf, CV_PDF_OUT)
+
+    return True

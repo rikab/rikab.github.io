@@ -3,6 +3,50 @@
 
 export const research_data = [
   {
+    "id": "interpretability",
+    "title": "Interpreting ``Interpretability'' and Explaining ``Explainability'' in Machine Learning in Physics",
+    "date": "2026-06-24",
+    "authors": "Rikab Gambhir, Luisa Lucie-Smith, Jesse Thaler",
+    "img": "assets/img/interpretability.png",
+    "blurb": "We review the concepts of interpretability and explainability as they apply to machine learning in physics. We define interpretability as concerning the structural transparency of a model (the ability to understand or approximate its inner workings) and explainability as concerning the scientific content of a model (the ability to map it onto domain knowledge). We discuss the trade-offs each entails (interpretability vs. expressivity; explainability vs. adaptability), the contexts in which each is needed, and the intrinsic and post-hoc tools available for achieving them. Throughout, we emphasize that machine-learned models are subject to the same scientific questions as classical models, differing only in scale, and that interpretability and explainability are best understood as deliberate modeling choices rather than inherent properties. We also emphasize the importance of task specification and intervention plans as a core aspect of model design.",
+    "abstract": "",
+    "tags": [
+      "ml",
+      "interpretability",
+      "statistics"
+    ],
+    "featured": false,
+    "joke": false,
+    "status": "preprint",
+    "bibtex": "@article{Gambhir:2026cly,\n    author = \"Gambhir, Rikab and Lucie-Smith, Luisa and Thaler, Jesse\",\n    title = \"{Interpreting ''Interpretability'' and Explaining ''Explainability'' in Machine Learning in Physics}\",\n    eprint = \"2606.26228\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"physics.data-an\",\n    reportNumber = \"MIT-CTP/6058\",\n    month = \"6\",\n    year = \"2026\"\n}",
+    "links": [
+      {
+        "text": "INSPIRE-HEP",
+        "href": "https://inspirehep.net/literature?q=arxiv:2606.26228"
+      },
+      {
+        "text": "arXiv 2606.26228",
+        "href": "https://arxiv.org/abs/2606.26228"
+      }
+    ],
+    "talks": [],
+    "citations": [
+      {
+        "month": "2026-06",
+        "count": 0
+      }
+    ],
+    "citations_excl_self": [
+      {
+        "month": "2026-06",
+        "count": 0
+      }
+    ],
+    "citations_total": 0,
+    "citations_total_excl_self": 0,
+    "citation_start": "2026-06"
+  },
+  {
     "id": "vistas",
     "title": "Vistas: A Visualization Interface for Particle Collision Simulations",
     "date": "2026-06-17",
@@ -121,6 +165,10 @@ export const research_data = [
       {
         "text": "arXiv 2512.04160",
         "href": "https://arxiv.org/abs/2512.04160"
+      },
+      {
+        "text": "J. High Energ. Phys. 2026, 243",
+        "href": "https://link.springer.com/article/10.1007/JHEP06(2026)243"
       }
     ],
     "talks": [
@@ -136,7 +184,7 @@ export const research_data = [
       },
       {
         "month": "2026-06",
-        "count": 1
+        "count": 2
       }
     ],
     "citations_excl_self": [
@@ -149,7 +197,7 @@ export const research_data = [
         "count": 1
       }
     ],
-    "citations_total": 1,
+    "citations_total": 2,
     "citations_total_excl_self": 1,
     "citation_start": "2025-12"
   },
@@ -199,6 +247,10 @@ export const research_data = [
       {
         "month": "2026-04",
         "count": 5
+      },
+      {
+        "month": "2026-06",
+        "count": 6
       }
     ],
     "citations_excl_self": [
@@ -215,7 +267,7 @@ export const research_data = [
         "count": 4
       }
     ],
-    "citations_total": 5,
+    "citations_total": 6,
     "citations_total_excl_self": 4,
     "citation_start": "2025-09"
   },
@@ -457,6 +509,10 @@ export const research_data = [
       {
         "month": "2025-12",
         "count": 11
+      },
+      {
+        "month": "2026-06",
+        "count": 12
       }
     ],
     "citations_excl_self": [
@@ -483,10 +539,14 @@ export const research_data = [
       {
         "month": "2025-12",
         "count": 6
+      },
+      {
+        "month": "2026-06",
+        "count": 7
       }
     ],
-    "citations_total": 11,
-    "citations_total_excl_self": 6,
+    "citations_total": 12,
+    "citations_total_excl_self": 7,
     "citation_start": "2024-10"
   },
   {
@@ -563,6 +623,10 @@ export const research_data = [
       {
         "month": "2026-02",
         "count": 10
+      },
+      {
+        "month": "2026-06",
+        "count": 11
       }
     ],
     "citations_excl_self": [
@@ -595,7 +659,7 @@ export const research_data = [
         "count": 9
       }
     ],
-    "citations_total": 10,
+    "citations_total": 11,
     "citations_total_excl_self": 9,
     "citation_start": "2024-03"
   },
@@ -914,6 +978,7 @@ export const research_data = [
       }
     ],
     "talks": [
+      "the-shape-of-jets-2026-06-23",
       "the-shape-of-jets-2026-03-17",
       "the-shape-of-jets-2025-10-10",
       "the-shape-of-jets-2025-09-22",
@@ -985,6 +1050,10 @@ export const research_data = [
       {
         "month": "2025-11",
         "count": 21
+      },
+      {
+        "month": "2026-06",
+        "count": 22
       }
     ],
     "citations_excl_self": [
@@ -1037,7 +1106,7 @@ export const research_data = [
         "count": 16
       }
     ],
-    "citations_total": 21,
+    "citations_total": 22,
     "citations_total_excl_self": 16,
     "citation_start": "2023-02"
   },
@@ -1675,6 +1744,19 @@ export const research_data = [
 ];
 
 export const talk_data = [
+  {
+    "id": "the-shape-of-jets-2026-06-23",
+    "title": "The Shape of Jets",
+    "where": "LPC Topic of the Week, Fermilab",
+    "date": "2026-06-23",
+    "category": "invited",
+    "topic": "",
+    "slides": "./assets/talks/[Fermilab 2026] The Shape of Jets.pdf",
+    "video": "https://indico.cern.ch/event/1701878/",
+    "featured": true,
+    "paper": "shaper",
+    "abstract": ""
+  },
   {
     "id": "interpreting-interpretability-and-explai-2026-06-22",
     "title": "Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics",
@@ -2636,8 +2718,8 @@ export const author_citations = [
   },
   {
     "month": "2026-06",
-    "total": 217,
-    "excl_self": 173
+    "total": 222,
+    "excl_self": 174
   }
 ];
 

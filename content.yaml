@@ -32,6 +32,30 @@ publications:
       In this distinguished work, I search for ``new physics'' and ``beyond the
       Standard Model'' &mdash; and find them.
 
+  - title: "Interpreting ``Interpretability'' and Explaining ``Explainability'' in Machine Learning in Physics"
+    date: 2026-06-24
+    authors: Rikab Gambhir, Luisa Lucie-Smith, Jesse Thaler
+    status: preprint
+    arxiv: "2606.26228"
+    id: interpretability
+    tags: [ml, interpretability, statistics]
+    img: assets/img/interpretability.png
+    blurb: >-
+      We review the concepts of interpretability and explainability as they
+      apply to machine learning in physics. We define interpretability as
+      concerning the structural transparency of a model (the ability to
+      understand or approximate its inner workings) and explainability as
+      concerning the scientific content of a model (the ability to map it onto
+      domain knowledge). We discuss the trade-offs each entails
+      (interpretability vs. expressivity; explainability vs. adaptability), the
+      contexts in which each is needed, and the intrinsic and post-hoc tools
+      available for achieving them. Throughout, we emphasize that
+      machine-learned models are subject to the same scientific questions as
+      classical models, differing only in scale, and that interpretability and
+      explainability are best understood as deliberate modeling choices rather
+      than inherent properties. We also emphasize the importance of task
+      specification and intervention plans as a core aspect of model design.
+
   - title: "Vistas: A Visualization Interface for Particle Collision Simulations"
     date: 2026-06-17
     authors: Benoît Assi, Christian Bierlich, Rikab Gambhir, Phil Ilten, Tony Menzo, Stephen Mrenna, Manuel Szewc, Michael K. Wilkinson, Jure Zupan
@@ -56,18 +80,6 @@ publications:
        We introduce the High-Dimensional Sensitivity (HDSense) score, a computationally efficient metric for ranking observable sets using only one-dimensional histograms. We apply HDSense to rank a set observables in terms of their constraining power with respect to five parameters of the Lund string model of hadronization implemented in Pythia using simulated leptonic collider events at the Z pole.
 
 
-  - title: "Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized"
-    date: 2025-12-05
-    authors: Rikab Gambhir, Radha Mastandrea
-    status: preprint
-    arxiv: "2512.04160"
-    id: rdf
-    tags: [qcd, statistics, perturbation-theory]
-    featured: true
-    img: assets/img/rdf.png
-    blurb: >-
-      We propose a framework, the Resummed Distribution Function (RDF), that, given a fixed-order perturbative calculation for an observable to some finite order in αsαs​, will ``resum'' the expression in a way that is guaranteed to match the original expression order-by-order and be positive, normalized, and finite. The RDF also enables a more direct notion of perturbative uncertainties, as we can directly vary higher-order parameters and treat them as nuisance parameters. We demonstrate the power of the RDF ansatz by matching to thrust to O(αs3) and extracting αs​ with perturbative uncertainties by fitting the RDF to ALEPH data.
-
   - title: The Pareto Frontier of Resilient Jet Tagging
     date: 2025-09-23
     authors: Rikab Gambhir, Matt LeBlanc, Yuanchen Zhou
@@ -84,6 +96,24 @@ publications:
       advantage over simpler models.
 
   # --- refereed ---
+
+
+  - title: "Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized"
+    date: 2025-12-05
+    authors: Rikab Gambhir, Radha Mastandrea
+    status: preprint
+    arxiv: "2512.04160"
+    id: rdf
+    tags: [qcd, statistics, perturbation-theory]
+    featured: true
+    journal:
+      name: J. High Energ. Phys. 2026, 243
+      href: https://link.springer.com/article/10.1007/JHEP06(2026)243
+    img: assets/img/rdf.png
+    blurb: >-
+      We propose a framework, the Resummed Distribution Function (RDF), that, given a fixed-order perturbative calculation for an observable to some finite order in αsαs​, will ``resum'' the expression in a way that is guaranteed to match the original expression order-by-order and be positive, normalized, and finite. The RDF also enables a more direct notion of perturbative uncertainties, as we can directly vary higher-order parameters and treat them as nuisance parameters. We demonstrate the power of the RDF ansatz by matching to thrust to O(αs3) and extracting αs​ with perturbative uncertainties by fitting the RDF to ALEPH data.
+
+
   - title: Isolating Unisolated Upsilons with Anomaly Detection in CMS Open Data
     date: 2025-02-19
     authors: Rikab Gambhir, Radha Mastandrea, Ben Nachman, Jesse Thaler
@@ -259,6 +289,16 @@ publications:
 talks:
 
   # ===== INVITED =====
+
+  - title: The Shape of Jets
+    date: 2026-06-23
+    category: invited
+    where: LPC Topic of the Week, Fermilab
+    location: Fermilab, Batavia (IL)
+    slides: ./assets/talks/[Fermilab 2026] The Shape of Jets.pdf
+    video: https://indico.cern.ch/event/1701878/
+    virtual: true
+    featured: true
 
   - title: Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics
     date: 2026-06-22
