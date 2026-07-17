@@ -480,7 +480,16 @@ talks:
 
   # ===== CONTRIBUTED =====
 
-
+  - title: " Positive Smeared Matrix Elements at Next-to-Leading Order"
+    date: 2026-07-16
+    category: contributed
+    topic: Positive Weights
+    where: BOOST 2026, Krakow (Poland)
+    event: BOOST 2026
+    event_dates: 13 - 17 July 2026
+    location: Krakow, Poland
+    slides: ./assets/talks/[BOOST 2026] Positive Weights.pdf
+    video: https://indico.cern.ch/event/1574970/contributions/7103221/
 
   - title: "HD Sense: An efficient method for ranking observable sensitivity"
     date: 2026-03-09

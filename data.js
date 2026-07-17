@@ -34,16 +34,24 @@ export const research_data = [
       {
         "month": "2026-06",
         "count": 0
+      },
+      {
+        "month": "2026-07",
+        "count": 1
       }
     ],
     "citations_excl_self": [
       {
         "month": "2026-06",
         "count": 0
+      },
+      {
+        "month": "2026-07",
+        "count": 1
       }
     ],
-    "citations_total": 0,
-    "citations_total_excl_self": 0,
+    "citations_total": 1,
+    "citations_total_excl_self": 1,
     "citation_start": "2026-06"
   },
   {
@@ -513,6 +521,10 @@ export const research_data = [
       {
         "month": "2026-06",
         "count": 12
+      },
+      {
+        "month": "2026-07",
+        "count": 13
       }
     ],
     "citations_excl_self": [
@@ -543,10 +555,14 @@ export const research_data = [
       {
         "month": "2026-06",
         "count": 7
+      },
+      {
+        "month": "2026-07",
+        "count": 8
       }
     ],
-    "citations_total": 12,
-    "citations_total_excl_self": 7,
+    "citations_total": 13,
+    "citations_total_excl_self": 8,
     "citation_start": "2024-10"
   },
   {
@@ -1745,6 +1761,19 @@ export const research_data = [
 
 export const talk_data = [
   {
+    "id": "positive-smeared-matrix-elements-at-next-2026-07-16",
+    "title": " Positive Smeared Matrix Elements at Next-to-Leading Order",
+    "where": "BOOST 2026, Krakow (Poland)",
+    "date": "2026-07-16",
+    "category": "contributed",
+    "topic": "Positive Weights",
+    "slides": "./assets/talks/[BOOST 2026] Positive Weights.pdf",
+    "video": "https://indico.cern.ch/event/1574970/contributions/7103221/",
+    "featured": false,
+    "paper": null,
+    "abstract": ""
+  },
+  {
     "id": "the-shape-of-jets-2026-06-23",
     "title": "The Shape of Jets",
     "where": "LPC Topic of the Week, Fermilab",
@@ -2720,6 +2749,11 @@ export const author_citations = [
     "month": "2026-06",
     "total": 222,
     "excl_self": 174
+  },
+  {
+    "month": "2026-07",
+    "total": 224,
+    "excl_self": 176
   }
 ];
 
@@ -2764,4 +2798,4 @@ export const author_h_index = [
 
 export const author_timeline_start = "2020-01";
 
-export const current_month = "2026-06";
+export const current_month = "2026-07";
