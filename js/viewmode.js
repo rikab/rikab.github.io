@@ -8,7 +8,7 @@ import { install_popups, remove_popups } from './popup.js';
 // cycle order
 const MODES = ['modern', 
                 'vhs', 
-                // 'popup', 
+                'popup', 
                 'retro'];
 
 // button label = NEXT mode
