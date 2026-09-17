@@ -480,6 +480,16 @@ talks:
 
   # ===== CONTRIBUTED =====
 
+  - title: Getting More Power from Anomaly Detectors for Free with Weights
+    date: 2026-09-17
+    category: contributed
+    where: ML4Jets 2026, Univ. Vienna (Austria)
+    event: ML4Jets 2026
+    event_dates: 14 - 18 September 2026
+    location: University of Vienna, Vienna, Austria
+    slides: ./assets/talks/[ML4Jets 2026] Weighted Anomaly Detection.pdf
+    video: https://indico.global/event/15240/contributions/165268/
+
   - title: " Positive Smeared Matrix Elements at Next-to-Leading Order"
     date: 2026-07-16
     category: contributed

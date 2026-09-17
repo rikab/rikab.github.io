@@ -1885,6 +1885,19 @@ export const research_data = [
 
 export const talk_data = [
   {
+    "id": "getting-more-power-from-anomaly-detector-2026-09-17",
+    "title": "Getting More Power from Anomaly Detectors for Free with Weights",
+    "where": "ML4Jets 2026, Univ. Vienna (Austria)",
+    "date": "2026-09-17",
+    "category": "contributed",
+    "topic": "",
+    "slides": "./assets/talks/[ML4Jets 2026] Weighted Anomaly Detection.pdf",
+    "video": "https://indico.global/event/15240/contributions/165268/",
+    "featured": false,
+    "paper": null,
+    "abstract": ""
+  },
+  {
     "id": "positive-smeared-matrix-elements-at-next-2026-07-16",
     "title": " Positive Smeared Matrix Elements at Next-to-Leading Order",
     "where": "BOOST 2026, Krakow (Poland)",
