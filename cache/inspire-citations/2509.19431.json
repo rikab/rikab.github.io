@@ -1,0 +1,161 @@
+{
+  "schema": 3,
+  "fetched": "2026-10-01T10:41:41",
+  "recid": 2973083,
+  "cited_keys": [
+    [
+      "gambhir",
+      "r"
+    ],
+    [
+      "leblanc",
+      "m"
+    ],
+    [
+      "zhou",
+      "y"
+    ]
+  ],
+  "entries": [
+    {
+      "date": "2025-09-26",
+      "author_keys": [
+        [
+          "konar",
+          "p"
+        ],
+        [
+          "ngairangbam",
+          "v"
+        ],
+        [
+          "spannowsky",
+          "m"
+        ],
+        [
+          "srivastava",
+          "d"
+        ]
+      ]
+    },
+    {
+      "date": "2025-10-07",
+      "author_keys": [
+        [
+          "garcia caffaro",
+          "a"
+        ],
+        [
+          "moult",
+          "i"
+        ],
+        [
+          "shimmin",
+          "c"
+        ]
+      ]
+    },
+    {
+      "date": "2025-10-30",
+      "author_keys": [
+        [
+          "gon\u00e7alves",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2025-12-07",
+      "author_keys": [
+        [
+          "h\u00f6che",
+          "s"
+        ],
+        [
+          "leblanc",
+          "m"
+        ],
+        [
+          "roloff",
+          "j"
+        ],
+        [
+          "whitman",
+          "g"
+        ]
+      ]
+    },
+    {
+      "date": "2026-04-02",
+      "author_keys": [
+        [
+          "bogorad",
+          "z"
+        ],
+        [
+          "elsharkawy",
+          "i"
+        ],
+        [
+          "kahn",
+          "y"
+        ],
+        [
+          "larkoski",
+          "a"
+        ],
+        [
+          "levi",
+          "n"
+        ]
+      ]
+    },
+    {
+      "date": "2026-04-15",
+      "author_keys": [
+        [
+          "napolitano",
+          "f"
+        ],
+        [
+          "della penna",
+          "l"
+        ],
+        [
+          "tedeschi",
+          "t"
+        ],
+        [
+          "fan\u00f2",
+          "l"
+        ]
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ],
+        [
+          "lucie-smith",
+          "l"
+        ],
+        [
+          "thaler",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "author_keys": [
+        [
+          "greif",
+          "k"
+        ]
+      ]
+    }
+  ]
+}

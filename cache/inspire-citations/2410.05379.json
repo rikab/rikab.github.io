@@ -1,0 +1,252 @@
+{
+  "schema": 3,
+  "fetched": "2026-10-01T10:41:42",
+  "recid": 2838360,
+  "cited_keys": [
+    [
+      "gambhir",
+      "r"
+    ],
+    [
+      "larkoski",
+      "a"
+    ],
+    [
+      "thaler",
+      "j"
+    ]
+  ],
+  "entries": [
+    {
+      "date": "2023-12-04",
+      "author_keys": [
+        [
+          "batson",
+          "j"
+        ],
+        [
+          "kahn",
+          "y"
+        ]
+      ]
+    },
+    {
+      "date": "2025-01-13",
+      "author_keys": [
+        [
+          "larkoski",
+          "a"
+        ]
+      ]
+    },
+    {
+      "date": "2025-01-18",
+      "author_keys": [
+        [
+          "cai",
+          "t"
+        ],
+        [
+          "craig",
+          "n"
+        ],
+        [
+          "craig",
+          "k"
+        ],
+        [
+          "lin",
+          "x"
+        ]
+      ]
+    },
+    {
+      "date": "2025-03-05",
+      "author_keys": [
+        [
+          "larkoski",
+          "a"
+        ]
+      ]
+    },
+    {
+      "date": "2025-03-28",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ]
+      ]
+    },
+    {
+      "date": "2025-04-16",
+      "author_keys": [
+        [
+          "larkoski",
+          "a"
+        ]
+      ]
+    },
+    {
+      "date": "2025-05-16",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ]
+      ]
+    },
+    {
+      "date": "2025-06-10",
+      "author_keys": [
+        [
+          "caratelli",
+          "d"
+        ],
+        [
+          "craig",
+          "n"
+        ],
+        [
+          "fang",
+          "c"
+        ],
+        [
+          "howard",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2025-09-26",
+      "author_keys": [
+        [
+          "konar",
+          "p"
+        ],
+        [
+          "ngairangbam",
+          "v"
+        ],
+        [
+          "spannowsky",
+          "m"
+        ],
+        [
+          "srivastava",
+          "d"
+        ]
+      ]
+    },
+    {
+      "date": "2025-11-25",
+      "author_keys": [
+        [
+          "d'agnolo",
+          "r"
+        ],
+        [
+          "glioti",
+          "a"
+        ],
+        [
+          "rigo",
+          "g"
+        ],
+        [
+          "valenti",
+          "a"
+        ]
+      ]
+    },
+    {
+      "date": "2025-12-04",
+      "author_keys": [
+        [
+          "cai",
+          "t"
+        ],
+        [
+          "bhargava",
+          "a"
+        ],
+        [
+          "nachman",
+          "b"
+        ]
+      ]
+    },
+    {
+      "date": "2026-06-22",
+      "author_keys": [
+        [
+          "atzori",
+          "d"
+        ],
+        [
+          "cacciari",
+          "m"
+        ],
+        [
+          "marzani",
+          "s"
+        ],
+        [
+          "soyez",
+          "g"
+        ]
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "author_keys": [
+        [
+          "doherty",
+          "r"
+        ],
+        [
+          "hay",
+          "l"
+        ],
+        [
+          "jain",
+          "r"
+        ],
+        [
+          "leblanc",
+          "m"
+        ],
+        [
+          "marrinan",
+          "j"
+        ],
+        [
+          "mauceri",
+          "c"
+        ],
+        [
+          "roloff",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "author_keys": [
+        [
+          "greif",
+          "k"
+        ]
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "author_keys": [
+        [
+          "larkoski",
+          "a"
+        ]
+      ]
+    }
+  ]
+}

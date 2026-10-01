@@ -1,0 +1,89 @@
+{
+  "schema": 3,
+  "fetched": "2026-10-01T10:41:43",
+  "recid": 2760767,
+  "cited_keys": [
+    [
+      "gambhir",
+      "r"
+    ],
+    [
+      "nachman",
+      "b"
+    ]
+  ],
+  "entries": [
+    {
+      "date": "2024-04-29",
+      "author_keys": [
+        [
+          "du",
+          "h"
+        ],
+        [
+          "krause",
+          "c"
+        ],
+        [
+          "mikuni",
+          "v"
+        ],
+        [
+          "nachman",
+          "b"
+        ],
+        [
+          "pang",
+          "i"
+        ],
+        [
+          "shih",
+          "d"
+        ]
+      ]
+    },
+    {
+      "date": "2024-06-03",
+      "author_keys": [
+        [
+          "liang",
+          "h"
+        ],
+        [
+          "li",
+          "l"
+        ],
+        [
+          "zhu",
+          "y"
+        ],
+        [
+          "shen",
+          "x"
+        ],
+        [
+          "ruan",
+          "m"
+        ]
+      ]
+    },
+    {
+      "date": "2025-05-16",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ]
+      ]
+    },
+    {
+      "date": "2025-12-23",
+      "author_keys": [
+        [
+          "sombillo",
+          "d"
+        ]
+      ]
+    }
+  ]
+}

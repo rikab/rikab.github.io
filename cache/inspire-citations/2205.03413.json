@@ -1,0 +1,265 @@
+{
+  "schema": 3,
+  "fetched": "2026-10-01T10:41:45",
+  "recid": 2078714,
+  "cited_keys": [
+    [
+      "gambhir",
+      "r"
+    ],
+    [
+      "nachman",
+      "b"
+    ],
+    [
+      "thaler",
+      "j"
+    ]
+  ],
+  "entries": [
+    {
+      "date": "2022-04-29",
+      "author_keys": [
+        [
+          "goodsell",
+          "m"
+        ],
+        [
+          "joury",
+          "a"
+        ]
+      ]
+    },
+    {
+      "date": "2022-05-10",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ],
+        [
+          "nachman",
+          "b"
+        ],
+        [
+          "thaler",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2022-08-16",
+      "author_keys": [
+        [
+          "nachman",
+          "b"
+        ]
+      ]
+    },
+    {
+      "date": "2023-09-29",
+      "author_keys": [
+        [
+          "konar",
+          "p"
+        ],
+        [
+          "ngairangbam",
+          "v"
+        ],
+        [
+          "spannowsky",
+          "m"
+        ]
+      ]
+    },
+    {
+      "date": "2024-01-04",
+      "author_keys": [
+        [
+          "chai",
+          "s"
+        ],
+        [
+          "gu",
+          "j"
+        ],
+        [
+          "li",
+          "l"
+        ]
+      ]
+    },
+    {
+      "date": "2024-02-21",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ],
+        [
+          "nachman",
+          "b"
+        ]
+      ]
+    },
+    {
+      "date": "2024-04-23",
+      "author_keys": [
+        [
+          "fraser",
+          "k"
+        ]
+      ]
+    },
+    {
+      "date": "2024-04-29",
+      "author_keys": [
+        [
+          "du",
+          "h"
+        ],
+        [
+          "krause",
+          "c"
+        ],
+        [
+          "mikuni",
+          "v"
+        ],
+        [
+          "nachman",
+          "b"
+        ],
+        [
+          "pang",
+          "i"
+        ],
+        [
+          "shih",
+          "d"
+        ]
+      ]
+    },
+    {
+      "date": "2024-12-16",
+      "author_keys": [
+        [
+          "bahl",
+          "h"
+        ],
+        [
+          "elmer",
+          "n"
+        ],
+        [
+          "favaro",
+          "l"
+        ],
+        [
+          "haussmann",
+          "m"
+        ],
+        [
+          "plehn",
+          "t"
+        ],
+        [
+          "winterhalder",
+          "r"
+        ]
+      ]
+    },
+    {
+      "date": "2025-01-01",
+      "author_keys": [
+        [
+          "elmer",
+          "n"
+        ]
+      ]
+    },
+    {
+      "date": "2025-05-16",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ]
+      ]
+    },
+    {
+      "date": "2025-05-30",
+      "author_keys": [
+        [
+          "benevedes",
+          "s"
+        ],
+        [
+          "thaler",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2025-08-05",
+      "author_keys": [
+        [
+          "sen",
+          "s"
+        ],
+        [
+          "vaidya",
+          "v"
+        ]
+      ]
+    },
+    {
+      "date": "2025-08-14",
+      "author_keys": [
+        [
+          "bhattacharya",
+          "a"
+        ],
+        [
+          "fraser",
+          "k"
+        ],
+        [
+          "schwartz",
+          "m"
+        ]
+      ]
+    },
+    {
+      "date": "2026-05-29",
+      "author_keys": [
+        [
+          "pfaffenbichler",
+          "l"
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-21",
+      "author_keys": [
+        [
+          "butter",
+          "a"
+        ],
+        [
+          "diefenbacher",
+          "s"
+        ],
+        [
+          "plehn",
+          "t"
+        ],
+        [
+          "vogel",
+          "l"
+        ]
+      ]
+    }
+  ]
+}

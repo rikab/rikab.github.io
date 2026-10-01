@@ -1,0 +1,63 @@
+{
+  "schema": 3,
+  "fetched": "2026-10-01T10:41:40",
+  "recid": 3172993,
+  "cited_keys": [
+    [
+      "gambhir",
+      "r"
+    ],
+    [
+      "lucie-smith",
+      "l"
+    ],
+    [
+      "thaler",
+      "j"
+    ]
+  ],
+  "entries": [
+    {
+      "date": "2026-07-10",
+      "author_keys": [
+        [
+          "grosso",
+          "g"
+        ],
+        [
+          "mikuni",
+          "v"
+        ],
+        [
+          "heinrich",
+          "l"
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "author_keys": [
+        [
+          "grosso",
+          "g"
+        ],
+        [
+          "winterhalder",
+          "r"
+        ],
+        [
+          "brenner",
+          "l"
+        ],
+        [
+          "lyons",
+          "l"
+        ],
+        [
+          "plehn",
+          "t"
+        ]
+      ]
+    }
+  ]
+}

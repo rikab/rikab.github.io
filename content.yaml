@@ -544,8 +544,10 @@ talks:
     category: contributed
     where: AD4HEP 2025, Columbia (NY)
     event: AD4HEP
-    event_dates: June 2025
+    event_dates: 16 - 18 June 2025
     location: Columbia University, Nevis Laboratories, New York
+    slides: ./assets/talks/[Columbia 2025] Unisolated Upsilons.pdf
+    video: https://indico.nevis.columbia.edu/event/9/contributions/91/
 
   - title: Isolating Unisolated Upsilons with Anomaly Detection in CMS Open Data
     date: 2025-05-20

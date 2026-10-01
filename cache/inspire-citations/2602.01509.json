@@ -1,0 +1,62 @@
+{
+  "schema": 3,
+  "fetched": "2026-10-01T10:41:40",
+  "recid": 3113704,
+  "cited_keys": [
+    [
+      "assi",
+      "b"
+    ],
+    [
+      "bierlich",
+      "c"
+    ],
+    [
+      "gambhir",
+      "r"
+    ],
+    [
+      "ilten",
+      "p"
+    ],
+    [
+      "menzo",
+      "t"
+    ],
+    [
+      "mrenna",
+      "s"
+    ],
+    [
+      "szewc",
+      "m"
+    ],
+    [
+      "wilkinson",
+      "m"
+    ],
+    [
+      "zupan",
+      "j"
+    ]
+  ],
+  "entries": [
+    {
+      "date": "2026-03-31",
+      "author_keys": [
+        [
+          "assi",
+          "b"
+        ],
+        [
+          "lee",
+          "k"
+        ],
+        [
+          "thaler",
+          "j"
+        ]
+      ]
+    }
+  ]
+}

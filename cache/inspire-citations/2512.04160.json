@@ -1,0 +1,68 @@
+{
+  "schema": 3,
+  "fetched": "2026-10-01T10:41:41",
+  "recid": 3089290,
+  "cited_keys": [
+    [
+      "gambhir",
+      "r"
+    ],
+    [
+      "mastandrea",
+      "r"
+    ]
+  ],
+  "entries": [
+    {
+      "date": "2026-06-09",
+      "author_keys": [
+        [
+          "haisch",
+          "u"
+        ],
+        [
+          "linder",
+          "j"
+        ],
+        [
+          "schnell",
+          "l"
+        ],
+        [
+          "wiesemann",
+          "m"
+        ],
+        [
+          "zanderighi",
+          "g"
+        ]
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ],
+        [
+          "lucie-smith",
+          "l"
+        ],
+        [
+          "thaler",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "author_keys": [
+        [
+          "larkoski",
+          "a"
+        ]
+      ]
+    }
+  ]
+}

@@ -925,19 +925,19 @@ export const research_data = [
       },
       {
         "month": "2026-04",
-        "count": 29
-      },
-      {
-        "month": "2026-06",
         "count": 30
       },
       {
-        "month": "2026-07",
+        "month": "2026-06",
         "count": 31
       },
       {
-        "month": "2026-08",
+        "month": "2026-07",
         "count": 32
+      },
+      {
+        "month": "2026-08",
+        "count": 33
       }
     ],
     "citations_excl_self": [
@@ -1015,23 +1015,23 @@ export const research_data = [
       },
       {
         "month": "2026-04",
-        "count": 24
-      },
-      {
-        "month": "2026-06",
         "count": 25
       },
       {
-        "month": "2026-07",
+        "month": "2026-06",
         "count": 26
       },
       {
-        "month": "2026-08",
+        "month": "2026-07",
         "count": 27
+      },
+      {
+        "month": "2026-08",
+        "count": 28
       }
     ],
-    "citations_total": 32,
-    "citations_total_excl_self": 27,
+    "citations_total": 33,
+    "citations_total_excl_self": 28,
     "citation_start": "2023-10"
   },
   {
@@ -1153,7 +1153,7 @@ export const research_data = [
       },
       {
         "month": "2026-09",
-        "count": 25
+        "count": 27
       }
     ],
     "citations_excl_self": [
@@ -1211,11 +1211,11 @@ export const research_data = [
       },
       {
         "month": "2026-09",
-        "count": 19
+        "count": 21
       }
     ],
-    "citations_total": 25,
-    "citations_total_excl_self": 19,
+    "citations_total": 27,
+    "citations_total_excl_self": 21,
     "citation_start": "2023-02"
   },
   {
@@ -2112,8 +2112,8 @@ export const talk_data = [
     "date": "2025-06-18",
     "category": "contributed",
     "topic": "",
-    "slides": null,
-    "video": null,
+    "slides": "./assets/talks/[Columbia 2025] Unisolated Upsilons.pdf",
+    "video": "https://indico.nevis.columbia.edu/event/9/contributions/91/",
     "featured": false,
     "paper": "upsilons",
     "abstract": ""
@@ -2874,33 +2874,33 @@ export const author_citations = [
   },
   {
     "month": "2026-04",
-    "total": 215,
-    "excl_self": 171
+    "total": 216,
+    "excl_self": 172
   },
   {
     "month": "2026-05",
-    "total": 219,
-    "excl_self": 175
+    "total": 220,
+    "excl_self": 176
   },
   {
     "month": "2026-06",
-    "total": 226,
-    "excl_self": 178
+    "total": 227,
+    "excl_self": 179
   },
   {
     "month": "2026-07",
-    "total": 230,
-    "excl_self": 182
+    "total": 231,
+    "excl_self": 183
   },
   {
     "month": "2026-08",
-    "total": 239,
-    "excl_self": 191
+    "total": 240,
+    "excl_self": 192
   },
   {
     "month": "2026-09",
-    "total": 243,
-    "excl_self": 194
+    "total": 246,
+    "excl_self": 197
   }
 ];
 
@@ -2945,4 +2945,4 @@ export const author_h_index = [
 
 export const author_timeline_start = "2020-01";
 
-export const current_month = "2026-09";
+export const current_month = "2026-10";

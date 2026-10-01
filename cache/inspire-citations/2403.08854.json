@@ -1,0 +1,184 @@
+{
+  "schema": 3,
+  "fetched": "2026-10-01T10:41:43",
+  "recid": 2768812,
+  "cited_keys": [
+    [
+      "gambhir",
+      "r"
+    ],
+    [
+      "osathapan",
+      "a"
+    ],
+    [
+      "thaler",
+      "j"
+    ]
+  ],
+  "entries": [
+    {
+      "date": "2024-03-07",
+      "author_keys": [
+        [
+          "chen",
+          "y"
+        ],
+        [
+          "chen",
+          "k"
+        ]
+      ]
+    },
+    {
+      "date": "2024-04-24",
+      "author_keys": [
+        [
+          "bhardwaj",
+          "a"
+        ],
+        [
+          "konar",
+          "p"
+        ],
+        [
+          "ngairangbam",
+          "v"
+        ]
+      ]
+    },
+    {
+      "date": "2024-10-31",
+      "author_keys": [
+        [
+          "larkoski",
+          "a"
+        ]
+      ]
+    },
+    {
+      "date": "2025-02-13",
+      "author_keys": [
+        [
+          "song",
+          "z"
+        ],
+        [
+          "yang",
+          "t"
+        ],
+        [
+          "cao",
+          "q"
+        ],
+        [
+          "luo",
+          "m"
+        ],
+        [
+          "zhu",
+          "h"
+        ]
+      ]
+    },
+    {
+      "date": "2025-02-23",
+      "author_keys": [
+        [
+          "qureshi",
+          "u"
+        ],
+        [
+          "gurrola",
+          "a"
+        ],
+        [
+          "ruiz-\u00e1lvarez",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2025-05-01",
+      "author_keys": [
+        [
+          "chen",
+          "y"
+        ]
+      ]
+    },
+    {
+      "date": "2025-05-16",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ]
+      ]
+    },
+    {
+      "date": "2025-10-08",
+      "author_keys": [
+        [
+          "zhang",
+          "j"
+        ],
+        [
+          "guo",
+          "s"
+        ],
+        [
+          "zhu",
+          "l"
+        ],
+        [
+          "wang",
+          "l"
+        ],
+        [
+          "ma",
+          "g"
+        ]
+      ]
+    },
+    {
+      "date": "2025-10-30",
+      "author_keys": [
+        [
+          "gon\u00e7alves",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2026-02-19",
+      "author_keys": [
+        [
+          "islam",
+          "w"
+        ],
+        [
+          "chekanov",
+          "s"
+        ]
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ],
+        [
+          "lucie-smith",
+          "l"
+        ],
+        [
+          "thaler",
+          "j"
+        ]
+      ]
+    }
+  ]
+}

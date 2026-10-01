@@ -1,0 +1,468 @@
+{
+  "schema": 3,
+  "fetched": "2026-10-01T10:41:44",
+  "recid": 2636321,
+  "cited_keys": [
+    [
+      "ba",
+      "d"
+    ],
+    [
+      "dogra",
+      "a"
+    ],
+    [
+      "gambhir",
+      "r"
+    ],
+    [
+      "tasissa",
+      "a"
+    ],
+    [
+      "thaler",
+      "j"
+    ]
+  ],
+  "entries": [
+    {
+      "date": "2020-01-01",
+      "author_keys": [
+        [
+          "cesarotti",
+          "c"
+        ],
+        [
+          "leblanc",
+          "m"
+        ]
+      ]
+    },
+    {
+      "date": "2023-05-05",
+      "author_keys": [
+        [
+          "larkoski",
+          "a"
+        ],
+        [
+          "thaler",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2023-06-07",
+      "author_keys": [
+        [
+          "shenoy",
+          "r"
+        ],
+        [
+          "duarte",
+          "j"
+        ],
+        [
+          "herwig",
+          "c"
+        ],
+        [
+          "hirschauer",
+          "j"
+        ],
+        [
+          "noonan",
+          "d"
+        ],
+        [
+          "pierini",
+          "m"
+        ],
+        [
+          "tran",
+          "n"
+        ],
+        [
+          "mantilla suarez",
+          "c"
+        ]
+      ]
+    },
+    {
+      "date": "2023-09-04",
+      "author_keys": [
+        [
+          "sahu",
+          "r"
+        ],
+        [
+          "ghosh",
+          "k"
+        ]
+      ]
+    },
+    {
+      "date": "2024-01-17",
+      "author_keys": [
+        [
+          "jiang",
+          "c"
+        ],
+        [
+          "li",
+          "h"
+        ],
+        [
+          "li",
+          "s"
+        ],
+        [
+          "si",
+          "z"
+        ]
+      ]
+    },
+    {
+      "date": "2024-01-27",
+      "author_keys": [
+        [
+          "craig",
+          "n"
+        ],
+        [
+          "howard",
+          "j"
+        ],
+        [
+          "li",
+          "h"
+        ]
+      ]
+    },
+    {
+      "date": "2024-03-13",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ],
+        [
+          "osathapan",
+          "a"
+        ],
+        [
+          "thaler",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2024-08-30",
+      "author_keys": [
+        [
+          "b\u00edr\u00f3",
+          "g"
+        ],
+        [
+          "papp",
+          "g"
+        ],
+        [
+          "barnaf\u00f6ldi",
+          "g"
+        ]
+      ]
+    },
+    {
+      "date": "2024-10-07",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ],
+        [
+          "larkoski",
+          "a"
+        ],
+        [
+          "thaler",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2025-01-13",
+      "author_keys": [
+        [
+          "larkoski",
+          "a"
+        ]
+      ]
+    },
+    {
+      "date": "2025-01-18",
+      "author_keys": [
+        [
+          "cai",
+          "t"
+        ],
+        [
+          "craig",
+          "n"
+        ],
+        [
+          "craig",
+          "k"
+        ],
+        [
+          "lin",
+          "x"
+        ]
+      ]
+    },
+    {
+      "date": "2025-03-05",
+      "author_keys": [
+        [
+          "larkoski",
+          "a"
+        ]
+      ]
+    },
+    {
+      "date": "2025-03-28",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ]
+      ]
+    },
+    {
+      "date": "2025-04-16",
+      "author_keys": [
+        [
+          "larkoski",
+          "a"
+        ]
+      ]
+    },
+    {
+      "date": "2025-05-16",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ]
+      ]
+    },
+    {
+      "date": "2025-05-22",
+      "author_keys": [
+        [
+          "ghosh",
+          "a"
+        ],
+        [
+          "konar",
+          "p"
+        ],
+        [
+          "samui",
+          "t"
+        ],
+        [
+          "singh",
+          "r"
+        ]
+      ]
+    },
+    {
+      "date": "2025-06-10",
+      "author_keys": [
+        [
+          "caratelli",
+          "d"
+        ],
+        [
+          "craig",
+          "n"
+        ],
+        [
+          "fang",
+          "c"
+        ],
+        [
+          "howard",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2025-07-03",
+      "author_keys": [
+        [
+          "ghosh",
+          "a"
+        ],
+        [
+          "ghosh",
+          "s"
+        ],
+        [
+          "mitra",
+          "s"
+        ],
+        [
+          "samui",
+          "t"
+        ],
+        [
+          "singh",
+          "r"
+        ]
+      ]
+    },
+    {
+      "date": "2025-07-08",
+      "author_keys": [
+        [
+          "falc\u00e3o",
+          "a"
+        ],
+        [
+          "takacs",
+          "a"
+        ]
+      ]
+    },
+    {
+      "date": "2025-11-10",
+      "author_keys": [
+        [
+          "courtoy",
+          "a"
+        ],
+        [
+          "ibsen",
+          "a"
+        ]
+      ]
+    },
+    {
+      "date": "2025-11-25",
+      "author_keys": [
+        [
+          "d'agnolo",
+          "r"
+        ],
+        [
+          "glioti",
+          "a"
+        ],
+        [
+          "rigo",
+          "g"
+        ],
+        [
+          "valenti",
+          "a"
+        ]
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "author_keys": [
+        [
+          "gambhir",
+          "r"
+        ],
+        [
+          "lucie-smith",
+          "l"
+        ],
+        [
+          "thaler",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "author_keys": [
+        [
+          "greif",
+          "k"
+        ]
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "author_keys": [
+        [
+          "larkoski",
+          "a"
+        ]
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "author_keys": [
+        [
+          "hay",
+          "l"
+        ],
+        [
+          "jain",
+          "r"
+        ],
+        [
+          "leblanc",
+          "m"
+        ],
+        [
+          "roloff",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "author_keys": [
+        [
+          "jain",
+          "r"
+        ],
+        [
+          "hay",
+          "l"
+        ],
+        [
+          "leblanc",
+          "m"
+        ],
+        [
+          "roloff",
+          "j"
+        ]
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "author_keys": [
+        [
+          "de",
+          "s"
+        ],
+        [
+          "samui",
+          "t"
+        ],
+        [
+          "singh",
+          "r"
+        ]
+      ]
+    }
+  ]
+}
