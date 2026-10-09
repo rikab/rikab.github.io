@@ -279,6 +279,10 @@ export const research_data = [
       {
         "month": "2026-08",
         "count": 8
+      },
+      {
+        "month": "2026-10",
+        "count": 9
       }
     ],
     "citations_excl_self": [
@@ -297,10 +301,14 @@ export const research_data = [
       {
         "month": "2026-08",
         "count": 6
+      },
+      {
+        "month": "2026-10",
+        "count": 7
       }
     ],
-    "citations_total": 8,
-    "citations_total_excl_self": 6,
+    "citations_total": 9,
+    "citations_total_excl_self": 7,
     "citation_start": "2025-09"
   },
   {
@@ -565,6 +573,10 @@ export const research_data = [
       {
         "month": "2026-09",
         "count": 15
+      },
+      {
+        "month": "2026-10",
+        "count": 16
       }
     ],
     "citations_excl_self": [
@@ -603,10 +615,14 @@ export const research_data = [
       {
         "month": "2026-08",
         "count": 9
+      },
+      {
+        "month": "2026-10",
+        "count": 10
       }
     ],
-    "citations_total": 15,
-    "citations_total_excl_self": 9,
+    "citations_total": 16,
+    "citations_total_excl_self": 10,
     "citation_start": "2024-10"
   },
   {
@@ -841,78 +857,74 @@ export const research_data = [
     "citations": [
       {
         "month": "2023-10",
-        "count": 0
-      },
-      {
-        "month": "2023-11",
         "count": 1
       },
       {
-        "month": "2023-12",
+        "month": "2023-11",
         "count": 2
       },
       {
-        "month": "2024-05",
+        "month": "2023-12",
         "count": 3
       },
       {
+        "month": "2024-05",
+        "count": 4
+      },
+      {
         "month": "2024-07",
-        "count": 5
+        "count": 6
       },
       {
         "month": "2024-09",
-        "count": 7
-      },
-      {
-        "month": "2024-10",
         "count": 8
       },
       {
+        "month": "2024-10",
+        "count": 9
+      },
+      {
         "month": "2024-12",
-        "count": 11
+        "count": 12
       },
       {
         "month": "2025-01",
-        "count": 13
-      },
-      {
-        "month": "2025-03",
         "count": 14
       },
       {
-        "month": "2025-04",
-        "count": 16
+        "month": "2025-03",
+        "count": 15
       },
       {
-        "month": "2025-05",
+        "month": "2025-04",
         "count": 17
       },
       {
-        "month": "2025-06",
+        "month": "2025-05",
         "count": 18
       },
       {
-        "month": "2025-07",
+        "month": "2025-06",
         "count": 19
       },
       {
-        "month": "2025-08",
+        "month": "2025-07",
         "count": 20
       },
       {
-        "month": "2025-09",
-        "count": 22
+        "month": "2025-08",
+        "count": 21
       },
       {
-        "month": "2025-10",
+        "month": "2025-09",
         "count": 23
       },
       {
-        "month": "2025-11",
+        "month": "2025-10",
         "count": 24
       },
       {
-        "month": "2025-12",
+        "month": "2025-11",
         "count": 25
       },
       {
@@ -943,66 +955,62 @@ export const research_data = [
     "citations_excl_self": [
       {
         "month": "2023-10",
-        "count": 0
-      },
-      {
-        "month": "2023-12",
         "count": 1
       },
       {
-        "month": "2024-05",
+        "month": "2023-12",
         "count": 2
       },
       {
-        "month": "2024-07",
+        "month": "2024-05",
         "count": 3
       },
       {
-        "month": "2024-09",
-        "count": 5
+        "month": "2024-07",
+        "count": 4
       },
       {
-        "month": "2024-10",
+        "month": "2024-09",
         "count": 6
       },
       {
+        "month": "2024-10",
+        "count": 7
+      },
+      {
         "month": "2024-12",
-        "count": 9
+        "count": 10
       },
       {
         "month": "2025-01",
-        "count": 11
-      },
-      {
-        "month": "2025-04",
         "count": 12
       },
       {
-        "month": "2025-06",
+        "month": "2025-04",
         "count": 13
       },
       {
-        "month": "2025-07",
+        "month": "2025-06",
         "count": 14
       },
       {
-        "month": "2025-08",
+        "month": "2025-07",
         "count": 15
       },
       {
-        "month": "2025-09",
-        "count": 17
+        "month": "2025-08",
+        "count": 16
       },
       {
-        "month": "2025-10",
+        "month": "2025-09",
         "count": 18
       },
       {
-        "month": "2025-11",
+        "month": "2025-10",
         "count": 19
       },
       {
-        "month": "2025-12",
+        "month": "2025-11",
         "count": 20
       },
       {
@@ -1154,6 +1162,10 @@ export const research_data = [
       {
         "month": "2026-09",
         "count": 27
+      },
+      {
+        "month": "2026-10",
+        "count": 28
       }
     ],
     "citations_excl_self": [
@@ -1212,10 +1224,14 @@ export const research_data = [
       {
         "month": "2026-09",
         "count": 21
+      },
+      {
+        "month": "2026-10",
+        "count": 22
       }
     ],
-    "citations_total": 27,
-    "citations_total_excl_self": 21,
+    "citations_total": 28,
+    "citations_total_excl_self": 22,
     "citation_start": "2023-02"
   },
   {
@@ -2724,133 +2740,133 @@ export const author_citations = [
   },
   {
     "month": "2023-10",
-    "total": 74,
-    "excl_self": 69
-  },
-  {
-    "month": "2023-11",
-    "total": 76,
+    "total": 75,
     "excl_self": 70
   },
   {
+    "month": "2023-11",
+    "total": 77,
+    "excl_self": 71
+  },
+  {
     "month": "2023-12",
-    "total": 79,
-    "excl_self": 73
+    "total": 80,
+    "excl_self": 74
   },
   {
     "month": "2024-01",
-    "total": 88,
-    "excl_self": 82
+    "total": 89,
+    "excl_self": 83
   },
   {
     "month": "2024-02",
-    "total": 92,
-    "excl_self": 84
-  },
-  {
-    "month": "2024-03",
-    "total": 94,
+    "total": 93,
     "excl_self": 85
   },
   {
+    "month": "2024-03",
+    "total": 95,
+    "excl_self": 86
+  },
+  {
     "month": "2024-04",
-    "total": 100,
-    "excl_self": 88
+    "total": 101,
+    "excl_self": 89
   },
   {
     "month": "2024-05",
-    "total": 103,
-    "excl_self": 91
+    "total": 104,
+    "excl_self": 92
   },
   {
     "month": "2024-06",
-    "total": 105,
-    "excl_self": 93
-  },
-  {
-    "month": "2024-07",
-    "total": 107,
+    "total": 106,
     "excl_self": 94
   },
   {
+    "month": "2024-07",
+    "total": 108,
+    "excl_self": 95
+  },
+  {
     "month": "2024-08",
-    "total": 110,
-    "excl_self": 97
+    "total": 111,
+    "excl_self": 98
   },
   {
     "month": "2024-09",
-    "total": 113,
-    "excl_self": 100
+    "total": 114,
+    "excl_self": 101
   },
   {
     "month": "2024-10",
-    "total": 117,
-    "excl_self": 103
-  },
-  {
-    "month": "2024-11",
     "total": 118,
     "excl_self": 104
   },
   {
+    "month": "2024-11",
+    "total": 119,
+    "excl_self": 105
+  },
+  {
     "month": "2024-12",
-    "total": 124,
-    "excl_self": 110
+    "total": 125,
+    "excl_self": 111
   },
   {
     "month": "2025-01",
-    "total": 131,
-    "excl_self": 116
+    "total": 132,
+    "excl_self": 117
   },
   {
     "month": "2025-02",
-    "total": 136,
-    "excl_self": 121
-  },
-  {
-    "month": "2025-03",
-    "total": 142,
+    "total": 137,
     "excl_self": 122
   },
   {
+    "month": "2025-03",
+    "total": 143,
+    "excl_self": 123
+  },
+  {
     "month": "2025-04",
-    "total": 147,
-    "excl_self": 125
+    "total": 148,
+    "excl_self": 126
   },
   {
     "month": "2025-05",
-    "total": 162,
-    "excl_self": 128
+    "total": 163,
+    "excl_self": 129
   },
   {
     "month": "2025-06",
-    "total": 167,
-    "excl_self": 133
+    "total": 168,
+    "excl_self": 134
   },
   {
     "month": "2025-07",
-    "total": 172,
-    "excl_self": 137
+    "total": 173,
+    "excl_self": 138
   },
   {
     "month": "2025-08",
-    "total": 176,
-    "excl_self": 141
+    "total": 177,
+    "excl_self": 142
   },
   {
     "month": "2025-09",
-    "total": 180,
-    "excl_self": 145
+    "total": 181,
+    "excl_self": 146
   },
   {
     "month": "2025-10",
-    "total": 188,
-    "excl_self": 152
+    "total": 189,
+    "excl_self": 153
   },
   {
     "month": "2025-11",
-    "total": 193,
-    "excl_self": 157
+    "total": 194,
+    "excl_self": 158
   },
   {
     "month": "2025-12",
@@ -2901,6 +2917,11 @@ export const author_citations = [
     "month": "2026-09",
     "total": 246,
     "excl_self": 197
+  },
+  {
+    "month": "2026-10",
+    "total": 249,
+    "excl_self": 200
   }
 ];
 
@@ -2940,6 +2961,10 @@ export const author_h_index = [
   {
     "month": "2025-10",
     "h": 8
+  },
+  {
+    "month": "2026-10",
+    "h": 9
   }
 ];
 

@@ -1,6 +1,6 @@
 {
   "schema": 3,
-  "fetched": "2026-10-01T10:41:41",
+  "fetched": "2026-10-09T14:16:20",
   "recid": 2973083,
   "cited_keys": [
     [
@@ -154,6 +154,27 @@
         [
           "greif",
           "k"
+        ]
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "author_keys": [
+        [
+          "napolitano",
+          "f"
+        ],
+        [
+          "della penna",
+          "l"
+        ],
+        [
+          "tedeschi",
+          "t"
+        ],
+        [
+          "fan\u00f2",
+          "l"
         ]
       ]
     }

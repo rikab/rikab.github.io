@@ -1,6 +1,6 @@
 {
   "schema": 3,
-  "fetched": "2026-10-01T10:41:44",
+  "fetched": "2026-10-09T14:16:25",
   "recid": 2714254,
   "cited_keys": [
     [
@@ -13,6 +13,35 @@
     ]
   ],
   "entries": [
+    {
+      "date": "2020-01-01",
+      "author_keys": [
+        [
+          "fern\u00e1ndez-mart\u00ednez",
+          "e"
+        ],
+        [
+          "foguel",
+          "a"
+        ],
+        [
+          "marcano",
+          "x"
+        ],
+        [
+          "naredo-tuero",
+          "d"
+        ],
+        [
+          "syvolap",
+          "v"
+        ],
+        [
+          "urqu\u00eda-calder\u00f3n",
+          "k"
+        ]
+      ]
+    },
     {
       "date": "2023-11-17",
       "author_keys": [
@@ -3822,35 +3851,6 @@
         [
           "zhou",
           "t"
-        ]
-      ]
-    },
-    {
-      "date": "2025-12-19",
-      "author_keys": [
-        [
-          "fern\u00e1ndez-mart\u00ednez",
-          "e"
-        ],
-        [
-          "foguel",
-          "a"
-        ],
-        [
-          "marcano",
-          "x"
-        ],
-        [
-          "naredo-tuero",
-          "d"
-        ],
-        [
-          "syvolap",
-          "v"
-        ],
-        [
-          "urqu\u00eda-calder\u00f3n",
-          "k"
         ]
       ]
     },
