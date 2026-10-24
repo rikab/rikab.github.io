@@ -1,32 +1,21 @@
-// view-mode toggle
+// view mode, set by ?mode=N in the URL
 
-import { $ } from './util.js';
 import { install_retro, remove_retro } from './retro.js';
 import { install_VHS, remove_VHS } from './vhs.js';
 import { install_popups, remove_popups } from './popup.js';
 
-// cycle order
-const MODES = ['modern', 
-                'vhs', 
-                'popup', 
-                'retro'];
+// mode number is the index in this list
+const MODES = ['modern', 'vhs', 'retro', 'popup', 'html'];
 
-// button label = NEXT mode
-const LABELS = {
-  modern: 'Switch Mode',
-  vhs: 'Switch Mode',
-  popup: 'Switch Mode',
-  retro: 'Switch Mode',
-};
+// read at module load, before talks.js clears the query string
+const URL_MODE = new URLSearchParams(window.location.search).get('mode');
 
-
-const STORAGE_KEY = 'viewMode';
-
-// landing-page odds for a visitor who has never clicked the toggle
+// landing-page odds when the URL has no ?mode=
 const LANDING_WEIGHTS = {
-  modern: 0.9,
-  vhs: 0.10,
-  retro: 0.0,
+  modern: 3,
+  vhs: 1,
+  retro: 1,
+  html: 1,
 };
 
 // weighted random pick over LANDING_WEIGHTS, restricted to live MODES
@@ -46,20 +35,27 @@ function pick_landing_mode() {
   return 'modern';
 }
 
-// stored value wins else roll the dice
-function normalize_mode(raw) {
-  if (MODES.includes(raw)) return raw;
+// ?mode=N wins, else roll the dice
+function mode_from_url() {
+
+  // accept only a plain index into MODES
+  if (URL_MODE !== null && /^\d+$/.test(URL_MODE) && Number(URL_MODE) < MODES.length) return MODES[Number(URL_MODE)];
   return pick_landing_mode();
+}
+
+// replace the whole page with html/index.html, built by scripts/html_theme_build.py
+function show_html_page() {
+  fetch('html/index.html').then((response) => response.text()).then((page) => {
+    document.open();
+    document.write(page);
+    document.close();
+  });
 }
 
 export function wire_view_mode(data) {
 
-  // Get the button
-  const btn = $('#viewmode-toggle');
-  if (!btn) return;
-
-  // read mode from localStorage, default to modern
-  let mode = normalize_mode(localStorage.getItem(STORAGE_KEY));
+  // drop the mode saved by the old toggle button
+  try { localStorage.removeItem('viewMode'); } catch (error) {}
 
   // tear down others first so body never carries two themes
   const apply = (next) => {
@@ -83,24 +79,13 @@ export function wire_view_mode(data) {
       install_popups(data);
     }
 
-    // Update button to next mode in cycle
-    btn.textContent = LABELS[next];
-    mode = next;
+    // plain page with no css or js
+    if (next === 'html') show_html_page();
   };
 
-  // run the apply function
-  apply(mode);
-
-  // on click, cycle to next mode in list, store in localStorage, and apply
-  btn.addEventListener('click', () => {
-    const next = MODES[(MODES.indexOf(mode) + 1) % MODES.length];
-    localStorage.setItem(STORAGE_KEY, next);
-    apply(next);
-  });
+  // apply the mode from the URL
+  apply(mode_from_url());
 
   // Esc inside vhs/popup drops back to modern
-  document.body.addEventListener('vhs-exit', () => {
-    localStorage.setItem(STORAGE_KEY, 'modern');
-    apply('modern');
-  });
+  document.body.addEventListener('vhs-exit', () => apply('modern'));
 }

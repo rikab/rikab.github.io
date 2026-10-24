@@ -1,6 +1,6 @@
 {
   "schema": 3,
-  "fetched": "2026-10-09T14:16:31",
+  "fetched": "2026-10-24T06:23:04",
   "recid": 1812970,
   "cited_keys": [],
   "entries": [
@@ -99400,6 +99400,15 @@
         [
           "kunkel",
           "m"
+        ]
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "author_keys": [
+        [
+          "melle",
+          "d"
         ]
       ]
     }

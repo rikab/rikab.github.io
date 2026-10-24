@@ -11,6 +11,23 @@
 # unless noted. When in doubt, copy an existing entry and tweak.
 # ----------------------------------------------------------------------------
 
+# about text, used by the About section of index.html and by html/index.html
+about:
+  portrait: assets/img/fun_headshot.jpg
+  tagline: 'Theoretical physicist &middot; postdoc, MLHAD Collaboration, University of Cincinnati'
+  links:
+    - {text: CV, href: assets/pdf/rikab_CV.pdf}
+    - {text: GitHub, href: 'https://github.com/rikab'}
+    - {text: Twitter, href: 'https://twitter.com/cornkab'}
+    - {text: LinkedIn, href: 'https://www.linkedin.com/in/rikab-gambhir-457375136'}
+    - {text: Google Scholar, href: 'https://scholar.google.com/citations?hl=en&user=RkNe2TQAAAAJ'}
+    - {text: INSPIRE-HEP, href: 'https://inspirehep.net/authors/3088466?ui-citation-summary=true'}
+    - {text: gambhirb@ucmail.uc.edu, href: 'mailto:gambhirb@ucmail.uc.edu'}
+  paragraphs:
+    - 'I&rsquo;m a postdoctoral researcher with the <a href="https://mlhad.org" target="_blank" rel="noopener">MLHAD Collaboration</a> at the <a href="https://www.uc.edu/" target="_blank" rel="noopener">University of Cincinnati</a>. I work at the intersection of <strong>jet physics</strong>, <strong>QCD</strong>, and <strong>machine learning</strong> &mdash; building tools and observables that make collider physics easier to reason about.'
+    - 'Before Cincinnati, I did my PhD at the <a href="https://physics.mit.edu/" target="_blank" rel="noopener">MIT Center for Theoretical Physics</a>, and before that, I did my undergrad in physics, applied sciences engineering, and mathematics at <a href="https://physics.rutgers.edu/" target="_blank" rel="noopener">Rutgers University</a>.'
+  footer: 'rikab@mit.edu &middot; gambhirb@ucmail.uc.edu &middot; <a href="https://github.com/rikab/rikab.github.io">Site source</a><br>Once was the <a href="https://twitter.com/finitephysicist">@FinitePhysicist</a>.'
+
 publications:
 
 

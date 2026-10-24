@@ -29,7 +29,7 @@ The site is a single page driven entirely by [content.yaml](content.yaml). Both 
 - [content.yaml](content.yaml) — source of truth. Three top-level keys: `publications:`, `talks:`, `software:`.
 - [index.html](index.html) — markup only. Sticky nav, hero, About, Featured Research, All Research, Stats (`<details>`, holds author-level citation + h-index charts), Talks (with filter bar), Software, footer. Vanilla — **no Bootstrap, no jQuery**.
 - [css/style.css](css/style.css) — design-token-driven. All colors live in `:root` custom properties (`--bg`, `--accent`, `--accent-2`, `--surface`, etc.); change them in one place to retheme.
-- [css/retro.css](css/retro.css) — every rule scoped under `body.retro`. The "📟 Retro mode" toggle (top-left) flips that class; see [js/retro.js](js/retro.js). The `body.retro` rules + the injected decorations (marquee, counter, paper nav, "NEW!" badge, last-updated stamp) are entirely additive — modern styles untouched. State persists in `localStorage['viewMode']`.
+- [css/retro.css](css/retro.css) — every rule scoped under `body.retro`. The mode comes from `?mode=N` in the URL (0 normal, 1 VHS, 2 retro, 3 popup), with no button and nothing saved; see [js/viewmode.js](js/viewmode.js). The `body.retro` rules + the injected decorations (marquee, counter, paper nav, "NEW!" badge, last-updated stamp) are entirely additive — modern styles untouched.
 - [main.tex](main.tex) — CV source (moderncv). Pulls in `cv/publications.tex` and `cv/talks.tex` via `\input{}`. Compile with `pdflatex main.tex` and overwrite [assets/pdf/rikab_CV.pdf](assets/pdf/rikab_CV.pdf).
 
 ### Python build pipeline (`scripts/`)

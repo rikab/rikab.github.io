@@ -39,6 +39,9 @@ export function start_hero_canvas() {
   // animation frame function, runs in a loop
   const frame = () => {
 
+    // stop once the canvas leaves the page
+    if (!c.isConnected) return;
+
     // skip in retro mode
     if (document.body.classList.contains('retro')) {
       requestAnimationFrame(frame);

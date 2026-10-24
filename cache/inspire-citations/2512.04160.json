@@ -1,6 +1,6 @@
 {
   "schema": 3,
-  "fetched": "2026-10-09T14:16:19",
+  "fetched": "2026-10-24T06:22:53",
   "recid": 3089290,
   "cited_keys": [
     [
@@ -61,6 +61,55 @@
         [
           "larkoski",
           "a"
+        ]
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "author_keys": [
+        [
+          "canonero",
+          "e"
+        ],
+        [
+          "cowan",
+          "g"
+        ],
+        [
+          "forte",
+          "s"
+        ],
+        [
+          "huston",
+          "j"
+        ],
+        [
+          "jaskiewicz",
+          "s"
+        ],
+        [
+          "kraus",
+          "m"
+        ],
+        [
+          "preuss",
+          "c"
+        ],
+        [
+          "reichelt",
+          "d"
+        ],
+        [
+          "skands",
+          "p"
+        ],
+        [
+          "szafron",
+          "r"
+        ],
+        [
+          "ulrich",
+          "y"
         ]
       ]
     }
