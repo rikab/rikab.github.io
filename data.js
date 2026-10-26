@@ -176,7 +176,7 @@ export const research_data = [
     "featured": true,
     "joke": false,
     "status": "preprint",
-    "bibtex": "@article{Gambhir:2025lka,\n    author = \"Gambhir, Rikab and Mastandrea, Radha\",\n    title = \"{Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized}\",\n    eprint = \"2512.04160\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    month = \"12\",\n    year = \"2025\"\n}",
+    "bibtex": "@article{Gambhir:2025lka,\n    author = \"Gambhir, Rikab and Mastandrea, Radha\",\n    title = \"{Resummed distribution functions: making perturbation theory positive and normalized}\",\n    eprint = \"2512.04160\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"hep-ph\",\n    doi = \"10.1007/JHEP06(2026)243\",\n    journal = \"JHEP\",\n    volume = \"06\",\n    pages = \"243\",\n    year = \"2026\"\n}",
     "links": [
       {
         "text": "INSPIRE-HEP",
