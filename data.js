@@ -3002,4 +3002,4 @@ export const author_h_index = [
 
 export const author_timeline_start = "2020-01";
 
-export const current_month = "2026-10";
+export const current_month = "2026-11";
