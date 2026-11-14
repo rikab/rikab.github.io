@@ -1,5 +1,3 @@
-// hero canvas
-
 import { $ } from './util.js';
 
 // animated canvas (pixel level drawing)
@@ -8,7 +6,6 @@ export function start_hero_canvas() {
   // boilerplate for setting up canvas
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const c = $('.hero-canvas');
-  if (!c) return;
   const ctx = c.getContext('2d');
 
   // particle array
@@ -38,15 +35,6 @@ export function start_hero_canvas() {
 
   // animation frame function, runs in a loop
   const frame = () => {
-
-    // stop once the canvas leaves the page
-    if (!c.isConnected) return;
-
-    // skip in retro mode
-    if (document.body.classList.contains('retro')) {
-      requestAnimationFrame(frame);
-      return;
-    }
 
     // clear canvas, compute forces and redraw particles and lines each frame
     ctx.clearRect(0, 0, w, h);

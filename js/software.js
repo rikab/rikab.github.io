@@ -1,7 +1,4 @@
-// software cards
-
 import { $, escape_HTML } from './util.js';
-
 
 function software_card(s, pub_by_ID) {
 
@@ -18,8 +15,8 @@ function software_card(s, pub_by_ID) {
   return `
     <article class="sw-card">
       <h3 class="sw-name">${escape_HTML(s.name)}</h3>
-      <div class="sw-role">${escape_HTML(s.role || '')}</div>
-      <p class="sw-blurb">${escape_HTML(s.blurb || '')}</p>
+      <div class="sw-role">${escape_HTML(s.role)}</div>
+      <p class="sw-blurb">${escape_HTML(s.blurb)}</p>
       ${s.install ? `
         <div class="sw-install">
           <code style="background:transparent;border:none;padding:0;">$ ${escape_HTML(s.install)}</code>
@@ -32,6 +29,5 @@ function software_card(s, pub_by_ID) {
 
 // render the software cards
 export function render_software({ software_data, pub_by_ID }) {
-  $('#softwareCards').innerHTML = (software_data || [])
-    .map((s) => software_card(s, pub_by_ID)).join('');
+  $('#softwareCards').innerHTML = software_data.map((s) => software_card(s, pub_by_ID)).join('');
 }

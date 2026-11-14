@@ -1,34 +1,15 @@
-// VHS mode
+import { $, escape_HTML, fmt_month_year, render_authors } from './util.js';
 
-import { $, $$, escape_HTML, fmt_month_year, render_authors } from './util.js';
-
-// state cleared in remove_VHS
-let slide_timer = null;
-let key_handler = null;
-let broadcast_click_handler = null;
+// slideshow and subtitle state
 let slides = [];
 let slide_index = 0;
 let paused = false;
-let slide_index_by_ID = {};
 let talks_by_ID = {};
-let color_bars_timer = null;
 let subtitle_timer = null;
 let subtitle_phrases = [];
 let subtitle_phrase_idx = 0;
 let subtitle_char_idx = 0;
 let subtitle_hold_frames = 0;
-
-// teardown selectors
-const VHS_SELECTORS = [
-  '#vhs-broadcast',
-  '.vhs-ticker',
-  '.vhs-tracking-bar',
-  '.vhs-color-bars',
-  '.vhs-subtitle',
-  '.vhs-channel',
-  '.vhs-static-lines',
-  '.vhs-chroma-svg',
-];
 
 // auto-advance dwell
 const SLIDE_MS = 5000;
@@ -45,58 +26,17 @@ const SUBTITLE_TICK_MS = 32;
 const SUBTITLE_HOLD_TICKS = 22;
 const SUBTITLE_WORDS_PER_PHRASE = 7;
 
-// ##### slide list #####
-
-function primary_link_of(slide) {
-  const r = slide.ref;
-  if (slide.kind === 'paper') {
-    const arxiv = r.links?.find((l) => /arxiv/i.test(l.text));
-    if (arxiv) return arxiv.href;
-    const inspire = r.links?.find((l) => /inspire/i.test(l.text));
-    if (inspire) return inspire.href;
-    return r.links?.[0]?.href || '#';
-  }
-  if (slide.kind === 'talk') return r.video || r.slides || '#';
-  return '#';
-}
-
 // featured papers, then rest of papers
-function build_slides(research_data, talk_data) {
-  const out = [];
-  const featured = research_data.filter((p) => p.featured && !p.joke);
-  for (const p of featured) out.push({ kind: 'paper', ref: p });
-  for (const p of research_data) {
-    if (p.joke) continue;
-    if (featured.includes(p)) continue;
-    out.push({ kind: 'paper', ref: p });
-  }
-
-  slide_index_by_ID = {};
-  out.forEach((s, i) => {
-    if (s.kind === 'paper') slide_index_by_ID[s.ref.id] = i;
-  });
-  talks_by_ID = Object.fromEntries((talk_data || []).map((t) => [t.id, t]));
-  return out;
-}
-
-// ##### render helpers #####
-
-// pull the hero mailto so slides can reuse the real address
-function get_mailto() {
-  const a = document.querySelector('.hero-socials a[href^="mailto:"]');
-  if (!a) return null;
-  const href = a.getAttribute('href') || '';
-  const addr = href.replace(/^mailto:/, '').trim();
-  return { href, addr };
+function build_slides(research_data) {
+  const real = research_data.filter((p) => !p.joke);
+  return [...real.filter((p) => p.featured), ...real.filter((p) => !p.featured)];
 }
 
 // big mailto at the slide footer
 function email_wordart() {
-  const m = get_mailto();
-  if (!m) return '';
   return `
     <div class="slide-email">
-      <a class="slide-email-link" href="${escape_HTML(m.href)}">${escape_HTML(m.addr.toUpperCase())}</a>
+      <a class="slide-email-link" href="mailto:gambhirb@ucmail.uc.edu">GAMBHIRB@UCMAIL.UC.EDU</a>
     </div>
   `;
 }
@@ -112,24 +52,10 @@ function truncate(s, n) {
 
 // "Phys. Rev. Lett. 135, 021902" → "PRL", etc
 function short_journal_name(raw) {
-  if (!raw) return '';
-  // drop volume + page (everything from the first digit on)
-  const head = raw.replace(/\s*\d.*$/, '').trim();
-  const lower = head.toLowerCase();
-  if (/phys.*rev.*lett/.test(lower)) return 'PRL';
-  if (/phys.*rev.*d/.test(lower)) return 'PRD';
-  if (/phys.*rev.*c/.test(lower)) return 'PRC';
-  if (/phys.*rev.*x/.test(lower)) return 'PRX';
-  if (/phys.*rev/.test(lower)) return 'PR';
-  if (/jhep/.test(lower)) return 'JHEP';
-  if (/jcap/.test(lower)) return 'JCAP';
-  if (/scipost/.test(lower)) return 'SciPost';
-  if (/eur.*phys.*j/.test(lower)) return 'EPJ';
-  if (/nature/.test(lower)) return 'Nature';
-  if (/science/.test(lower)) return 'Science';
-  // acronym fallback, max 5 chars
-  const acro = head.split(/[\s.]+/).filter(Boolean).map((w) => w[0]).join('').toUpperCase();
-  return acro.slice(0, 5) || head.slice(0, 5);
+
+  // initials of the words before the volume number
+  const head = raw.replace(/\s*\d.*$/, '');
+  return head.split(/[\s.]+/).filter(Boolean).map((w) => w[0]).join('').toUpperCase();
 }
 
 // payment-style badge wrapping a link
@@ -139,28 +65,22 @@ function pay_badge(href, inner, opts = {}) {
   return `<a class="${cls}" href="${escape_HTML(href)}" target="_blank" rel="noopener"${title}>${inner}</a>`;
 }
 
-// ##### slide rendering #####
-
 function render_slide() {
-  const screen = $('#vhs-broadcast');
-  if (!screen) return;
-  const slide = slides[slide_index];
-  if (!slide) return;
-  screen.innerHTML = `<div class="slide" data-kind="${slide.kind}">${render_paper_slide(slide.ref)}</div>`;
 
-  // brief SMPTE flash between slides
+  // current paper into the broadcast screen
+  const p = slides[slide_index];
+  $('#vhs-broadcast').innerHTML = `<div class="slide">${render_paper_slide(p)}</div>`;
+
+  // brief SMPTE flash between slides and the channel number
   trigger_color_bars(260);
+  update_channel();
 
-  update_channel(slide);
-
-  // subtitle scrolls through the slide's abstract / blurb
-  set_subtitle(slide.ref.abstract || slide.ref.blurb || slide.ref.title || '');
+  // subtitle scrolls through the slide's blurb
+  set_subtitle(p.blurb);
 }
 
 function render_paper_slide(p) {
-  const image_inner = p.img
-    ? `<img src="${escape_HTML(p.img)}" alt="" loading="lazy">`
-    : `<div class="slide-image-fallback">📚</div>`;
+  const image_inner = `<img src="${escape_HTML(p.img)}" alt="" loading="lazy">`;
 
   const subtitle = p.status === 'refereed' ? 'PEER-REVIEWED!' : 'NEW PREPRINT!';
 
@@ -168,10 +88,10 @@ function render_paper_slide(p) {
   const price = fmt_month_year(p.date);
   const price_unit = p.status === 'refereed' ? 'PUBLISHED' : 'PREPRINT';
 
-  const benefit = truncate(p.blurb || p.abstract || '', BENEFIT_MAX);
+  const benefit = truncate(p.blurb, BENEFIT_MAX);
 
   // sort the links that exist into badge slots
-  const links = p.links || [];
+  const links = p.links;
   const arxiv = links.find((l) => /arxiv/i.test(l.text));
   const inspire = links.find((l) => /inspire/i.test(l.text));
   const code = links.find((l) => /github|code/i.test(l.text));
@@ -187,7 +107,7 @@ function render_paper_slide(p) {
   if (code) badges.push(pay_badge(code.href, '<i class="fa fa-github"></i>', { title: 'Code' }));
 
   // guarantee line: FREE first, then metadata bits
-  const cites = p.citations_total || 0;
+  const cites = p.citations_total;
   const guarantee_bits = ['100% FREE'];
   if (cites > 0) guarantee_bits.push(`${cites} CITATION${cites === 1 ? '' : 'S'}!`);
   if (p.status === 'refereed' && journal_short) guarantee_bits.push(`PEER-REVIEWED IN ${journal_short}`);
@@ -195,16 +115,14 @@ function render_paper_slide(p) {
   const guarantee = '★ ' + guarantee_bits.join(' · ') + ' ★';
 
   // bonus-talks callout: video > slides for the pill href
-  const linked_talks = (p.talks || [])
-    .map((tid) => talks_by_ID[tid])
-    .filter(Boolean);
+  const linked_talks = p.talks.map((tid) => talks_by_ID[tid]);
   let bonus_HTML = '';
   if (linked_talks.length) {
     const noun = linked_talks.length === 1 ? 'TALK' : 'TALKS';
     const pills = linked_talks.map((t) => {
       const href = t.video || t.slides || '#';
       // "MAR 26" date stub
-      const stub = (fmt_month_year(t.date) || '').replace(/\s+/, ' ').toUpperCase().replace(/ 20/, ' ');
+      const stub = fmt_month_year(t.date).replace(/\s+/, ' ').toUpperCase().replace(/ 20/, ' ');
       const icon = t.video ? '▶' : '⬇';
       return `<a class="slide-bonus-pill" href="${escape_HTML(href)}" target="_blank" rel="noopener" title="${escape_HTML(t.title)}">${icon} ${escape_HTML(stub)}</a>`;
     }).join('');
@@ -228,7 +146,7 @@ function render_paper_slide(p) {
         <span class="slide-price">${escape_HTML(price)}</span>
         <span class="slide-price-unit">${escape_HTML(price_unit)}</span>
       </div>
-      ${benefit ? `<div class="slide-benefit">${escape_HTML(benefit)}</div>` : ''}
+      <div class="slide-benefit">${escape_HTML(benefit)}</div>
       ${bonus_HTML}
     </div>
     <div class="slide-payments">
@@ -241,23 +159,12 @@ function render_paper_slide(p) {
 
 // advance with wrap
 function advance(delta = 1) {
-  if (!slides.length) return;
   slide_index = (slide_index + delta + slides.length) % slides.length;
   render_slide();
 }
 
-// jump to absolute index (F1)
-function jump_to(i) {
-  if (!slides.length) return;
-  slide_index = ((i % slides.length) + slides.length) % slides.length;
-  render_slide();
-}
-
-// ##### decorations #####
-
 // top ticker of paper titles + cite counts
 function install_ticker(papers) {
-  if ($('.vhs-ticker')) return;
   const items = papers
     .filter((p) => !p.joke)
     .map((p) => `★ "${p.title}" — ${p.citations_total} CITATION${p.citations_total === 1 ? '' : 'S'} ★`)
@@ -270,8 +177,6 @@ function install_ticker(papers) {
 
 // SVG chromatic-aberration filter
 function install_chroma_filter() {
-
-  if ($('.vhs-chroma-svg')) return;
 
   // SVG filter
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -310,7 +215,6 @@ function install_chroma_filter() {
 
 // secondary tracking band layered over the CSS ::after band
 function install_tracking_bar() {
-  if ($('.vhs-tracking-bar')) return;
   const el = document.createElement('div');
   el.className = 'vhs-tracking-bar';
   document.body.prepend(el);
@@ -318,7 +222,6 @@ function install_tracking_bar() {
 
 // fixed full-viewport SMPTE no-signal overlay
 function install_color_bars() {
-  if ($('.vhs-color-bars')) return;
   const el = document.createElement('div');
   el.className = 'vhs-color-bars';
   el.innerHTML = `
@@ -331,7 +234,6 @@ function install_color_bars() {
 // flash color bars for ms then hide
 function trigger_color_bars(ms = 500) {
   const bars = $('.vhs-color-bars');
-  if (!bars) return;
   bars.classList.add('is-active');
   setTimeout(() => bars.classList.remove('is-active'), ms);
 }
@@ -339,7 +241,7 @@ function trigger_color_bars(ms = 500) {
 // recurring random-interval color-bars flash
 function schedule_next_color_bars() {
   const delay = COLORBARS_MIN_MS + Math.random() * (COLORBARS_MAX_MS - COLORBARS_MIN_MS);
-  color_bars_timer = setTimeout(() => {
+  setTimeout(() => {
     trigger_color_bars(700);
     schedule_next_color_bars();
   }, delay);
@@ -347,7 +249,6 @@ function schedule_next_color_bars() {
 
 // subtitle container
 function install_subtitle() {
-  if ($('.vhs-subtitle')) return;
   const el = document.createElement('div');
   el.className = 'vhs-subtitle';
   el.innerHTML = '<span class="vhs-subtitle-text"></span>';
@@ -378,7 +279,6 @@ function split_into_phrases(text) {
 function set_subtitle(text) {
   if (subtitle_timer) { clearInterval(subtitle_timer); subtitle_timer = null; }
   const el = $('.vhs-subtitle-text');
-  if (!el) return;
   subtitle_phrases = split_into_phrases(text);
   subtitle_phrase_idx = 0;
   subtitle_char_idx = 0;
@@ -386,12 +286,10 @@ function set_subtitle(text) {
   el.textContent = '';
   if (!subtitle_phrases.length) return;
   subtitle_timer = setInterval(() => {
-    const el2 = $('.vhs-subtitle-text');
-    if (!el2) return;
     const phrase = subtitle_phrases[subtitle_phrase_idx];
     if (subtitle_char_idx < phrase.length) {
       subtitle_char_idx += 1;
-      el2.textContent = phrase.slice(0, subtitle_char_idx);
+      el.textContent = phrase.slice(0, subtitle_char_idx);
       return;
     }
     // hold the scanned phrase, then advance
@@ -402,29 +300,26 @@ function set_subtitle(text) {
     subtitle_hold_frames = 0;
     subtitle_char_idx = 0;
     subtitle_phrase_idx = (subtitle_phrase_idx + 1) % subtitle_phrases.length;
-    el2.textContent = '';
+    el.textContent = '';
   }, SUBTITLE_TICK_MS);
 }
 
 // CH indicator
 function install_channel() {
-  if ($('.vhs-channel')) return;
   const el = document.createElement('div');
   el.className = 'vhs-channel';
   document.body.appendChild(el);
 }
 
 // CH XX = 1-indexed, 2-digit slide number
-function update_channel(/* slide */) {
+function update_channel() {
   const el = $('.vhs-channel');
-  if (!el) return;
   const n = (slide_index + 1).toString().padStart(2, '0');
   el.textContent = `CH ${n}`;
 }
 
 // static-lines overlay band near the bottom
 function install_static_lines() {
-  if ($('.vhs-static-lines')) return;
   const el = document.createElement('div');
   el.className = 'vhs-static-lines';
   document.body.appendChild(el);
@@ -432,50 +327,41 @@ function install_static_lines() {
 
 // screen container + click-to-advance handler
 function install_broadcast() {
-  if ($('#vhs-broadcast')) return;
   const el = document.createElement('div');
   el.id = 'vhs-broadcast';
   el.addEventListener('mouseenter', () => { paused = true; });
   el.addEventListener('mouseleave', () => { paused = false; });
   const main = document.querySelector('main');
-  if (main) main.insertBefore(el, main.firstChild);
-  else document.body.appendChild(el);
+  main.insertBefore(el, main.firstChild);
 
   // bare clicks advance; links bleed through
-  broadcast_click_handler = (e) => {
+  el.addEventListener('click', (e) => {
     if (e.target.closest('a, button')) return;
     advance(+1);
-  };
-  el.addEventListener('click', broadcast_click_handler);
+  });
 }
 
-// ##### keyboard #####
-
-function make_key_handler() {
-  return (e) => {
-    if (e.key === 'ArrowLeft') { advance(-1); e.preventDefault(); }
-    else if (e.key === 'ArrowRight') { advance(+1); e.preventDefault(); }
-    else if (e.key === ' ') {
-      const tag = (e.target.tagName || '').toLowerCase();
-      if (tag === 'button' || tag === 'select' || tag === 'input' || tag === 'textarea') return;
-      paused = !paused;
-      e.preventDefault();
-    }
-    else if (e.key === 'F1') { jump_to(0); e.preventDefault(); }
-    else if (e.key === 'Escape') {
-      document.body.dispatchEvent(new CustomEvent('vhs-exit'));
-      e.preventDefault();
-    }
-  };
+// arrow keys, space to pause, F1 to rewind, and Esc to exit
+function on_key(e) {
+  if (e.key === 'ArrowLeft') { advance(-1); e.preventDefault(); }
+  else if (e.key === 'ArrowRight') { advance(+1); e.preventDefault(); }
+  else if (e.key === ' ') {
+    const tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'button' || tag === 'select' || tag === 'input' || tag === 'textarea') return;
+    paused = !paused;
+    e.preventDefault();
+  }
+  else if (e.key === 'F1') { advance(-slide_index); e.preventDefault(); }
+  else if (e.key === 'Escape') location.search = '?mode=0';
 }
-
-// ##### install / remove #####
 
 export function install_VHS({ research_data, talk_data }) {
-  slides = build_slides(research_data, talk_data);
-  slide_index = 0;
-  paused = false;
 
+  // slides and the talk lookup for bonus pills
+  slides = build_slides(research_data);
+  talks_by_ID = Object.fromEntries(talk_data.map((t) => [t.id, t]));
+
+  // decorations and the first slide
   install_chroma_filter();
   install_ticker(research_data);
   install_tracking_bar();
@@ -484,30 +370,14 @@ export function install_VHS({ research_data, talk_data }) {
   install_channel();
   install_static_lines();
   install_broadcast();
-
   render_slide();
 
-  slide_timer = setInterval(() => { if (!paused) advance(+1); }, SLIDE_MS);
-
-  key_handler = make_key_handler();
-  document.addEventListener('keydown', key_handler);
+  // auto-advance and keyboard
+  setInterval(() => { if (!paused) advance(+1); }, SLIDE_MS);
+  document.addEventListener('keydown', on_key);
 
   // big SMPTE flash on enter
   trigger_color_bars(1400);
 
   schedule_next_color_bars();
-}
-
-export function remove_VHS() {
-  if (slide_timer) { clearInterval(slide_timer); slide_timer = null; }
-  if (color_bars_timer) { clearTimeout(color_bars_timer); color_bars_timer = null; }
-  if (subtitle_timer) { clearInterval(subtitle_timer); subtitle_timer = null; }
-  if (key_handler) { document.removeEventListener('keydown', key_handler); key_handler = null; }
-  broadcast_click_handler = null;
-  for (const sel of VHS_SELECTORS) {
-    for (const el of $$(sel)) el.remove();
-  }
-  slides = [];
-  slide_index = 0;
-  paused = false;
 }

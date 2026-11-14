@@ -1,17 +1,6 @@
-# ----------------------------------------------------------------------------
-# Single source of truth for publications and talks.
-#
-# Edit this file, then run:   python3 scripts/build.py
-# That regenerates:
-#   - data.js                  (website cards)
-#   - cv/publications.tex      (CV: Refereed + Preprints sections)
-#   - cv/talks.tex             (CV: Invited + Lectures + Contributed sections)
-#
-# Every field below is documented in scripts/build.py. Fields are optional
-# unless noted. When in doubt, copy an existing entry and tweak.
-# ----------------------------------------------------------------------------
+# site and CV content; run python3 scripts/build.py after editing
 
-# about text, used by the About section of index.html and by html/index.html
+# about text for index.html and html/index.html
 about:
   portrait: assets/img/fun_headshot.jpg
   tagline: 'Theoretical physicist &middot; postdoc, MLHAD Collaboration, University of Cincinnati'
@@ -118,7 +107,7 @@ publications:
   - title: "Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized"
     date: 2025-12-05
     authors: Rikab Gambhir, Radha Mastandrea
-    status: preprint
+    status: refereed
     arxiv: "2512.04160"
     id: rdf
     tags: [qcd, statistics, perturbation-theory]
@@ -128,7 +117,7 @@ publications:
       href: https://link.springer.com/article/10.1007/JHEP06(2026)243
     img: assets/img/rdf.png
     blurb: >-
-      We propose a framework, the Resummed Distribution Function (RDF), that, given a fixed-order perturbative calculation for an observable to some finite order in αsαs​, will ``resum'' the expression in a way that is guaranteed to match the original expression order-by-order and be positive, normalized, and finite. The RDF also enables a more direct notion of perturbative uncertainties, as we can directly vary higher-order parameters and treat them as nuisance parameters. We demonstrate the power of the RDF ansatz by matching to thrust to O(αs3) and extracting αs​ with perturbative uncertainties by fitting the RDF to ALEPH data.
+      We propose a framework, the Resummed Distribution Function (RDF), that, given a fixed-order perturbative calculation for an observable to some finite order in αs, will ``resum'' the expression in a way that is guaranteed to match the original expression order-by-order and be positive, normalized, and finite. The RDF also enables a more direct notion of perturbative uncertainties, as we can directly vary higher-order parameters and treat them as nuisance parameters. We demonstrate the power of the RDF ansatz by matching to thrust to O(αs³) and extracting αs with perturbative uncertainties by fitting the RDF to ALEPH data.
 
 
   - title: Isolating Unisolated Upsilons with Anomaly Detection in CMS Open Data
@@ -295,7 +284,7 @@ publications:
     id: vlq
     tags: [bsm, cms]
     journal:
-      name: Phys. Rev. D 102, IPhT, Saclay, FranceIPhT, Saclay, France112004
+      name: Phys. Rev. D 102, 112004
       href: https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.112004
     img: assets/img/exclusion.png
     blurb: >-
@@ -309,6 +298,7 @@ talks:
 
   - title: The Shape of Jets
     date: 2026-06-23
+    paper: shaper
     category: invited
     where: LPC Topic of the Week, Fermilab
     location: Fermilab, Batavia (IL)
@@ -319,6 +309,7 @@ talks:
 
   - title: Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics
     date: 2026-06-22
+    paper: interpretability
     category: invited
     where: Fermilab AI Lecture Series
     location: Fermilab, Batavia (IL)
@@ -328,6 +319,7 @@ talks:
 
   - title: "Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized"
     date: 2026-04-30
+    paper: rdf
     category: invited
     where: Fermilab Theory Seminar
     location: Fermilab, Batavia (IL)
@@ -336,6 +328,7 @@ talks:
 
   - title: Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics
     date: 2026-04-27
+    paper: interpretability
     category: invited
     where: HEP Lunch Seminar, UChicago
     location: UChicago, Chicago (IL)
@@ -344,6 +337,7 @@ talks:
 
   - title: Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics
     date: 2026-04-16
+    paper: interpretability
     category: invited
     where: IAIFI Lunch Seminar, MIT
     location: MIT, Cambridge (MA)
@@ -352,6 +346,7 @@ talks:
 
   - title: "Resummed Distribution Functions: Making Perturbation Theory Positive and Normalized"
     date: 2026-04-02
+    paper: rdf
     category: invited
     where: Institut de Physique Théorique (IPhT)
     location: IPhT, Saclay, France
@@ -361,6 +356,7 @@ talks:
   
   - title: The Shape of Jets
     date: 2026-03-17
+    paper: shaper
     category: invited
     where: KITP Particle Theory Initiative 
     location: University of California, Santa Barbara (CA)
@@ -372,6 +368,7 @@ talks:
 
   - title: The Shape of Jets
     date: 2025-10-10
+    paper: shaper
     category: invited
     where: Alabama HEP/Astro Seminar, University of Alabama (AL)
     location: University of Alabama, Alabama
@@ -381,6 +378,7 @@ talks:
 
   - title: The Shape of Jets
     date: 2025-09-22
+    paper: shaper
     category: invited
     where: Cincinnati HEP/Astro Seminar, University of Cincinnati (OH)
     location: University of Cincinnati, Cincinnati (OH)
@@ -389,6 +387,7 @@ talks:
 
   - title: Moments of Clarity in Machine Learning for Jet Physics
     date: 2025-06-11
+    paper: moments
     category: invited
     where: Harvard, Cambridge (MA)
     location: Harvard, Massachusetts
@@ -397,6 +396,7 @@ talks:
 
   - title: Moments of Clarity in Machine Learning for Jet Physics
     date: 2025-03-12
+    paper: moments
     category: invited
     where: Yale AI/Physics Seminar, New Haven (CT)
     location: Yale, Connecticut
@@ -405,6 +405,7 @@ talks:
 
   - title: The Shape of Jets
     date: 2025-03-04
+    paper: shaper
     category: invited
     where: LBNL AI Seminar, (Virtual)
     location: LBNL, California
@@ -414,6 +415,7 @@ talks:
 
   - title: Moments of Clarity in Machine Learning for Jet Physics
     date: 2024-12-18
+    paper: moments
     category: invited
     where: Brown Physics Seminar, Providence (RI)
     location: Brown University, Rhode Island
@@ -422,6 +424,7 @@ talks:
 
   - title: Moments of Clarity in Machine Learning for Jet Physics
     date: 2024-10-18
+    paper: moments
     category: invited
     where: Rutgers Journal Club, New Brunswick (NJ)
     location: Rutgers University, New Jersey
@@ -430,6 +433,7 @@ talks:
 
   - title: Moments of Clarity in Machine Learning for Jet Physics
     date: 2024-10-11
+    paper: moments
     category: invited
     where: UIUC Physics Seminar, Urbana-Champaign (IL)
     location: University of Urbana-Champaign, Illinois
@@ -438,6 +442,7 @@ talks:
 
   - title: Moments of Clarity in Machine Learning for Jet Physics
     date: 2024-05-28
+    paper: moments
     category: invited
     role: Invited Speaker Seminar
     where: SLAC AI Seminar (virtual)
@@ -452,13 +457,14 @@ talks:
     category: invited
     role: Invited Talk
     where: CMS Open-Data Workshop 2023, Fermilab (IL)
-    cv_description: Invited Talk, Fermilab Open Data Workshop, 11 July 2023, Batvaria, Illinois
+    cv_description: Invited Talk, Fermilab Open Data Workshop, 11 July 2023, Batavia, Illinois
     slides: ./assets/talks/(Fermilab 2023) CMS Open Data-2.pdf
     video: https://indico.fnal.gov/event/58914/timetable/
     featured: true
 
   - title: "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"
     date: 2022-11-22
+    paper: frequentist-way
     category: invited
     role: Invited Seminar Speaker
     where: ATLAS Jet/Etmiss Seminar, CERN (virtual)
@@ -470,6 +476,7 @@ talks:
 
   - title: "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"
     date: 2022-09-13
+    paper: frequentist-way
     category: invited
     role: Invited Seminar Speaker
     where: Astro/Particle-ML Seminar, UCI (virtual)
@@ -480,7 +487,9 @@ talks:
   # ===== LECTURE SERIES & SCHOOLS =====
   - title: Interpreting ``Interpretability'' in ML and Physics
     date: 2025-11-21
+    paper: interpretability
     category: lectures
+    where: PhyStat School of Statistics, Nikhef
     location: Nikhef, The Netherlands
     virtual: true
     cv_event_name: "1st PhyStat School of Statistics: Statistics in the era of ML"
@@ -520,6 +529,7 @@ talks:
 
   - title: "HD Sense: An efficient method for ranking observable sensitivity"
     date: 2026-03-09
+    paper: hdsense
     category: contributed
     topic: HDSense
     where: LPCC MCWG Tuning Forum
@@ -529,6 +539,7 @@ talks:
 
   - title: Interpreting ``Interpretability'' and Explaining ``Explainability'' in ML and Physics
     date: 2026-02-17
+    paper: interpretability
     category: contributed
     where: VERaiPHY, Nikhef
     event: VERaiPHY 2026
@@ -540,6 +551,7 @@ talks:
 
   - title: The Pareto Frontier of Resilient Jet Tagging
     date: 2025-08-21
+    paper: pareto
     category: contributed
     topic: Pareto Frontier
     where: ML4Jets 2025, Caltech (CA)
@@ -549,6 +561,7 @@ talks:
 
   - title: "Re-Normalizing Flows: Taming Logs and Perturbation Theory in QCD"
     date: 2025-07-30
+    paper: rdf
     category: contributed
     topic: Resummed Distribution Functions
     where: BOOST 2025, Brown University (RI)
@@ -558,6 +571,7 @@ talks:
 
   - title: Likelihood-based Reweighting for Improved sensitivity in Anomaly Detection
     date: 2025-06-18
+    paper: upsilons
     category: contributed
     where: AD4HEP 2025, Columbia (NY)
     event: AD4HEP
@@ -568,14 +582,16 @@ talks:
 
   - title: Isolating Unisolated Upsilons with Anomaly Detection in CMS Open Data
     date: 2025-05-20
+    paper: upsilons
     category: contributed
     where: Pheno 2025, Univ. Pittsburgh (PA)
     event: Pheno 2025
     event_dates: May 2025
-    location: University of Pittsburg, Pennsylvania
+    location: University of Pittsburgh, Pennsylvania
 
   - title: "Re-Normalizing Flows: Taming Logs and Perturbation Theory in QCD"
     date: 2024-11-05
+    paper: rdf
     category: contributed
     topic: Resummed Distribution Functions
     where: ML4Jets 2024, LPNHE Paris (France)
@@ -585,6 +601,7 @@ talks:
 
   - title: Moments of Clarity in Jet Physics with Machine Learning
     date: 2024-09-24
+    paper: moments
     category: contributed
     where: IAIFI Journal Club, MIT
     event: Journal Club Presentation
@@ -593,6 +610,7 @@ talks:
 
   - title: "SPECTER: Efficient Evaluation of the Spectral EMD"
     date: 2024-08-15
+    paper: specter
     category: contributed
     topic: SPECTER – Spectral EMD
     where: IAIFI Workshop, MIT Media Lab
@@ -605,6 +623,7 @@ talks:
 
   - title: "SPECTER: Efficient Evaluation of the Spectral EMD"
     date: 2024-07-31
+    paper: specter
     category: contributed
     topic: SPECTER – Spectral EMD
     where: BOOST 2024, Genova (Italy)
@@ -616,17 +635,19 @@ talks:
 
   - title: The New Physics Case for Muon Beam Dump Experiments
     date: 2024-05-16
+    paper: muon-beam-dump
     category: contributed
     topic: Muon Beam Dumps
     where: DPF-Pheno 2024, Univ. Pittsburgh
     event: Pheno 2024
     event_dates: May 2024
-    location: University of Pittsburg, Pennsylvania
+    location: University of Pittsburgh, Pennsylvania
     slides: ./assets/talks/(Pheno 2024) Muon Beam Dump.pdf
     video: https://indico.cern.ch/event/1358339/contributions/5899388/
 
   - title: "SPECTER: Efficient Evaluation of the Spectral EMD"
     date: 2023-11-08
+    paper: specter
     category: contributed
     topic: SPECTER – Spectral EMD
     where: ML4Jets 2023, DESY Hamburg
@@ -638,6 +659,7 @@ talks:
 
   - title: "Moment Pooling: Performance & Interpretability via Physics-Inspired Products"
     date: 2023-08-02
+    paper: moments
     category: contributed
     topic: Moment Pooling
     where: BOOST 2023, LBNL Berkeley
@@ -650,6 +672,7 @@ talks:
 
   - title: "Moment Pooling: Performance & Interpretability via Physics-Inspired Products"
     date: 2023-04-17
+    paper: moments
     category: contributed
     topic: Moment Pooling
     where: APS April Meeting 2023, Minneapolis
@@ -661,6 +684,7 @@ talks:
 
   - title: "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"
     date: 2022-12-03
+    paper: frequentist-way
     category: contributed
     topic: Frequentist Way – Calibration & Correlation
     where: ML & Physical Sciences @ NeurIPS 2022
@@ -671,6 +695,7 @@ talks:
 
   - title: Can You Hear the Shape of a Jet?
     date: 2022-08-15
+    paper: shaper
     category: contributed
     topic: Can You Hear the Shape of a Jet?
     where: BOOST 2022, Univ. Hamburg
@@ -682,6 +707,7 @@ talks:
 
   - title: Can You Hear the Shape of a Jet?
     date: 2022-04-10
+    paper: shaper
     category: contributed
     topic: Can You Hear the Shape of a Jet?
     where: APS April Meeting 2022, New York City
@@ -693,6 +719,7 @@ talks:
 
   - title: "Learning Uncertainties the Frequentist Way: Calibration and Correlation in High Energy Physics"
     date: 2021-07-07
+    paper: frequentist-way
     category: contributed
     topic: Frequentist Way – Calibration & Correlation
     where: ML4Jets 2021, Univ. Heidelberg (virtual)
@@ -705,6 +732,7 @@ talks:
 
   - title: A Search for Fully Hadronic Final State Vector-Like Quark Pair Production in 13 TeV pp Collisions using CMS Data
     date: 2020-04-19
+    paper: vlq
     category: contributed
     event: APS April 2020
     event_dates: 19 April 2020
@@ -713,6 +741,7 @@ talks:
 
   - title: A Search for Fully Hadronic Final State Vector-Like Quark Pair Production in 13 TeV pp Collisions using CMS Data
     date: 2019-07-29
+    paper: vlq
     category: contributed
     event: 2019 Meeting of the Division of Particles & Fields of the American Physical Society
     event_dates: 29 Jul-2 Aug 2019
@@ -729,6 +758,7 @@ talks:
   # or part of older recordings the CV doesn't list) =====
   - title: An IAIFI Story – Can You Hear the Shape of a Jet?
     date: 2023-05-16
+    paper: shaper
     category: contributed
     topic: Can You Hear the Shape of a Jet?
     where: IAIFI Engineering Advisory Board
@@ -737,6 +767,7 @@ talks:
 
   - title: Can You Hear the Shape of a Jet?
     date: 2023-03-17
+    paper: shaper
     category: contributed
     topic: Can You Hear the Shape of a Jet?
     where: MIT CTP Graduate Seminar
@@ -746,6 +777,7 @@ talks:
 
   - title: Can You Hear the Shape of a Jet?
     date: 2022-11-04
+    paper: shaper
     category: contributed
     topic: Can You Hear the Shape of a Jet?
     where: ML4Jets 2022, Rutgers University
@@ -755,6 +787,7 @@ talks:
 
   - title: Can You Hear the Shape of a Jet? – IAIFI/NSF Review
     date: 2022-08-11
+    paper: shaper
     category: contributed
     topic: Can You Hear the Shape of a Jet?
     where: MIT, Cambridge (MA)
@@ -763,6 +796,7 @@ talks:
 
   - title: The New Physics Case for Muon Beam-Dump Experiments
     date: 2024-03-19
+    paper: muon-beam-dump
     category: contributed
     topic: Muon Beam Dumps
     where: MIT CTP Graduate Seminar

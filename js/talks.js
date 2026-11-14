@@ -1,5 +1,3 @@
-// talks
-
 import { $, $$, escape_HTML, fmt_date } from './util.js';
 
 // labels and names
@@ -19,8 +17,8 @@ const state = {
 };
 
 // private variables for data and lookups
-let _talk_data = [];
-let _pub_by_ID = {};
+let all_talks = [];
+let papers_by_ID = {};
 
 // get the topic of a talk
 function topic_of(t) {
@@ -37,15 +35,10 @@ function row_passes(t) {
 
 // apply the current filters to the talk data and re-render the list
 function apply_filters() {
-  const visible = _talk_data.filter(row_passes);
+  const visible = all_talks.filter(row_passes);
 
   // render the talks list
   render_talk_list(visible);
-  
-  // drop stale query strings 
-  if (location.search) {
-    history.replaceState(null, '', location.pathname + location.hash);
-  }
 }
 
 // build a talk row element from a talk object
@@ -62,16 +55,16 @@ function build_talk_row(t, { with_category = false } = {}) {
 
   // icons for slides and video if available
   const slides_icon = t.slides
-    ? `<a class="talk-icon" href="${escape_HTML(t.slides)}" target="_blank" rel="noopener" title="Slides" onclick="event.stopPropagation()"><i class="fa fa-file-pdf-o"></i></a>`
+    ? `<a class="talk-icon" href="${escape_HTML(t.slides)}" target="_blank" rel="noopener" title="Slides"><i class="fa fa-file-pdf-o"></i></a>`
     : '';
   const video_icon = t.video
-    ? `<a class="talk-icon" href="${escape_HTML(t.video)}" target="_blank" rel="noopener" title="Video" onclick="event.stopPropagation()"><i class="fa fa-play"></i></a>`
+    ? `<a class="talk-icon" href="${escape_HTML(t.video)}" target="_blank" rel="noopener" title="Video"><i class="fa fa-play"></i></a>`
     : '';
 
   // link to paper if available
-  const paper = t.paper ? _pub_by_ID[t.paper] : null;
+  const paper = t.paper ? papers_by_ID[t.paper] : null;
   const paper_link = paper
-    ? `Paper: <a href="#paper-${escape_HTML(paper.id)}" data-paper-link>${escape_HTML(paper.title)}</a>`
+    ? `Paper: <a href="#paper-${escape_HTML(paper.id)}">${escape_HTML(paper.title)}</a>`
     : '';
 
   // category badge if in combined view
@@ -84,15 +77,14 @@ function build_talk_row(t, { with_category = false } = {}) {
     <div class="talk-date">${escape_HTML(fmt_date(t.date))}</div>
     <div class="talk-main">
       <div class="talk-title">${cat_badge}${escape_HTML(t.title)}</div>
-      <div class="talk-where">${escape_HTML(t.where || '')}</div>
+      <div class="talk-where">${escape_HTML(t.where)}</div>
     </div>
     <div class="talk-icons">${slides_icon}${video_icon}</div>
     <div class="talk-detail">
       <div class="meta-line">
-        ${escape_HTML((CATEGORY_LABEL[t.category] || t.category))}${t.topic ? ` &middot; ${escape_HTML(t.topic)}` : ''}
+        ${escape_HTML(CATEGORY_LABEL[t.category])}${t.topic ? ` &middot; ${escape_HTML(t.topic)}` : ''}
       </div>
-      ${t.abstract || (paper && paper.blurb)
-        ? `<p>${escape_HTML(t.abstract || paper.blurb)}</p>` : ''}
+      ${paper ? `<p>${escape_HTML(paper.blurb)}</p>` : ''}
       ${paper_link ? `<p style="font-size:.85rem;color:var(--muted);margin:.4rem 0 0;">${paper_link}</p>` : ''}
     </div>
   `;
@@ -150,7 +142,7 @@ function render_talk_list(items) {
 function build_filter_controls() {
 
   // populate the year dropdown with unique years from the talk data
-  const years = [...new Set(_talk_data.map((t) => t.date.slice(0, 4)))].sort().reverse();
+  const years = [...new Set(all_talks.map((t) => t.date.slice(0, 4)))].sort().reverse();
   const year_sel = $('#yearFilter');
   for (const y of years) {
     const opt = document.createElement('option');
@@ -159,7 +151,7 @@ function build_filter_controls() {
   }
 
   // populate the topics with unique topics from the talk data, using the topic_of function
-  const topics = [...new Set(_talk_data.map(topic_of).filter(Boolean))]
+  const topics = [...new Set(all_talks.map(topic_of).filter(Boolean))]
     .sort((a, b) => a.localeCompare(b));
   const chip_root = $('#topicFilter');
   for (const top of topics) {
@@ -235,8 +227,8 @@ function wire_filter_events() {
 
 // run everything
 export function init_talks({ talk_data, pub_by_ID }) {
-  _talk_data = talk_data;
-  _pub_by_ID = pub_by_ID;
+  all_talks = talk_data;
+  papers_by_ID = pub_by_ID;
   $('#talkCount').textContent = `(${talk_data.length})`;
   build_filter_controls();
   wire_filter_events();

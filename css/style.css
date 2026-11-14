@@ -2,27 +2,25 @@
 
 /* global variables */
 :root {
-  --bg:           #0e0e10; /* primary background color */
-  --bg-alt:       #131317;
-  --surface:      #1a1a1d;
-  --surface-2:    #222226;
-  --border:       #2a2a2e;
-  --border-soft:  #1f1f23;
-  --text:         #ececec;
-  --text-soft:    #c2c2c2;
-  --muted:        #8d8d92;
-  --accent:       #e63946;          /* primary red */
-  --accent-soft:  #ff6b6b;         /* lighter red, for hovers and highlights */
-  --accent-2:     #f4a261;          /* warm amber */
-  --accent-2-soft:#ffd29a;         /* lighter amber, for hovers and highlights */
-  --shadow-sm:    0 1px 2px rgba(0,0,0,.4);
-  --shadow:       0 4px 16px rgba(0,0,0,.45), 0 1px 2px rgba(0,0,0,.5);
-  --shadow-lg:    0 12px 32px rgba(0,0,0,.55);
+  --bg: #0e0e10; /* primary background color */
+  --bg-alt: #131317;
+  --surface: #1a1a1d;
+  --surface-2: #222226;
+  --border: #2a2a2e;
+  --border-soft: #1f1f23;
+  --text: #ececec;
+  --text-soft: #c2c2c2;
+  --muted: #8d8d92;
+  --accent: #e63946; /* primary red */
+  --accent-soft: #ff6b6b; /* lighter red, for hovers and highlights */
+  --accent-2: #f4a261; /* warm amber */
+  --shadow: 0 4px 16px rgba(0,0,0,.45), 0 1px 2px rgba(0,0,0,.5);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,.55);
 
   /* plot */
-  --chart-grid:   #2a2a2e;
-  --chart-axis:   #3a3a3f;
-  --chart-text:   #8d8d92;
+  --chart-grid: #2a2a2e;
+  --chart-axis: #3a3a3f;
+  --chart-text: #8d8d92;
 
   /* fonts */
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -76,7 +74,7 @@ h1, h2, h3, h4 {
 }
 h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); }
 h3 { font-size: 1.15rem; }
-p  { margin: 0 0 1em; }
+p { margin: 0 0 1em; }
 
 /* code-style text */
 code {
@@ -247,11 +245,7 @@ code {
   color: var(--text-soft);
 }
 
-/*  */
 /* sections */
-/*  */
-
-
 
 .section {
   padding: clamp(3rem, 8vh, 6rem) var(--gutter);
@@ -472,7 +466,7 @@ code {
   margin: 1.25rem 0 .5rem;
 }
 .card-detail h4:first-child { margin-top: 0; }
-.card-abstract { color: var(--text-soft); }
+
 .card-bibtex {
   position: relative;
   background: var(--bg);
@@ -663,8 +657,8 @@ code {
   border: 1px solid currentColor;
   background: rgba(255,255,255,.02);
 }
-.cat-invited     { color: var(--accent); }
-.cat-lectures    { color: var(--accent-2); }
+.cat-invited { color: var(--accent); }
+.cat-lectures { color: var(--accent-2); }
 .cat-contributed { color: var(--text-soft); }
 .year-header {
   position: sticky;
@@ -845,7 +839,7 @@ code {
   margin: 0;
 }
 
-/*  featured mark + count  */
+/* featured mark + count */
 .featured-mark { color: var(--accent-2); }
 
 /* statistics stuff */
@@ -951,7 +945,7 @@ code {
   padding: 1rem 1.2rem 1.2rem;
   margin: 0;
 }
-.stats-chart figcaption {
+.stats-chart figcaption, .paper-chart-wrap figcaption {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -959,18 +953,22 @@ code {
   color: var(--muted);
   margin-bottom: .5rem;
 }
-.stats-chart .legend {
+.stats-chart .legend, .paper-chart-wrap .legend {
   display: inline-flex;
   align-items: center;
   gap: .35rem;
 }
-.stats-chart .swatch {
+.stats-chart .swatch, .paper-chart-wrap .swatch {
   display: inline-block;
-  width: 12px; height: 12px;
+  width: 12px;
+  height: 12px;
   border-radius: 2px;
 }
-.stats-chart .sw-red   { background: var(--accent); }
-.stats-chart .sw-amber { background: var(--accent-2); }
+.stats-chart .sw-red, .paper-chart-wrap .sw-red { background: var(--accent); }
+.stats-chart .sw-amber, .paper-chart-wrap .sw-amber { background: var(--accent-2); }
+.paper-chart-wrap figcaption { font-size: .75rem; margin-bottom: .35rem; }
+.paper-chart-wrap .legend { gap: .3rem; }
+.paper-chart-wrap .swatch { width: 10px; height: 10px; }
 .chart {
   width: 100%;
   height: auto;
@@ -982,26 +980,6 @@ code {
   margin: .25rem 0 1rem;
   padding: 0;
 }
-.paper-chart-wrap figcaption {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  font-size: .75rem;
-  color: var(--muted);
-  margin-bottom: .35rem;
-}
-.paper-chart-wrap .legend {
-  display: inline-flex;
-  align-items: center;
-  gap: .3rem;
-}
-.paper-chart-wrap .swatch {
-  display: inline-block;
-  width: 10px; height: 10px;
-  border-radius: 2px;
-}
-.paper-chart-wrap .sw-red   { background: var(--accent); }
-.paper-chart-wrap .sw-amber { background: var(--accent-2); }
 .paper-chart {
   width: 100%;
   max-width: 380px;
@@ -1029,7 +1007,7 @@ code {
   transform: none;
 }
 
-/* boilderplate accessibility code */
+/* boilerplate accessibility code */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {

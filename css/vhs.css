@@ -1,18 +1,17 @@
-/* pallete */
+/* palette */
 body.vhs {
   --v-blue-deep: #0000c8;
-  --v-blue-mid:  #0019ff;
-  --v-blue-pop:  #4d6dff;
-  --v-red:       #ff0010;
-  --v-red-deep:  #aa0008;
-  --v-yellow:    #ffe200;
+  --v-blue-mid: #0019ff;
+  --v-red: #ff0010;
+  --v-red-deep: #aa0008;
+  --v-yellow: #ffe200;
   --v-yellow-soft: #fff04a;
-  --v-cream:     #f5f0d8;
-  --v-white:     #ffffff;
-  --v-black:     #000000;
-  --chart-grid:  var(--v-yellow);
-  --chart-axis:  var(--v-white);
-  --chart-text:  var(--v-cream);
+  --v-cream: #f5f0d8;
+  --v-white: #ffffff;
+  --v-black: #000000;
+  --chart-grid: var(--v-yellow);
+  --chart-axis: var(--v-white);
+  --chart-text: var(--v-cream);
 
   background: var(--v-blue-deep);
   color: var(--v-white);
@@ -172,12 +171,6 @@ body.vhs .slide-image img {
   filter: contrast(1.05) saturate(1.1);
   position: relative;
   z-index: 1;
-}
-
-/* fallback emoji */
-body.vhs .slide-image-fallback {
-  font-size: clamp(5rem, 14vw, 10rem);
-  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.4));
 }
 
 /* info column */
@@ -424,7 +417,7 @@ body.vhs .vhs-color-bars {
   /* SMPTE 7 stripes: white / yellow / cyan / green / magenta / red / blue */
   background: linear-gradient(
     to right,
-    #c0c0c0 0%,    #c0c0c0 14.28%,
+    #c0c0c0 0%, #c0c0c0 14.28%,
     #c0c000 14.28%, #c0c000 28.57%,
     #00c0c0 28.57%, #00c0c0 42.86%,
     #00c000 42.86%, #00c000 57.14%,
@@ -482,7 +475,7 @@ body.vhs .vhs-cb-sp {
 }
 
 body.vhs .vhs-cb-play { left: 14px; }
-body.vhs .vhs-cb-sp   { right: 14px; }
+body.vhs .vhs-cb-sp { right: 14px; }
 
 /* ##### footer ##### */
 body.vhs .site-footer {
@@ -495,15 +488,6 @@ body.vhs .site-footer {
 
 body.vhs .site-footer a { color: var(--v-yellow); }
 
-/* viewmode toggle sits below the CRT overlay so scanlines apply to it */
-body.vhs #viewmode-toggle {
-  z-index: 9990;
-  background: var(--v-red);
-  color: var(--v-yellow);
-  border: 3px outset var(--v-yellow);
-  font-family: 'Arial Black', sans-serif;
-}
-
 /* ##### scrollbar ##### */
 body.vhs::-webkit-scrollbar { width: 14px; height: 14px; }
 body.vhs::-webkit-scrollbar-track { background: var(--v-blue-deep); }
@@ -515,29 +499,29 @@ body.vhs::-webkit-scrollbar-thumb:hover { background: var(--v-yellow); }
 
 /* ##### keyframes ##### */
 @keyframes vhs-flicker {
-  0%   { opacity: 1; }
-  50%  { opacity: 0.94; }
+  0% { opacity: 1; }
+  50% { opacity: 0.94; }
   100% { opacity: 1; }
 }
 
 @keyframes vhs-tracking-roll {
   from { transform: translateY(-60px); }
-  to   { transform: translateY(100vh); }
+  to { transform: translateY(100vh); }
 }
 
 @keyframes vhs-marquee {
   from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  to { transform: translateX(-50%); }
 }
 
 @keyframes vhs-bounce {
   0%, 100% { transform: rotate(-1deg) translateY(0); }
-  50%      { transform: rotate(1deg) translateY(-4px); }
+  50% { transform: rotate(1deg) translateY(-4px); }
 }
 
 @keyframes vhs-zoom-in {
   from { transform: scale(0.96); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 /* ##### bonus-talks callout ##### */
@@ -718,7 +702,7 @@ body.vhs .vhs-static-lines {
 }
 
 @keyframes vhs-static-roll {
-  0%   { transform: translateY(0); }
+  0% { transform: translateY(0); }
   100% { transform: translateY(11px); }
 }
 
